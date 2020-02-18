@@ -8,7 +8,7 @@
 @section('content')
 
     <!-- slider -->
-    <section id="home-section" class="hero">
+    {{-- <section id="home-section" class="hero">
 		  <div class="home-slider owl-carousel">
 	      <div class="slider-item" style="background-image: url(frontend/images/bg_1.jpg);">
 	      	<div class="overlay"></div>
@@ -18,8 +18,51 @@
 	        </div>
 	      </div>
 	    </div>
-    </section>
-    <!-- end-slider -->
+    </section> --}}
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100 img-fluid img-slider"  src="{{asset('/frontend/images/category-2.jpg')}}" alt="First slide">
+
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Amazing Deals:</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 img-fluid img-slider" src="{{asset('/frontend/images/category-3.jpg')}}" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Amazing Deals:</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 img-fluid img-slider" style="height:450px" src="{{asset('/frontend/images/category-4.jpg')}}" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Amazing Deals:</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <!-- end-slider -->
+
 
     <!-- services section -->
     <section class="ftco-section">
@@ -372,7 +415,7 @@
                 </div>
             </div>
         </div>
-                    
+
                 <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="product">
                     <a href="#" class="img-prod"><img class="img-fluid" src="frontend/images/product-8.jpg" alt="Colorlib Template">
@@ -488,122 +531,126 @@
                 </div>
             </div>
         </section>
-    
-                    
-                    
-                <section class="ftco-section img" style="background-image: url(frontend/images/bg_3.jpg);">
-                <div class="container">
-                        <div class="row justify-content-end">
-                    <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
-                        <span class="subheading">Best Price For You</span>
-                    <h2 class="mb-4">Deal of the day</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                    <h3><a href="#">Spinach</a></h3>
-                    <span class="price">$10 <a href="#">now $5 only</a></span>
-                    <div id="timer" class="d-flex mt-5">
-                                    <div class="time" id="days"></div>
-                                    <div class="time pl-3" id="hours"></div>
-                                    <div class="time pl-3" id="minutes"></div>
-                                    <div class="time pl-3" id="seconds"></div>
-                                </div>
+
+        <!-- Deal of the day section -->
+
+        <section class="ftco-section img" style="background-image: url(frontend/images/deal-of-the-day111.jpg);">
+            <div class="container">
+                    <div class="row justify-content-end ">
+                        <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate ml-4">
+                            <span class="subheading">Best Price For You</span>
+                            <h2 class="mb-4">Deal of the day</h2>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                            <h3><a href="#">Spinach</a></h3>
+                            <span class="price">$10 <a href="#">now $5 only</a></span>
+                            <div id="timer" class="d-flex mt-5">
+                                <div class="time" id="days"></div>
+                                <div class="time pl-3" id="hours"></div>
+                                <div class="time pl-3" id="minutes"></div>
+                                <div class="time pl-3" id="seconds"></div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- end of the Deal of the day section -->
+
+    <!-- Satisfied customer section-->
+
+    <section class="ftco-section testimony-section">
+        <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                {{-- <span class="subheading">Testimony</span> --}}
+            <h2 class="mb-4">Our satisfied customer says</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+            </div>
+        </div>
+    <div class="row ftco-animate">
+            <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel">
+                <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                    <div class="user-img mb-5" style="background-image: url(frontend/images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                        <i class="icon-quote-left"></i>
+                    </span>
+                    </div>
+
+                    <div class="text text-center">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Marketing Manager</span>
                     </div>
                 </div>
                 </div>
-            </section>
-        
-        
-            <section class="ftco-section testimony-section">
-                <div class="container">
-                <div class="row justify-content-center mb-5 pb-3">
-                    <div class="col-md-7 heading-section ftco-animate text-center">
-                        {{-- <span class="subheading">Testimony</span> --}}
-                    <h2 class="mb-4">Our satisfied customer says</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+                <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                    <div class="user-img mb-5" style="background-image: url(frontend/images/person_2.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                        <i class="icon-quote-left"></i>
+                    </span>
                     </div>
-                </div>
-                <div class="row ftco-animate">
-                    <div class="col-md-12">
-                    <div class="carousel-testimony owl-carousel">
-                        <div class="item">
-                        <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url(frontend/images/person_1.jpg)">
-                            <span class="quote d-flex align-items-center justify-content-center">
-                                <i class="icon-quote-left"></i>
-                            </span>
-                            </div>
-                            <div class="text text-center">
-                            <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <p class="name">Garreth Smith</p>
-                            <span class="position">Marketing Manager</span>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="item">
-                        <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url(frontend/images/person_2.jpg)">
-                            <span class="quote d-flex align-items-center justify-content-center">
-                                <i class="icon-quote-left"></i>
-                            </span>
-                            </div>
-                            <div class="text text-center">
-                            <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <p class="name">Garreth Smith</p>
-                            <span class="position">Interface Designer</span>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="item">
-                        <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url(frontend/images/person_3.jpg)">
-                            <span class="quote d-flex align-items-center justify-content-center">
-                                <i class="icon-quote-left"></i>
-                            </span>
-                            </div>
-                            <div class="text text-center">
-                            <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <p class="name">Garreth Smith</p>
-                            <span class="position">UI Designer</span>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="item">
-                        <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url(frontend/images/person_1.jpg)">
-                            <span class="quote d-flex align-items-center justify-content-center">
-                                <i class="icon-quote-left"></i>
-                            </span>
-                            </div>
-                            <div class="text text-center">
-                            <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <p class="name">Garreth Smith</p>
-                            <span class="position">Web Developer</span>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="item">
-                        <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url(frontend/images/person_1.jpg)">
-                            <span class="quote d-flex align-items-center justify-content-center">
-                                <i class="icon-quote-left"></i>
-                            </span>
-                            </div>
-                            <div class="text text-center">
-                            <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <p class="name">Garreth Smith</p>
-                            <span class="position">System Analyst</span>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+                    <div class="text text-center">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Interface Designer</span>
                     </div>
                 </div>
                 </div>
-            </section>
-        
-        
+                <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                    <div class="user-img mb-5" style="background-image: url(frontend/images/person_3.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                        <i class="icon-quote-left"></i>
+                    </span>
+                    </div>
+                    <div class="text text-center">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">UI Designer</span>
+                    </div>
+                </div>
+                </div>
+                <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                    <div class="user-img mb-5" style="background-image: url(frontend/images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                        <i class="icon-quote-left"></i>
+                    </span>
+                    </div>
+                    <div class="text text-center">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Web Developer</span>
+                    </div>
+                </div>
+                </div>
+                <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                    <div class="user-img mb-5" style="background-image: url(frontend/images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                        <i class="icon-quote-left"></i>
+                    </span>
+                    </div>
+                    <div class="text text-center">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">System Analyst</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
             <!-- proudy partner section -->
             <hr>
-        
+
                 <section class="ftco-section ftco-partner">
                 <div class="container">
                     <div class="row">
@@ -625,7 +672,7 @@
                     </div>
                 </div>
             </section>
-        
+
                 <!-- end of proudy partner section -->
 
             <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
@@ -647,10 +694,10 @@
             </div>
         </section>
                 <!-- end of subscriber section -- >
-        
 
 
-    
+
+
 @endsection
 
 

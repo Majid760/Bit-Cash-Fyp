@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    
+
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
     <!-- mega-menu -->
     <link rel="stylesheet" href="{{asset('frontend/css/megamenu.css')}}">
+
 
     <link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/owl.theme.default.min.css')}}">
@@ -45,7 +46,7 @@
     @yield('styles')
   </head>
   <body class="goto-here">
-		<div class="py-1 bg-success" style="background-color:#4ad121">
+		<div class="py-1 " style="background-color:#5C830E">
     	<div class="container">
     		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
 	    		<div class="col-lg-12 d-block">
@@ -75,20 +76,20 @@
 		</div>
 		  </div>
     </div>
-    <nav class="navbar navbar-expand-lg  ftco_navbar  ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg  ftco_navbar  ftco-navbar-light " id="ftco-navbar" style="margin-top:0 !important">
 	    <div class="container">
-            <a class="navbar-brand" href="http://127.0.0.1:8000/">BIT-<span style="color:#ffe100">CASH<span></a>
+            <a class="navbar-brand" href="{{route('home')}}"><span style="color:#5C830E">BIT</span><span style="color:#ffe100">-CASH<span></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav">
-	          <li class="nav-item active  ml-3"><a href="index.html" class="nav-link">HOME</a></li>
+              <li class="nav-item active  ml-3"><a href="{{route('home')}}" class="nav-link">HOME</a></li>
 	          <li class="nav-item dropdown mr-1">
               <a class="nav-link dropdown-toggle mega-drop-down" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04" >
-                
+
                 <div class="col-md-6 col-lg-4" style="display:inline">
             	<a class="dropdown-item" href="shop.html">Shop</a>
               	<a class="dropdown-item" href="wishlist.html">Wishlist</a>
@@ -155,7 +156,7 @@
                                         </li>
                                         <li>
                                         <a class="view-more btn btn-sm " href="#">View more</a>
-                                                
+
                                         </li>
                                     </ul>
                                 </div>
@@ -169,16 +170,16 @@
                                         <li><a href="#"><i class="fa fa-paint-brush"></i>UI/UX</a></li>
                                     </ul>
                                 </div>
-                                
+
                             </div>
-                        </div>	
+                        </div>
                     </div>
                   --}}
-                  
-              </div>
-               
 
-              <!-- end of mega-menu --> 
+              </div>
+
+
+              <!-- end of mega-menu -->
             </li>
 	          <li class="nav-item "><a href="about.html" class="nav-link">All stores</a></li>
 	          <li class="nav-item "><a href="blog.html" class="nav-link">Today deals</a></li>
@@ -269,9 +270,9 @@
           </div>
           <div class="row">
             <div class="col-md-12 text-center">
-  
+
               <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | BIT-<span style="color:#ffe100">CASH<span>.PK 
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | BIT-<span style="color:#ffe100">CASH<span>.PK
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                           </p>
             </div>
@@ -286,6 +287,7 @@
 
 
         <script src="{{asset('js/jquery.min.js')}}"></script>
+        <!-- slider -->
         <script src="{{asset('js/jquery-migrate-3.0.1.min.js')}}"></script>
         <script src="{{asset('js/popper.min.js')}}"></script>
         <script src="{{asset('js/bootstrap.min.js')}}"></script>
@@ -306,4 +308,3 @@
       @yield('scripts')
   </body>
 </html>
-  

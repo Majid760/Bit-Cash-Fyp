@@ -10027,4 +10027,24 @@ textarea.form-control {
 
 
 
-    
+    /* slider images */
+
+ .img-slider {
+
+    max-height: 450px;
+ }
+
+
+ .collapse > ul > li >a:hover{
+     background-color: #5C830E;
+     color:#F5D810 !important;
+
+
+ }
+
+ .collapse > ul > li{
+     padding:0 !important;
+     margin-top: 0 !important;
+
+ }
+
