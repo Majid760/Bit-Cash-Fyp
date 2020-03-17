@@ -8,18 +8,6 @@
 @section('content')
 
     <!-- slider -->
-    {{-- <section id="home-section" class="hero">
-		  <div class="home-slider owl-carousel">
-	      <div class="slider-item" style="background-image: url(frontend/images/bg_1.jpg);">
-	      	<div class="overlay"></div>
-	        <div class="container">
-	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-    </section> --}}
-
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -29,7 +17,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100 img-fluid img-slider"  src="{{asset('/frontend/images/category-2.jpg')}}" alt="First slide">
+            <img class="d-block w-100 img-fluid img-slider" style="object-fit:cover"src="{{asset('/frontend/images/category-2.jpg')}}" alt="First slide">
 
             <div class="carousel-caption d-none d-md-block">
                 <h5>Amazing Deals:</h5>
@@ -63,60 +51,28 @@
 
       <!-- end-slider -->
 
+      <!-- top different offers -->
+      <div class="container">
+          <div class="row my-4">
+              <div class="col-md-6 col-lg-4 padding-0">
+                  <div class="top__offers d-flex align-items-end fadeInUp ftco-animate">
+                    <img class=" img-fluid top__offers" height="200px" src="{{asset('frontend/images/1-top-offer.png')}}">
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-4 padding-0">
+                <div class="top__offers d-flex align-items-end fadeInUp ftco-animate">
+                    <img class=" img-fluid top__offers" height="200px" src="{{asset('frontend/images/sale-2.png')}}">
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 padding-0">
+                <div class="top__offers d-flex align-items-end fadeInUp ftco-animate">
+                    <img class=" img-fluid top__offers" height="200px" src="{{asset('frontend/images/sale-3.png')}}">
+                </div>
+            </div>
+          </div>
+      </div>
 
-    <!-- services section -->
-    <section class="ftco-section">
-			<div class="container">
-				<div class="row no-gutters ftco-services">
-          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
-            		<span class="flaticon-shipped"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading">Free Shipping</h3>
-                <span>On order over $100</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
-            		<span class="flaticon-diet"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading">Always Fresh</h3>
-                <span>Product well package</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
-            		<span class="flaticon-award"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading">Superior Quality</h3>
-                <span>Quality Products</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
-            		<span class="flaticon-customer-service"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading">Support</h3>
-                <span>24/7 Support</span>
-              </div>
-            </div>
-          </div>
-        </div>
-			</div>
-    </section>
-    <!-- end services section -->
-
+    <!-- top different offers -->
 
         <!-- services section -->
 
@@ -126,23 +82,23 @@
 					<div class="col-md-8">
 						<div class="row">
 							<div class="col-md-6 order-md-last align-items-stretch d-flex">
-								<div class="category-wrap-2 ftco-animate img align-self-stretch d-flex" style="background-image: url(frontend/images/category.jpg);">
+								<div class="category-wrap-2 ftco-animate img align-self-stretch d-flex" style="background-image: url(frontend/images/product.jpg);">
 									<div class="text text-center">
-										<h2>Vegetables</h2>
-										<p>Protect the health of every home</p>
+										<h2 class="text-color">Our Quality Products</h2>
+										<p>Save the money for your future!</p>
 										<p><a href="#" class="btn btn-primary">Shop now</a></p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-6">
-								<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(frontend/images/category-1.jpg);">
+								<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(frontend/images/acc.jpg);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Fruits</a></h2>
+										<h2 class="mb-0"><a href="#">Accessories</a></h2>
 									</div>
 								</div>
-								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(frontend/images/category-2.jpg);">
+								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(frontend/images/clothes.jpg);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Vegetables</a></h2>
+										<h2 class="mb-0"><a href="#">Clothes</a></h2>
 									</div>
 								</div>
 							</div>
@@ -150,14 +106,14 @@
 					</div>
 
 					<div class="col-md-4">
-						<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(frontend/images/category-3.jpg);">
+						<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(frontend/images/shoes.jpg);">
 							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="#">Juices</a></h2>
+								<h2 class="mb-0"><a href="#">Shoes</a></h2>
 							</div>
 						</div>
-						<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(frontend/images/category-4.jpg);">
+						<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(frontend/images/mobile-computer.jpg);">
 							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="#">Dried</a></h2>
+								<h2 class="mb-0"><a href="#">Laptop & Smart Phones</a></h2>
 							</div>
 						</div>
 					</div>
@@ -531,6 +487,132 @@
                 </div>
             </div>
         </section>
+
+        <!-- how to get cash-back section -->
+        <section>
+            <div class="container">
+                <hr>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 pt-3">
+                        <h3 class="text-center text-color">How to Get Cashback via Bit-Cash?</h3>
+                    </div>
+                </div>
+                <div class="row py-2 my-2 text-center">
+                    <div class="col-sm-12 col-md-3 my-2 col-lg-3 service--section">
+                        <div class="service-icon">
+                            <i class="fa fa-search fa-4x mt-3"></i>
+                        </div>
+                        <p class="service--sectio__title">One step registration</p>
+                        <p>Login & Browse Offers from 300+ Online Stores.</p>
+                    </div>
+                    <div class="col-sm-12 col-md-3 my-2 col-lg-3 service--section">
+                        <div class="service-icon">
+                            <i class="fa fa-shopping-cart fa-4x mt-3"></i>
+                        </div>
+                        <p class="service--sectio__title">Search 20+ Stores</p>
+                        <p>Shop at any Store after Redirecting via Bit-Cash.</p>
+                    </div>
+                    <div class="col-sm-12 col-md-3 my-2 col-lg-3 service--section">
+                        <div class="service-icon">
+                            <i class="fa fa-google-wallet fa-4x mt-3"></i>
+                        </div>
+
+                        <h2 class="service--sectio__title">Amount Verification</h2>
+                        <p>Cashback will be tracked into Bit-Cash account in 24-48 hours.</p>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-lg-3 my-2  service--section">
+                        <div  class="service-icon">
+                            <i class="fa fa-money fa-4x mt-3"></i>
+                        </div>
+                        <h2 class="service--sectio__title">redeem</h2>
+                        <p>Redeem Earned Cashback to Bank Account</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- end services section -->
+    <!-- top store coupans and cashback offers -->
+    <section>
+        <div class="container">
+            <hr>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h3 class="text-color py-3 text-center">Top Stores Coupons & Cashback Offers</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <img src="{{asset('frontend/images/daraz.jpg')}}" class="img-fluid img-css">
+                    <h2 class="cashback-offers">Up to 13% Cashback</h2>
+                    <p class="cashback-percent">50+ offers</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <img  src="{{asset('frontend/images/yayvo4.png')}}" class="img-fluid img-css">
+                    <h2 class="cashback-offers">Up to 9% Cashback</h2>
+                    <p class="cashback-percent">20+ offers</p>
+
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <img src="{{asset('frontend/images/aliexpress.png')}}" class="img-fluid img-css">
+                    <h2 class="cashback-offers">Up to 15% Cashback</h2>
+                    <p class="cashback-percent">10+ offers</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <img src="{{asset('frontend/images/ishoopingg.jpg')}}" class="img-fluid img-css">
+                    <h2 class="cashback-offers">Up to 20% Cashback</h2>
+                    <p class="cashback-percent">50+ offers</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <img src="{{asset('frontend/images/mega.png')}}" class="img-fluid img-css">
+                    <h2 class="cashback-offers">Up to 10% Cashback</h2>
+                    <p class="cashback-percent">30+ offers</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <img src="{{asset('frontend/images/goto.jpg')}}" class="img-fluid img-css">
+                    <h2 class="cashback-offers">Up to 10% Cashback</h2>
+                    <p class="cashback-percent">26+ offers</p>
+                </div>
+            </div>
+            <!-- 2nd row -->
+
+            <div class="row mt-3">
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                 <img src="{{asset('frontend/images/telemart2.png')}}" class="img-fluid img-css">
+                 <h2 class="cashback-offers">Up to 9% Cashback</h2>
+                    <p class="cashback-percent">20+ offers<p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <img  src="{{asset('frontend/images/shophive3.jpg')}}" class="img-fluid img-css">
+                    <h2 class="cashback-offers">Up to 10% Cashback</h2>
+                    <p class="cashback-percent">40+ offers</p>
+
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <img src="{{asset('frontend/images/clickypk.jpg')}}" class="img-fluid img-css">
+                    <h2 class="cashback-offers">Up to 10% Cashback</h2>
+                    <p class="cashback-percent">10+ offers</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <img src="{{asset('frontend/images/elo.png')}}" class="img-fluid img-css">
+                    <h2 class="cashback-offers">Up to 12% Cashback</h2>
+                    <p class="cashback-percent">25+ offers</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <img src="{{asset('frontend/images/homeshoping.jpg')}}" class="img-fluid img-css">
+                    <h2 class="cashback-offers">Up to 17% Cashback</h2>
+                    <p class="cashback-percent">20+ offers</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <img src="{{asset('frontend/images/symbios.jpg')}}" class="img-fluid img-css">
+                    <h2 class="cashback-offers">Up to 23% Cashback</h2>
+                    <p class="cashback-percent">50+ offers</p>
+                </div>
+            </div> <!--ending row -->
+        </div>
+    </section>
+        <!-- end of top store coupans and cashback offers -->
+
 
         <!-- Deal of the day section -->
 

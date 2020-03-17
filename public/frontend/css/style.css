@@ -8131,7 +8131,9 @@ h1, h2, h3, h4, h5,
         color: #fff;
         background: #82ae46; } }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: #000000; }
+    color: #000000;
+    }
+
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item.active > a {
         color: #fff; } }
@@ -10013,7 +10015,7 @@ textarea.form-control {
     stroke-dashoffset: -136px; } }
 
 
-<<<<<<<<<<
+/* <<<<<<<<<< >>>>>>>>>>> */
 
     .navbar-nav > nav-item > nav-link > li:hover a{
       background-color: #ffe100 !important;
@@ -10034,11 +10036,10 @@ textarea.form-control {
     max-height: 450px;
  }
 
-
+  /* navigation bar  */
  .collapse > ul > li >a:hover{
-     background-color: #5C830E;
-     color:#F5D810 !important;
-
+     border-top:2px solid #EA3562;
+     color:#F5D810;
 
  }
 
@@ -10048,3 +10049,91 @@ textarea.form-control {
 
  }
 
+ /* text color */
+
+ .text-color{
+     color:#EA3562 !important;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 24px;
+
+ }
+/* top offer images */
+
+.top__offers{
+    max-width: 100%;
+    height: 200px !important;
+    border-radius: 5px;
+}
+
+.padding-0 {
+    padding:3px !important;
+
+}
+
+/* service procedure section style */
+
+.service--section {
+    height: 300px;
+    background: #e3e3e3;
+    /* margin: 0 3px; */
+    border: 4px solid whitesmoke;
+}
+
+.service-icon {
+    height: 100px;
+    width: 100px;
+    margin: 10px auto;
+    border-radius: 50%;
+    background-color: #F1F1F1;
+}
+
+.font-icon {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.service--sectio__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 5px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+/* top store coupans and cashback offers */
+
+.img-css {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin:0;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+}
+.cashback-offers {
+    color: #E66D0C;
+    font-size: 14px;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 10px 10px 0 10px;
+    text-indent: 2px;
+    font-weight: bold;
+    margin:0 !important;
+}
+.cashback-percent{
+    text-align: center;
+    margin:0 !important;
+    padding:0 5px 5px 5px;
+}
+.cashback-store-title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    color: #FFBA39;
+    text-indent: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

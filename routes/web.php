@@ -1,6 +1,8 @@
 <?php
 
 require_once 'bit-cash/frontend.php';
+require_once 'bit-cash/auth.php';
+
 
 /*
 |--------------------------------------------------------------------------

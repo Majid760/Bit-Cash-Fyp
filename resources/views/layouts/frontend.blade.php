@@ -10,11 +10,15 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
 
+
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
-
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{asset('frontend/css/open-iconic-bootstrap.min.css')}}">
+
     <link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
 
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
@@ -46,7 +50,7 @@
     @yield('styles')
   </head>
   <body class="goto-here">
-		<div class="py-1 " style="background-color:#5C830E">
+		<div class="py-1 " style="background-color:#EA3562">
     	<div class="container">
     		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
 	    		<div class="col-lg-12 d-block">
@@ -78,7 +82,7 @@
     </div>
     <nav class="navbar navbar-expand-lg  ftco_navbar  ftco-navbar-light " id="ftco-navbar" style="margin-top:0 !important">
 	    <div class="container">
-            <a class="navbar-brand" href="{{route('home')}}"><span style="color:#5C830E">BIT</span><span style="color:#ffe100">-CASH<span></a>
+            <a class="navbar-brand" href="{{route('home')}}"><span style="color:#EA3562">BIT</span><span style="color:#ffe100">-CASH<span></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -181,17 +185,24 @@
 
               <!-- end of mega-menu -->
             </li>
-	          <li class="nav-item "><a href="about.html" class="nav-link">All stores</a></li>
-	          <li class="nav-item "><a href="blog.html" class="nav-link">Today deals</a></li>
-	          <li class="nav-item "><a href="contact.html" class="nav-link">best offers</a></li>
+	          <li class="nav-item "><a href="about.html" class="nav-link">stores</a></li>
+	          <li class="nav-item "><a href="blog.html" class="nav-link">deals</a></li>
+	          <li class="nav-item "><a href="contact.html" class="nav-link">offers</a></li>
 	          <!-- <li class="nav-item mr-1 cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li> -->
             <!-- <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form> -->
             <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" id="search-bar" type="search" placeholder="Search">
-              <button class="btn btn-outline-success" type="submit" style="border-radius:5px">Search</button>
+                <div class="input-group">
+                    <input type="text" class="form-control  input-sm ml-1" placeholder="search..." >
+                    <div class="input-group-append">
+                        <span class="btn btn-outline-warning text-center input-group-lg" style="padding:10px 5px" >Search</span>
+                    </div>
+                </div>
+                <a class="btn btn-lg btn-primary ml-2" href="{{ route('user.register') }}" style="border-radius:5px">Register</a>
+                <a class="btn btn-lg btn-danger ml-2" href="{{ route('user.login') }}" style="border-radius:5px; width:100px;">Login</a>
+
             </form>
 	        </ul>
 	      </div>
@@ -216,7 +227,7 @@
                       </div>
             </div>
           <div class="row mb-5">
-            <div class="col-md">
+            <div class="col-md py-3">
               <div class="ftco-footer-widget mb-4">
                 <h2 class="ftco-heading-2">Vegefoods</h2>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -228,7 +239,7 @@
               </div>
             </div>
             <div class="col-md">
-              <div class="ftco-footer-widget mb-4 ml-md-5">
+              <div class="ftco-footer-widget mb-4 ml-md-5 px-3 py-3">
                 <h2 class="ftco-heading-2">Menu</h2>
                 <ul class="list-unstyled">
                   <li><a href="#" class="py-2 d-block">Shop</a></li>
@@ -239,7 +250,7 @@
               </div>
             </div>
             <div class="col-md-4">
-               <div class="ftco-footer-widget mb-4">
+               <div class="ftco-footer-widget mb-4 px-3 py-3">
                 <h2 class="ftco-heading-2">Help</h2>
                 <div class="d-flex">
                     <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
@@ -256,7 +267,7 @@
               </div>
             </div>
             <div class="col-md">
-              <div class="ftco-footer-widget mb-4">
+              <div class="ftco-footer-widget mb-4 px-3 py-3">
                   <h2 class="ftco-heading-2">Have a Questions?</h2>
                   <div class="block-23 mb-3">
                     <ul>
@@ -304,6 +315,10 @@
         <script src="{{asset('js/google-map.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
         <script src="{{asset('js/megamenu.js')}}"></script>
+
+        <!-- font-awesome -->
+        <script src="https://use.fontawesome.com/ddf0dbc894.js"></script>
+        <script src="https://use.fontawesome.com/7b1b5f4647.js"></script>
 
       @yield('scripts')
   </body>
