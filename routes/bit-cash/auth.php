@@ -9,6 +9,10 @@ Route::prefix('user')->group(function(){
     Route::get('/register', 'Auth\UserRegisterController@showRegistrationForm')->name('user.register');
 
     Route::post('/register', 'Auth\UserRegisterController@register')->name('user.register');
+    // Route::post('/register', function(){
+    //     return 'kdkdkdkdk';
+    // })->name('user.register');
+
 
 
 

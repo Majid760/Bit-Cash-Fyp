@@ -10,13 +10,14 @@
               <!-- Sign up form -->
                 <section class="signup">
                     <div class="container">
+                        @if($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <div class="alert alert-danger text-center mt-2">{{ $error }}</div>
+                        @endforeach
+                        @endif
                         <div class="signup-content">
                             <div class="signup-form">
-                                @if($errors)
-                                    @foreach($errors as $error)
-                                        <div class="alert alert-danger">{{ $error }}</div>
-                                    @endforeach
-                                @endif
+
                                 <h2 class="form-title">Sign up</h2>
                                 <form method="POST" class="register-form" id="register-form" action="{{ route('user.register') }}">
                                     <div class="form-group">
@@ -49,7 +50,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                        <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"  required autocomplete="new-password"/>
+                                        <input type="password" name="password_confirmation" id="re_pass" placeholder="Repeat your password"  required autocomplete="new-password"/>
                                     </div>
                                     <div class="form-group">
                                         <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
