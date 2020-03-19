@@ -9,10 +9,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!--Sing-in & sing-up page  Font Icon -->
-    <link rel="stylesheet" href="{{asset('frontend/fonts/sign-in-up-material-icon/css/material-design-iconic-font.min.css')}}">
-    <!-- Main css -->
-    <link rel="stylesheet" href="{{asset('/frontend/css/sign-in-up-style.css')}}">
+
 
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
@@ -58,23 +55,24 @@
     		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
 	    		<div class="col-lg-12 d-block">
 		    		<div class="row d-flex">
-		    			<div class="col-md-3 col-sm-2 pr-4 d-flex topper  align-items-center">
+		    			<div class="col-md-3 col-sm-2 pr-4 col-lg-3 d-flex topper  align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
 						    <span class="text">+92 35 2355 98</span>
 					    </div>
-					    <div class="col-md-3 col-sm-2 pr-4 d-flex topper align-items-center">
+					    {{-- <div class="col-md-3 col-sm-2 pr-4 d-flex topper align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
 						    <span class="text">email@email.com</span>
-					    </div>
-				 <div class="col-md-6 col-sm-6 pr-1 d-flex topper  text-lg-right">
-
+					    </div> --}}
+				 <div class="col-md-9 col-sm-9 col-lg-9 pr-1 d-flex topper  text-lg-right">
                     <nav class="navbar ml-0 px-0">
                         <a class="nav-item nav-link text-warning py-0 px-1" href="#">Balance |</a>
                         <a class="nav-item nav-link text-warning py-0 px-1" href="#">How It Works? |</a>
                         <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('contact')}}">CONTACT |</a>
                         <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('about')}}">ABOUT |</a>
                         <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('blog')}}">BLOG |</a>
-                        <a class="nav-item nav-link text-warning py-0 px-1" href="#">DOWNLOAD APP </a>
+                        <a class="nav-item nav-link text-warning py-0 px-1" href="#">DOWNLOAD APP |</a>
+
+
                     </nav>
 
 				</div>
@@ -94,7 +92,7 @@
 	        <ul class="navbar-nav">
               <li class="nav-item active  ml-3"><a href="{{route('home')}}" class="nav-link">HOME</a></li>
 	          <li class="nav-item dropdown mr-1">
-              <a class="nav-link dropdown-toggle mega-drop-down" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
+              <a class="nav-link dropdown-toggle mega-drop-down" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRODUCT</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04" >
 
                 <div class="col-md-6 col-lg-4" style="display:inline">
@@ -188,9 +186,9 @@
 
               <!-- end of mega-menu -->
             </li>
-	          <li class="nav-item "><a href="about.html" class="nav-link">stores</a></li>
-	          <li class="nav-item "><a href="blog.html" class="nav-link">deals</a></li>
-	          <li class="nav-item "><a href="contact.html" class="nav-link">offers</a></li>
+	          <li class="nav-item "><a href="about.html" class="nav-link">store</a></li>
+	          <li class="nav-item "><a href="blog.html" class="nav-link">deal</a></li>
+	          <li class="nav-item "><a href="contact.html" class="nav-link">offer</a></li>
 	          <!-- <li class="nav-item mr-1 cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li> -->
             <!-- <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -198,15 +196,35 @@
             </form> -->
             <form class="form-inline my-2 my-lg-0">
                 <div class="input-group">
-                    <input type="text" class="form-control  input-sm ml-1" placeholder="search..." >
+                    <input type="text" class="form-control  ml-2 search-input" placeholder="search...">
                     <div class="input-group-append">
-                        <span class="btn btn-outline-warning text-center input-group-lg" style="padding:10px 5px" >Search</span>
+                        <a class="btn btn-outline-warning text-center input-group-lg serach-btn"  >Search</a>
                     </div>
                 </div>
-                {{-- <a class="btn btn-lg btn-primary ml-2" href="{{ route('user.register') }}" style="border-radius:5px">Register</a> --}}
-                {{-- <a class="btn btn-lg btn-danger ml-2" href="{{ route('user.login') }}" style="border-radius:5px; width:100px;">Login</a> --}}
-                <a class="btn btn-lg btn-danger ml-2" href="#" data-toggle="modal" data-target="#loginModal" style="border-radius:5px; width:100px;">Login</a>
-                <a class="btn btn-lg btn-primary ml-2" href="#" data-toggle="modal" data-target="#registerModal" style="border-radius:5px">Register</a>
+                @if (!((isset(Auth::user()->name)) || (isset(Auth::user()->email))))
+                <!--Check out button-->
+                <div class="dropdown">
+                    <button class="dropbtn btn  signs-btn ml-4" >Signs<i class="fa fa-map-signs ml-2"></i></button>
+                    <div class="dropdown-content">
+                        <a  href="{{ route('user.register') }}">Register</a>
+                        <a  href="{{ route('user.login') }}">Login</a>
+                    </div>
+                  </div>
+                @else
+                <div class="dropdown">
+                    <button  class="dropbtn btn text-center accoutn-btn ml-2" disabled>My Account <i class="fa fa-user pl-2"></i></button>
+                    <div class="dropdown-content">
+                        <a  href="#" >AVAIL:Rs {{ __('0') }} </a>
+                        <a  href="#" >PENDING:Rs {{ __('0') }} </a>
+                        <a  href="#" >My Account <i class="fa fa-user pl-2"></i></a>
+                        <a  href="{{route('user.logout')}}">Logout<i class="fa fa-sign-out  pl-2"></i></a>
+                    </div>
+                </div>
+                <!-- Check in button -->
+                @endif
+
+
+
 
 
             </form>
@@ -220,148 +238,6 @@
     @yield('content')
 
 
-
-    <!-- login -->
-
-       <!-- Sing in  Form -Modal -->
-    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" id="loginModal">
-        <div class="modal-dialog modal-lg md-12 lg-12" role="document">
-        <div class="modal-content ">
-            <section class="sign-in">
-                <div class="container">
-                    <div class="signin-content">
-                        <div class="signin-image">
-                            <figure><img src="{{asset('frontend/images/signin-image.jpg')}}" alt="sing up image"></figure>
-                            <a href="#" class="signup-image-link" data-toggle="modal" data-target="#registerModal" id="sign">Create an account</a>
-                        </div>
-
-                        <div class="signin-form">
-                            <h2 class="form-title">Sign In</h2>
-                            <form method="POST" class="register-form" id="login-form">
-                                <div class="form-group">
-                                    @csrf
-                                    <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="email" name="email" id="email" placeholder="Your Email" class=" @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus/>
-                                    @error('email')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" name="password" id="password" class=" @error('password') is-invalid @enderror" name="password" placeholder="Password"/>
-                                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="remember-me" id="remember" class="agree-term"  {{ old('remember') ? 'checked' : '' }}/>
-                                    <label for="remember-me" class="label-agree-term"><span><span></span></span>
-                                        Remember me
-                                    </label>
-                                </div>
-                                <div class="form-group form-button">
-                                    <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
-                                </div>
-                                </form>
-                                <div class="social-login">
-                                    <span class="social-label">Or login with</span>
-                                    <ul class="socials">
-                                        <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
-                                        <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
-                                        <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-        </div>
-    </div>
-
-</div>
-
-
-    <!-- end of login -->
-
-    <!-- Sing up  Form -Modal -->
-    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" id="registerModal">
-        <div class="modal-dialog modal-lg md-12 lg-12" role="document">
-        <div class="modal-content ">
-            <section class="signup">
-                <div class="container">
-                    @if($errors->any())
-                    @foreach ($errors->all() as $error)
-                        <div class="alert alert-danger text-center mt-2">{{ $error }}</div>
-                    @endforeach
-                    @endif
-                    <div class="signup-content">
-                        <div class="signup-form">
-
-                            <h2 class="form-title">Sign up</h2>
-                            <form method="POST" class="register-form" id="register-form" action="{{ route('user.register') }}">
-                                <div class="form-group">
-                                    @csrf
-                                    <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="name" id="name" placeholder="Your Name" class="@error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus/>
-                                    @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                    <input type="email" name="email" id="email" placeholder="Your Email" class=" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-                                    @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" name="password" id="pass" placeholder="Password" class="@error('password') is-invalid @enderror" name="password" required autocomplete="new-password"/>
-                                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                    <input type="password" name="password_confirmation" id="re_pass" placeholder="Repeat your password"  required autocomplete="new-password"/>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                                </div>
-                                <div class="form-group form-button">
-                                    <input type="submit" name="signup" class="form-submit" value="Register"/>
-                                    {{-- <a href="{{ route('user.register')}}" class="btn btn-lg btn-primary">Register</a> --}}
-
-                                </div>
-                            </form>
-                        </div>
-                        <div class="signup-image">
-                            <figure><img src="{{asset('frontend/images/signup-image.jpg')}}" alt="sing up image"></figure>
-                            <a  href="#" data-toggle="modal" data-target="#loginModal" class="signup-image-link" id="signup">I am already member</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-    </div>
-
-</div>
-
-
-    <!-- end of login -->
-
     <!-- footer -->
 
 
@@ -369,10 +245,10 @@
         <div class="container">
             <div class="row">
                 <div class="mouse">
-                    <a href="#" class="mouse-icon">
-                        <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
-                    </a>
-                </div>
+                          <a href="#" class="mouse-icon">
+                              <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+                          </a>
+                      </div>
             </div>
           <div class="row mb-5">
             <div class="col-md py-3">
@@ -430,11 +306,10 @@
           <div class="row">
             <div class="col-md-12 text-center">
 
-              <p>
-                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | BIT-<span style="color:#ffe100">CASH<span>.PK
-                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
+              <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | BIT-<span style="color:#ffe100">CASH<span>.PK
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                          </p>
             </div>
           </div>
         </div>
@@ -464,22 +339,10 @@
         <script src="{{asset('js/google-map.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
         <script src="{{asset('js/megamenu.js')}}"></script>
+
         <!-- font-awesome -->
         <script src="https://use.fontawesome.com/ddf0dbc894.js"></script>
         <script src="https://use.fontawesome.com/7b1b5f4647.js"></script>
-        <script>
-            $(document).ready(function() {
-                $("#signup").on("click", function () {
-                $("#registerModal").removeClass("fade").modal("hide");
-                });
-                $("#sign").on("click", function () {
-                $("#loginModal").removeClass("fade").modal("hide");
-                });
-
-            });
-
-
-        </script>
 
       @yield('scripts')
   </body>

@@ -10136,4 +10136,110 @@ textarea.form-control {
     color: #FFBA39;
     text-indent: 2px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
 }
+
+/* user account button style */
+
+
+
+.serach-btn {
+    padding:12px 20px !important;
+    background-color:#EA3562 !important;
+    color:#ffe100 !important;
+}
+
+
+.search-input {
+    width:280px !important;
+
+}
+@media(max-width:1210px) {
+    .search-input {
+        width:240px !important;
+
+    }
+}
+@media(max-width:1010px) {
+    .search-input {
+        width:200px !important;
+
+    }
+    .serach-btn {
+        padding:12px 10px !important;
+        background-color:#EA3562 !important;
+        color:#ffe100 !important;
+    }
+
+}
+
+.signs-btn {
+    padding:12px 10px !important;
+    width:100px;
+    background-color:#EA3562 !important;
+    color:#ffe100 !important;
+}
+
+.accoutn-btn {
+    padding:12px 10px !important;
+    width:120px;
+    background-color:#EA3562 !important;
+    color:#ffe100 !important;
+
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    text-decoration:none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #EA3562;
+    color: #FCBB3D;
+}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #FCBB3D;
+}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+      background-color: #EA3562;
+      text-decoration: none;
+    }

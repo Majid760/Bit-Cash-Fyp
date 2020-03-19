@@ -11,7 +11,10 @@ class FrontendController extends Controller
 
 
     public function index(){
-        // dd(Auth::guest());
+        // Auth::logout();
+        // dd(isset(Auth::user()->name));
+        // dd(isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email );
+
         return view('index');
     }
 }

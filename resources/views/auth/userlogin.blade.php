@@ -10,6 +10,11 @@
             <!-- Sing in  Form -->
                 <section class="sign-in">
                 <div class="container">
+                    @if($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <div class="alert alert-danger text-center mt-2">{{ $error }}</div>
+                        @endforeach
+                    @endif
                     <div class="signin-content">
                         <div class="signin-image">
                             <figure><img src="{{asset('frontend/images/signin-image.jpg')}}" alt="sing up image"></figure>
@@ -18,7 +23,7 @@
 
                         <div class="signin-form">
                             <h2 class="form-title">Sign In</h2>
-                            <form method="POST" class="register-form" id="login-form">
+                            <form method="POST" class="register-form" id="login-form" action="{{ route('user.login')}}">
                                 <div class="form-group">
                                     @csrf
                                     <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -42,6 +47,9 @@
                                     <input type="checkbox" name="remember-me" id="remember" class="agree-term"  {{ old('remember') ? 'checked' : '' }}/>
                                     <label for="remember-me" class="label-agree-term"><span><span></span></span>
                                         Remember me
+                                    </label>
+                                    <label for="forgot-password ml-2" class="label-agree-term">
+                                        <a href="{{route('user.forgot')}}" class="ml-4"style="color:#EA3562;"> Forgot Password?</a>
                                     </label>
                                 </div>
                                 <div class="form-group form-button">

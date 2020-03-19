@@ -1,8 +1,9 @@
 @extends('layouts.frontend')
- <!--Sing-in & sing-up page  Font Icon -->
- <link rel="stylesheet" href="{{asset('frontend/fonts/sign-in-up-material-icon/css/material-design-iconic-font.min.css')}}">
- <!-- Main css -->
- <link rel="stylesheet" href="{{asset('/frontend/css/sign-in-up-style.css')}}">
+<!--Sing-in & sing-up page  Font Icon -->
+<link rel="stylesheet" href="{{asset('frontend/fonts/sign-in-up-material-icon/css/material-design-iconic-font.min.css')}}">
+<!-- Main css -->
+<link rel="stylesheet" href="{{asset('/frontend/css/sign-in-up-style.css')}}">
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
