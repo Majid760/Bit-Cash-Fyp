@@ -64,13 +64,13 @@
 						    <span class="text">email@email.com</span>
 					    </div> --}}
 				 <div class="col-md-9 col-sm-9 col-lg-9 pr-1 d-flex topper  text-lg-right">
-                    <nav class="navbar ml-0 px-0">
-                        <a class="nav-item nav-link text-warning py-0 px-1" href="#">Balance |</a>
+                    <nav class="navbar  px-0">
+
                         <a class="nav-item nav-link text-warning py-0 px-1" href="#">How It Works? |</a>
                         <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('contact')}}">CONTACT |</a>
                         <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('about')}}">ABOUT |</a>
                         <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('blog')}}">BLOG |</a>
-                        <a class="nav-item nav-link text-warning py-0 px-1" href="#">DOWNLOAD APP |</a>
+                        <a class="nav-item nav-link text-warning py-0 px-1" href="#">DOWNLOAD APP </a>
 
 
                     </nav>

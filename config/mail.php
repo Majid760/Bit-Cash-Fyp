@@ -61,7 +61,7 @@ return [
     // ],
 
     'from' => [
-            'address' =>  'hello@example.com',
+            'address' =>  'bit-cash@support.com',
             'name' => 'Majid Ali Khan',
         ],
 

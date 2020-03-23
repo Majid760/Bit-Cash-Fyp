@@ -91,7 +91,7 @@ class UserRegisterController extends Controller
     protected function registered(Request $request, $user)
     {
         //
-        return redirect()->route('/');
+
     }
 
     /**

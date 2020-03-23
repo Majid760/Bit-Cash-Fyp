@@ -84,6 +84,7 @@ class UserForgotPasswordController extends Controller
      */
     protected function sendResetLinkResponse(Request $request, $response)
     {
+        // dd(back()->with('status', trans($response)));
         return back()->with('status', trans($response));
     }
 
