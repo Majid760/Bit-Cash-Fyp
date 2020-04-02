@@ -138,7 +138,7 @@ class UserLoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         //
-        return request()->route('RouteServiceProvider::HOME');
+        return request()->route('/');
     }
 
 

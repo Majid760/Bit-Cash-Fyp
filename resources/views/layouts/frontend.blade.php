@@ -9,14 +9,19 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- user dashboard css -->
+    <link href="{{ asset('backend/css/user-dashboard-style.css')}}" rel="stylesheet" >
+    {{-- <!-- sign in and up css -->
+    <link rel="stylesheet" href="{{asset('/frontend/css/sign-in-up-style.css')}}"> --}}
 
-
-
+    <!-- css files -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <link rel="stylesheet" href="{{asset('frontend/css/open-iconic-bootstrap.min.css')}}">
 
     <link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
@@ -59,23 +64,23 @@
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
 						    <span class="text">+92 35 2355 98</span>
 					    </div>
-					    {{-- <div class="col-md-3 col-sm-2 pr-4 d-flex topper align-items-center">
+					    <div class="col-md-3 col-sm-2 col-lg-3 pr-4 d-flex topper align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
 						    <span class="text">email@email.com</span>
-					    </div> --}}
-				 <div class="col-md-9 col-sm-9 col-lg-9 pr-1 d-flex topper  text-lg-right">
-                    <nav class="navbar  px-0">
+					    </div>
+                        <div class="col-md-6 col-sm-8 col-lg-6 pr-1 d-flex topper  text-lg-right">
+                            <nav class="navbar  px-0 top-navbar">
 
-                        <a class="nav-item nav-link text-warning py-0 px-1" href="#">How It Works? |</a>
-                        <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('contact')}}">CONTACT |</a>
-                        <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('about')}}">ABOUT |</a>
-                        <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('blog')}}">BLOG |</a>
-                        <a class="nav-item nav-link text-warning py-0 px-1" href="#">DOWNLOAD APP </a>
+                                <a class="nav-item nav-link text-warning py-0 px-1 " href="#">How It Works? |</a>
+                                <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('contact')}}">CONTACT |</a>
+                                <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('about')}}">ABOUT |</a>
+                                <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('blog')}}">BLOG |</a>
+                                <a class="nav-item nav-link text-warning py-0 px-1" href="#">DOWNLOAD APP </a>
 
 
-                    </nav>
+                            </nav>
 
-				</div>
+                        </div>
 			</div>
 		 </div>
 		</div>
@@ -212,11 +217,11 @@
                   </div>
                 @else
                 <div class="dropdown">
-                    <button  class="dropbtn btn text-center accoutn-btn ml-2" disabled>My Account <i class="fa fa-user pl-2"></i></button>
+                    <button  class="dropbtn btn text-center accoutn-btn ml-2" >My Account <i class="fa fa-user pl-2"></i></button>
                     <div class="dropdown-content">
                         <a  href="#" >AVAIL:Rs {{ __('0') }} </a>
                         <a  href="#" >PENDING:Rs {{ __('0') }} </a>
-                        <a  href="#" >My Account <i class="fa fa-user pl-2"></i></a>
+                        <a  href="{{route('user.dashboard')}}" >My Account <i class="fa fa-user pl-2"></i></a>
                         <a  href="{{route('user.logout')}}">Logout<i class="fa fa-sign-out  pl-2"></i></a>
                     </div>
                 </div>

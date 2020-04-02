@@ -32,7 +32,7 @@ class UserRegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -91,6 +91,7 @@ class UserRegisterController extends Controller
     protected function registered(Request $request, $user)
     {
         //
+        return request()->route('/');
 
     }
 

@@ -1,6 +1,13 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
+
 Route::get('/', 'FrontendController@index')->name('home');
+// Route::get('/', function(){
+//     return 'kdkkdkd';
+// })->name('home');
+
 
 
 

@@ -16,6 +16,13 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
+          <div class="carousel-item">
+                <img class="d-block w-100 img-fluid img-slider" style="height:450px" src="{{asset('/frontend/images/category-4.png')}}" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Amazing Deals:</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint.</p>
+                </div>
+          </div>
           <div class="carousel-item active">
             <img class="d-block w-100 img-fluid img-slider" style="object-fit:cover"src="{{asset('/frontend/images/category-2.jpg')}}" alt="First slide">
 
@@ -25,19 +32,13 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 img-fluid img-slider" src="{{asset('/frontend/images/category-3.jpg')}}" alt="Second slide">
+            <img class="d-block w-100 img-fluid img-slider" src="{{asset('/frontend/images/sale60.png')}}" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
                 <h5>Amazing Deals:</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint</p>
             </div>
           </div>
-          <div class="carousel-item">
-            <img class="d-block w-100 img-fluid img-slider" style="height:450px" src="{{asset('/frontend/images/category-4.jpg')}}" alt="Third slide">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Amazing Deals:</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint.</p>
-            </div>
-          </div>
+
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -500,21 +501,21 @@
                 <div class="row py-2 my-2 text-center">
                     <div class="col-sm-12 col-md-3 my-2 col-lg-3 service--section">
                         <div class="service-icon">
-                            <i class="fa fa-search fa-4x mt-3"></i>
+                            <i class="fa fa-search fa-4x mt-3 custom-font"></i>
                         </div>
                         <p class="service--sectio__title">One step registration</p>
                         <p>Login & Browse Offers from 300+ Online Stores.</p>
                     </div>
                     <div class="col-sm-12 col-md-3 my-2 col-lg-3 service--section">
                         <div class="service-icon">
-                            <i class="fa fa-shopping-cart fa-4x mt-3"></i>
+                            <i class="fa fa-shopping-cart fa-4x mt-3 custom-font"></i>
                         </div>
                         <p class="service--sectio__title">Search 20+ Stores</p>
                         <p>Shop at any Store after Redirecting via Bit-Cash.</p>
                     </div>
                     <div class="col-sm-12 col-md-3 my-2 col-lg-3 service--section">
                         <div class="service-icon">
-                            <i class="fa fa-google-wallet fa-4x mt-3"></i>
+                            <i class="fa fa-google-wallet fa-4x mt-3 custom-font"></i>
                         </div>
 
                         <h2 class="service--sectio__title">Amount Verification</h2>
@@ -522,7 +523,7 @@
                     </div>
                     <div class="col-sm-12 col-md-3 col-lg-3 my-2  service--section">
                         <div  class="service-icon">
-                            <i class="fa fa-money fa-4x mt-3"></i>
+                            <i class="fa fa-money fa-4x mt-3 custom-font"></i>
                         </div>
                         <h2 class="service--sectio__title">redeem</h2>
                         <p>Redeem Earned Cashback to Bank Account</p>
