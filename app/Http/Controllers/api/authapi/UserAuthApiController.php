@@ -2,87 +2,84 @@
 
 namespace App\Http\Controllers\api\authapi;
 
-use App\Team;
 use App\User;
-use App\TeamFile;
-use App\TeamEvent;
-use App\TeamMember;
-use App\ChatMessage;
-// use Tymon\JWTAuth\JWTAuth;
-use Tymon\JWTAuth\Facades\JWTAuth;
-use App\MessageConversation;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\RegisterAuthRequest;
-use Tymon\JWTAuth\Exceptions\JWTException;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+
 
 class UserAuthApiController extends Controller
 {
-    //
- public $loginAfterSignUp = false;
+
+    public $successStatus= 200;
 
 
-    public function register(Request $request)
-    {
-        $user = new User();
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = bcrypt($request->password);
-        $user->save();
+    // login the user function
 
-        if ($this->loginAfterSignUp) {
-            // dd($this->login($request));
-            return $this->login($request);
-        }
-        $input = $request->only('email', 'password');
-        $jwt_token = JWTAuth::attempt($input);
 
-        return response()->json([
-            'success' => true,
-            'token' => $jwt_token,
-            'user' => $user
-        ], 200);
-    }
+    public function login(Request $request) {
 
-    public function login(Request $request)
-    {
-        $jwt_token = null;
-        $input = $request->only('email', 'password');
-        if (!$jwt_token = JWTAuth::attempt($input)) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Invalid Email or Password',
-            ], 401);
-        }else{
-            $user=User::where('email',$input['email'])->first();
-            return response()->json([
-                    'success' => true,
-                    'token' => $jwt_token,
-                    'user' =>$user,
-                ]);
-        }
-
-    }
-
-    public function logout(Request $request)
-    {
-        $this->validate($request, [
-            'token' => 'required'
+        $validator= Validator::make($request->all(),[
+            'email'    => 'required|email| max:255',
+            'password' => 'required|string|min:6',
         ]);
+        if($validator->fails()){
+            return response()->json(['error' => $validator->errors()],401);
+        }
 
-        try {
-            JWTAuth::invalidate($request->token);
+        if(Auth::attempt(['email' => request('email'), 'password' => request('password')]))
+        {
+            $user=Auth::user();
+            $success['token']=$user->createToken('bit-cach')->accessToken ;
+            return response()->json(['successs'=>$success],$this->successStatus);
 
-            return response()->json([
-                'success' => true,
-                'message' => 'User logged out successfully'
-            ]);
-        } catch (JWTException $exception) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Sorry, the user cannot be logged out'
-            ], 500);
+        }else{
+            return response()->json(['error'=> 'Unauthorized'], 401);
         }
     }
+
+
+    // register the user function
+
+    public function register(Request $request){
+        $validator= Validator::make($request->all(),[
+            'name'     => 'required|string|max:255',
+            'email'    => 'required|email| max:255|unique:users',
+            'password' => 'required|string|min:6',
+            'c_password' => 'required|string|min:6|same:password',
+
+            ]);
+            if($validator->fails()){
+                return response()->json(['error' => $validator->errors()],401);
+            }
+            $input=$request->all();
+            $input['password']=Hash::make($input['password']);
+            $user=User::create($input);
+            $success['token']=$user->createToken('bit-cash')->accessToken;
+            $success['name']=$user->name;
+            return response()->json(['success'=>$success], $this->successStatus);
+
+     }
+
+
+    // get the detail the loged in user
+
+    public function logout(Request $request) {
+
+            $request->user()->token()->revoke();
+            return response()->json([
+                'message' => 'Successfully logged out'
+            ]);
+
+    }
+
+    public function getDetails(){
+
+        $user=auth()->user();
+        return response()->json(['success'=>$user], $this->successStatus);
+    }
+
 
 }

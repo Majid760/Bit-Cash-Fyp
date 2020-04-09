@@ -7,12 +7,12 @@
 
 @section('content')
 
-<div class="hero-wrap hero-bread" style="background-image: url('frontend/images/bg_1.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url('frontend/images/category-4.png');">
     <div class="container">
       <div class="row no-gutters slider-text align-items-center justify-content-center">
         <div class="col-md-9 ftco-animate text-center">
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About us</span></p>
-          <h1 class="mb-0 bread">About us</h1>
+            {{-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About us</span></p> --}}
+            <h1 class="mb-0 bread"><span style="color:#061824">Ab</span><span style="color:#FF7904">out us</span></h1>
         </div>
       </div>
     </div>
@@ -22,14 +22,14 @@
           <div class="container">
               <div class="row">
                   <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(frontend/images/about.jpg);">
-                      <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+                      <a href="#" class="icon popup-vimeo d-flex justify-content-center align-items-center">
                           <span class="icon-play"></span>
                       </a>
                   </div>
                   <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
             <div class="heading-section-bold mb-4 mt-md-5">
                 <div class="ml-md-0">
-                  <h2 class="mb-4">Welcome to Vegefoods an eCommerce website</h2>
+                  <h2 class="mb-4">Welcome to Bit-Cach an eCommerce website</h2>
               </div>
             </div>
             <div class="pb-md-5">
@@ -44,7 +44,7 @@
 
     <!-- proudy partner section -->
     <hr>
-        
+
     <section class="ftco-section ftco-partner">
     <div class="container mt-2">
         <div class="row">
@@ -67,9 +67,9 @@
     </div>
 </section>
 
-    <!-- end of proudy partner section --> 
-      
-     
+    <!-- end of proudy partner section -->
+
+
       <hr>
       <section class="ftco-section testimony-section">
     <div class="container">
@@ -158,7 +158,7 @@
     </div>
   </section>
   <hr>
- 
+
 
 
 

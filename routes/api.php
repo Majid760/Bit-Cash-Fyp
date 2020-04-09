@@ -18,10 +18,14 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::prefix('auth')->group(function(){
+Route::post('login', 'api\authapi\UserAuthApiController@login');
+Route::post('register', 'api\authapi\UserAuthApiController@register');
 
-    Route::post('login', 'Api\AuthApi\UserAuthApiController@login');
-    Route::post('logout', 'Api\AuthApi\UserAuthApiController@logout');
-    Route::post('register', 'Api\AuthApi\UserAuthApiController@register');
+Route::group(['middileware' => 'Auth::api'], function (){
+
+    Route::post('detail', 'api\authapi\UserAuthApiController@getDetails');
+    Route::post('logout', 'api\authapi\UserAuthApiController@logout');
+
 
 });
+

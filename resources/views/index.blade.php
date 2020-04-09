@@ -17,7 +17,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item">
-                <img class="d-block w-100 img-fluid img-slider" style="height:450px" src="{{asset('/frontend/images/category-4.png')}}" alt="Third slide">
+                <img class="d-block w-100 img-fluid img-slider  " style="height:450px" src="{{asset('/frontend/images/category-4.png')}}" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Amazing Deals:</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint.</p>
@@ -87,7 +87,7 @@
 									<div class="text text-center">
 										<h2 class="text-color">Our Quality Products</h2>
 										<p>Save the money for your future!</p>
-										<p><a href="#" class="btn btn-primary">Shop now</a></p>
+										<p><a href="#" class="btn btn-primary" style="background:#EA3562; border-color:#EA3562;">Shop now</a></p>
 									</div>
 								</div>
 							</div>
@@ -131,7 +131,7 @@
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<span class="subheading">Featured Products</span>
             <h2 class="mb-4">Our Products</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+            {{-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> --}}
           </div>
         </div>
     	</div>
@@ -140,15 +140,15 @@
         <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="product">
                 <a href="#" class="img-prod">
-        <img class="img-fluid" src="frontend/images/product-1.jpg" alt="Colorlib Template">
+                    <img class="img-fluid product-image" src="frontend/images/Manicure-Milling-Drill-Bit.jpg" alt="Colorlib Template">
                     <span class="status">30%</span>
                     <div class="overlay"></div>
                 </a>
                 <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Bell Pepper</a></h3>
+                    <h3><a href="#">Manicure-Milling-Drill-Bit</a></h3>
                     <div class="d-flex">
                         <div class="pricing">
-                            <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
+                            {{-- <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p> --}}
                         </div>
                     </div>
                     <div class="bottom-area d-flex px-3">
@@ -172,12 +172,12 @@
         <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="product">
                 <a href="#" class="img-prod">
-        <img class="img-fluid" src="frontend/images/product-2.jpg" alt="Colorlib Template">
-        <span class="status">35%</span>
+                        <img class="img-fluid product-image" src="frontend/images/Spider-Nail-Gel.png" alt="Colorlib Template">
+                        <span class="status">35%</span>
                     <div class="overlay"></div>
                 </a>
                 <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Strawberry</a></h3>
+                    <h3><a href="#">Spider-Nail-Gel</a></h3>
                     <div class="d-flex">
                         <div class="pricing">
                             <p class="price"><span>$120.00</span></p>
@@ -202,12 +202,12 @@
         <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="product">
                 <a href="#" class="img-prod">
-        <img class="img-fluid" src="frontend/images/product-3.jpg" alt="Colorlib Template">
-            <span class="status">20%</span>
+                     <img class="img-fluid product-image" src="frontend/images/Wifi-Repeater.jpg" alt="Colorlib Template">
+                    <span class="status">20%</span>
                     <div class="overlay"></div>
                 </a>
                 <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Green Beans</a></h3>
+                    <h3><a href="#">Wifi-Repeater</a></h3>
                     <div class="d-flex">
                         <div class="pricing">
                             <p class="price"><span>$120.00</span></p>
@@ -231,11 +231,11 @@
         </div>
         <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid" src="frontend/images/product-4.jpg" alt="Colorlib Template">
+                <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Wireless-Phone-Chargers.jpg" alt="Colorlib Template">
                     <div class="overlay"></div>
                 </a>
                 <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Purple Cabbage</a></h3>
+                    <h3><a href="#">Wireless-Phone-Chargers</a></h3>
                     <div class="d-flex">
                         <div class="pricing">
                             <p class="price"><span>$120.00</span></p>
@@ -261,12 +261,12 @@
 
         <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid" src="frontend/images/product-5.jpg" alt="Colorlib Template">
+                <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Phone-Lenses.jpg" alt="Colorlib Template">
                     <span class="status">30%</span>
                     <div class="overlay"></div>
                 </a>
                 <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Tomatoe</a></h3>
+                    <h3><a href="#">Phone-Lenses</a></h3>
                     <div class="d-flex">
                         <div class="pricing">
                             <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
@@ -290,11 +290,11 @@
         </div>
         <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid" src="frontend/images/product-6.jpg" alt="Colorlib Template">
+                <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Home-Security-IP-Camera.jpg" alt="Colorlib Template">
                     <div class="overlay"></div>
                 </a>
                 <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Brocolli</a></h3>
+                    <h3><a href="#">Home-Security-IP-Camera</a></h3>
                     <div class="d-flex">
                         <div class="pricing">
                             <p class="price"><span>$120.00</span></p>
@@ -318,11 +318,11 @@
         </div>
         <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid" src="frontend/images/product-7.jpg" alt="Colorlib Template">
+                <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Face-Shield.png" alt="Colorlib Template">
                     <div class="overlay"></div>
                 </a>
                 <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Carrots</a></h3>
+                    <h3><a href="#">Face-Shield</a></h3>
                     <div class="d-flex">
                         <div class="pricing">
                             <p class="price"><span>$120.00</span></p>
@@ -346,11 +346,11 @@
         </div>
         <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid" src="frontend/images/product-8.jpg" alt="Colorlib Template">
+                <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Car-Phone-Holder.jpg" alt="Colorlib Template">
                     <div class="overlay"></div>
                 </a>
                 <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Fruit Juice</a></h3>
+                    <h3><a href="#">Car-Phone-Holder</a></h3>
                     <div class="d-flex">
                         <div class="pricing">
                             <p class="price"><span>$120.00</span></p>
@@ -375,11 +375,11 @@
 
                 <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="frontend/images/product-8.jpg" alt="Colorlib Template">
+                    <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Selfie-Drone-Quadcopter.jpg" alt="Colorlib Template">
                     <div class="overlay"></div>
                     </a>
                     <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Fruit Juice</a></h3>
+                    <h3><a href="#">Selfie-Drone-Quadcopter</a></h3>
                     <div class="d-flex">
                         <div class="pricing">
                         <p class="price"><span>$120.00</span></p>
@@ -403,11 +403,11 @@
                 </div>
                 <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="frontend/images/product-8.jpg" alt="Colorlib Template">
+                    <a href="#" class="img-prod"><img class="img-fluid" src="frontend/images/Fishing-Quick-Knot-Tool.jpg" alt="Colorlib Template">
                     <div class="overlay"></div>
                     </a>
                     <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Fruit Juice</a></h3>
+                    <h3><a href="#">Fishing-Quick-Knot-Tool</a></h3>
                     <div class="d-flex">
                         <div class="pricing">
                         <p class="price"><span>$120.00</span></p>
@@ -431,11 +431,11 @@
                 </div>
                 <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="frontend/images/product-8.jpg" alt="Colorlib Template">
+                    <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Front-Facing-Baby-Carrier.jpg" alt="Colorlib Template">
                     <div class="overlay"></div>
                     </a>
                     <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Fruit Juice</a></h3>
+                    <h3><a href="#">Front-Facing-Baby-Carrier</a></h3>
                     <div class="d-flex">
                         <div class="pricing">
                         <p class="price"><span>$120.00</span></p>
@@ -459,11 +459,11 @@
                 </div>
                 <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="frontend/images/product-8.jpg" alt="Colorlib Template">
+                    <a href="#" class="img-prod "><img class="img-fluid product-image" src="frontend/images/Portable-Blender-Electric-Blender.jpg" alt="Colorlib Template">
                     <div class="overlay"></div>
                     </a>
                     <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Fruit Juice</a></h3>
+                    <h3><a href="#">Portable-Blender-Electric-Blender</a></h3>
                     <div class="d-flex">
                         <div class="pricing">
                         <p class="price"><span>$120.00</span></p>
@@ -544,33 +544,33 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/daraz.jpg')}}" class="img-fluid img-css">
+                    <img src="{{asset('frontend/images/daraz.jpg')}}" class="img-fluid  img-css zoom">
                     <h2 class="cashback-offers">Up to 13% Cashback</h2>
                     <p class="cashback-percent">50+ offers</p>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img  src="{{asset('frontend/images/yayvo4.png')}}" class="img-fluid img-css">
+                    <img  src="{{asset('frontend/images/yayvo4.png')}}" class="img-fluid img-css zoom">
                     <h2 class="cashback-offers">Up to 9% Cashback</h2>
                     <p class="cashback-percent">20+ offers</p>
 
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/aliexpress.png')}}" class="img-fluid img-css">
+                    <img src="{{asset('frontend/images/aliexpress.png')}}" class="img-fluid img-css zoom">
                     <h2 class="cashback-offers">Up to 15% Cashback</h2>
                     <p class="cashback-percent">10+ offers</p>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/ishoopingg.jpg')}}" class="img-fluid img-css">
+                    <img src="{{asset('frontend/images/ishoopingg.jpg')}}" class="img-fluid img-css zoom">
                     <h2 class="cashback-offers">Up to 20% Cashback</h2>
                     <p class="cashback-percent">50+ offers</p>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/mega.png')}}" class="img-fluid img-css">
+                    <img src="{{asset('frontend/images/mega.png')}}" class="img-fluid img-css zoom">
                     <h2 class="cashback-offers">Up to 10% Cashback</h2>
                     <p class="cashback-percent">30+ offers</p>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/goto.jpg')}}" class="img-fluid img-css">
+                    <img src="{{asset('frontend/images/goto.jpg')}}" class="img-fluid img-css zoom">
                     <h2 class="cashback-offers">Up to 10% Cashback</h2>
                     <p class="cashback-percent">26+ offers</p>
                 </div>
@@ -579,33 +579,33 @@
 
             <div class="row mt-3">
                 <div class="col-sm-6 col-md-4 col-lg-2">
-                 <img src="{{asset('frontend/images/telemart2.png')}}" class="img-fluid img-css">
+                 <img src="{{asset('frontend/images/telemart2.png')}}" class="img-fluid img-css zoom">
                  <h2 class="cashback-offers">Up to 9% Cashback</h2>
                     <p class="cashback-percent">20+ offers<p>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img  src="{{asset('frontend/images/shophive3.jpg')}}" class="img-fluid img-css">
+                    <img  src="{{asset('frontend/images/shophive3.jpg')}}" class="img-fluid img-css zoom">
                     <h2 class="cashback-offers">Up to 10% Cashback</h2>
                     <p class="cashback-percent">40+ offers</p>
 
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/clickypk.jpg')}}" class="img-fluid img-css">
+                    <img src="{{asset('frontend/images/clickypk.jpg')}}" class="img-fluid img-css zoom">
                     <h2 class="cashback-offers">Up to 10% Cashback</h2>
                     <p class="cashback-percent">10+ offers</p>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/elo.png')}}" class="img-fluid img-css">
+                    <img src="{{asset('frontend/images/elo.png')}}" class="img-fluid img-css zoom">
                     <h2 class="cashback-offers">Up to 12% Cashback</h2>
                     <p class="cashback-percent">25+ offers</p>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/homeshoping.jpg')}}" class="img-fluid img-css">
+                    <img src="{{asset('frontend/images/homeshoping.jpg')}}" class="img-fluid img-css zoom">
                     <h2 class="cashback-offers">Up to 17% Cashback</h2>
                     <p class="cashback-percent">20+ offers</p>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/symbios.jpg')}}" class="img-fluid img-css">
+                    <img src="{{asset('frontend/images/symbios.jpg')}}" class="img-fluid img-css zoom">
                     <h2 class="cashback-offers">Up to 23% Cashback</h2>
                     <p class="cashback-percent">50+ offers</p>
                 </div>
@@ -738,19 +738,19 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm ftco-animate">
-                            <a href="#" class="partner"><img src="frontend/images/partner-1.png" class="img-fluid" alt="Colorlib Template"></a>
+                            <a href="#" class="partner"><img src="frontend/images/amazonn.png" class="img-fluid" alt="Colorlib Template"></a>
                         </div>
                         <div class="col-sm ftco-animate">
-                            <a href="#" class="partner"><img src="frontend/images/partner-2.png" class="img-fluid" alt="Colorlib Template"></a>
+                            <a href="#" class="partner"><img src="frontend/images/aliexpress-partner.png" class="img-fluid" alt="Colorlib Template"></a>
                         </div>
                         <div class="col-sm ftco-animate">
-                            <a href="#" class="partner"><img src="frontend/images/partner-3.png" class="img-fluid" alt="Colorlib Template"></a>
+                            <a href="#" class="partner"><img src="frontend/images/daraz-partner.png" class="img-fluid" alt="Colorlib Template"></a>
                         </div>
                         <div class="col-sm ftco-animate">
-                            <a href="#" class="partner"><img src="frontend/images/partner-4.png" class="img-fluid" alt="Colorlib Template"></a>
+                            <a href="#" class="partner"><img src="frontend/images/yayvo-partner.png" class="img-fluid" alt="Colorlib Template"></a>
                         </div>
                         <div class="col-sm ftco-animate">
-                            <a href="#" class="partner"><img src="frontend/images/partner-5.png" class="img-fluid" alt="Colorlib Template"></a>
+                            <a href="#" class="partner"><img src="frontend/images/elo-partner.png" class="img-fluid" alt="Colorlib Template"></a>
                         </div>
                     </div>
                 </div>

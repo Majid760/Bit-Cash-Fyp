@@ -6,12 +6,11 @@
 @endsection
 
 @section('content')
-<div class="hero-wrap hero-bread" style="background-image: url('frontend/images/bg_1.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url('frontend/images/fetival.png');">
     <div class="container">
       <div class="row no-gutters slider-text align-items-center justify-content-center">
         <div class="col-md-9 ftco-animate text-center">
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact us</span></p>
-          <h1 class="mb-0 bread">Contact us</h1>
+            <h1 class="mb-0 bread"><span style="color:#142A51;">Contact us </span></h1>
         </div>
       </div>
     </div>
@@ -61,7 +60,7 @@
               <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
             </div>
           </form>
-        
+
         </div>
 
         <div class="col-md-6 d-flex">
@@ -74,5 +73,5 @@
   @endsection
 
   @section('scripts')
-      
+
   @endsection

@@ -1,7 +1,6 @@
 @extends('layouts.frontend')
 
 @section('styles')
-
 @endsection
 @section('content')
     <div class="container">
