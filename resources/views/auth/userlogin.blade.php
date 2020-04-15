@@ -4,7 +4,7 @@
  <!-- sign in and up css -->
  <link rel="stylesheet" href="{{asset('/frontend/css/sign-in-up-style.css')}}">
 
-@section('content')
+@section('content')/
 <div class="container">
     <div class="row mt-3">
         <div class="main">

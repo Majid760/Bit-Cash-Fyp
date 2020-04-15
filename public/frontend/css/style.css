@@ -10102,16 +10102,18 @@ textarea.form-control {
     height: 300px;
     background: #e3e3e3;
     background-color: #EA3562;
+
     /* background:url('../images/get-cashback.jpg'); */
     /* margin: 0 3px; */
     border: 4px solid whitesmoke;
+    border-radius: 80px 5px 80px 5px;
 }
 
 .service-icon {
     height: 100px;
     width: 100px;
     margin: 10px auto;
-    border-radius: 50%;
+    border-radius: 30px 3px 30px 3px;
     background-color: #F1F1F1;
 }
 

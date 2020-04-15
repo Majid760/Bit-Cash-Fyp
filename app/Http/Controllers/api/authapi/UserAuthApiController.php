@@ -15,6 +15,10 @@ class UserAuthApiController extends Controller
 
     public $successStatus= 200;
 
+    public function __construct() {
+        // $this->mid
+    }
+
 
     // login the user function
 

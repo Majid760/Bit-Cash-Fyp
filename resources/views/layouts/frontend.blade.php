@@ -27,8 +27,9 @@
     <link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
 
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
-    <!-- mega-menu -->
-    <link rel="stylesheet" href="{{asset('frontend/css/megamenu.css')}}">
+
+
+
 
 
     <link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.min.css')}}">
@@ -52,149 +53,238 @@
      <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <!-- mega  menu -->
+
+    <link href="{{ asset('frontend/css/mega-menu.css') }}" rel="stylesheet" id="bootstrap-css">
+
+
+
     @yield('styles')
   </head>
   <body class="goto-here">
 		<div class="py-1 " style="background-color:#EA3562">
-    	<div class="container">
-    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
-	    		<div class="col-lg-12 d-block">
-		    		<div class="row d-flex">
-		    			<div class="col-md-3 col-sm-2 pr-4 col-lg-3 d-flex topper  align-items-center">
-					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-						    <span class="text">+92 35 2355 98</span>
-					    </div>
-					    <div class="col-md-3 col-sm-2 col-lg-3 pr-4 d-flex topper align-items-center">
-					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-						    <span class="text">email@email.com</span>
-					    </div>
-                        <div class="col-md-6 col-sm-8 col-lg-6 pr-1 d-flex topper  text-lg-right">
-                            <nav class="navbar  px-0 top-navbar">
+            <div class="container">
+                <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+                    <div class="col-lg-12 d-block">
+                        <div class="row d-flex">
+                            <div class="col-md-3 col-sm-2 pr-4 col-lg-3 d-flex topper  align-items-center">
+                                <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                                <span class="text">+92 35 2355 98</span>
+                            </div>
+                            <div class="col-md-3 col-sm-2 col-lg-3 pr-4 d-flex topper align-items-center">
+                                <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                                <span class="text">email@email.com</span>
+                            </div>
+                            <div class="col-md-6 col-sm-8 col-lg-6 pr-1 d-flex topper  text-lg-right">
+                                <nav class="navbar  px-0 top-navbar">
 
-                                <a class="nav-item nav-link text-warning py-0 px-1 " href="#">How It Works? |</a>
-                                <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('contact')}}">CONTACT |</a>
-                                <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('about')}}">ABOUT |</a>
-                                <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('blog')}}">BLOG |</a>
-                                <a class="nav-item nav-link text-warning py-0 px-1" href="#">DOWNLOAD APP </a>
-
-
-                            </nav>
-
+                                    <a class="nav-item nav-link text-warning py-0 px-1 " href="#how-to-work">How It Works? |</a>
+                                    <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('contact')}}">CONTACT |</a>
+                                    <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('about')}}">ABOUT |</a>
+                                    <a class="nav-item nav-link text-warning py-0 px-1" href="{{url('blog')}}">BLOG |</a>
+                                    <a class="nav-item nav-link text-warning py-0 px-1" href="#">DOWNLOAD APP </a>
+                                </nav>
+                            </div>
                         </div>
-			</div>
-		 </div>
-		</div>
-		  </div>
-    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Start nav -->
     <nav class="navbar navbar-expand-lg  ftco_navbar  ftco-navbar-light " id="ftco-navbar" style="margin-top:0 !important">
-	    <div class="container">
+        <div class="container">
             <a class="navbar-brand" href="{{route('home')}}"><span style="color:#EA3562">BIT</span><span style="color:#ffe100">-CASH<span></a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav">
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav">
               <li class="nav-item active  ml-3"><a href="{{route('home')}}" class="nav-link">HOME</a></li>
-	          <li class="nav-item dropdown mr-1">
-              <a class="nav-link dropdown-toggle mega-drop-down" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRODUCT</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown04" >
+              <!-- start of product mega menu -->
+              <li class="nav-item dropdown mr-1 menu-area">
+              <a class="nav-link dropdown-toggle mega-drop-down" href="#" id="mega-one" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">PRODUCT</a>
+              <div class="dropdown-menu mega-area" aria-labelledby="mega-one" >
 
-                <div class="col-md-6 col-lg-4" style="display:inline">
-            	<a class="dropdown-item" href="shop.html">Shop</a>
-              	<a class="dropdown-item" href="wishlist.html">Wishlist</a>
-                <a class="dropdown-item" href="product-single.html">Single Product</a>
-                <a class="dropdown-item" href="cart.html">Cart</a>
-                <a class="dropdown-item" href="checkout.html">Checkout</a>
-                </div>
-                <div class="col-md-6 col-lg-4" style="display:inline">
-                    <a class="dropdown-item" href="shop.html">Shop</a>
-                      <a class="dropdown-item" href="wishlist.html">Wishlist</a>
-                    <a class="dropdown-item" href="product-single.html">Single Product</a>
-                    <a class="dropdown-item" href="cart.html">Cart</a>
-                    <a class="dropdown-item" href="checkout.html">Checkout</a>
-                </div>
-                <div class="col-md-6 col-lg-4" style="display:inline">
-                    <a class="dropdown-item" href="shop.html">Shop</a>
-                      <a class="dropdown-item" href="wishlist.html">Wishlist</a>
-                    <a class="dropdown-item" href="product-single.html">Single Product</a>
-                    <a class="dropdown-item" href="cart.html">Cart</a>
-                    <a class="dropdown-item" href="checkout.html">Checkout</a>
-                </div>
-                    <!--mega-menu -->
-                    {{-- <div class="animated fadeIn  mega-menu  ">
-                        <div class="mega-menu-wrap">
-                            <div class="row">
-                                <div class="col-md-3 col-lg-3 ">
-                                    <h4 class="row mega-title ">Feature</h4>
-                                    <ul class="stander">
-                                        <li><a href="#">Mobile</a></li>
-                                        <li><a href="#">Computer</a></li>
-                                        <li><a href="#">Watch</a></li>
-                                        <li><a href="#">laptop</a></li>
-                                        <li><a href="#">Camera</a></li>
-                                        <li><a href="#">I pad</a></li>
-                                        <li><a class="view-more btn- btn-sm" href="#">View more</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 col-lg-3">
-                                        <h4 class="row mega-title">Standers</h4>
-                                    <ul class="stander">
-                                        <li><a href="#">Mobile</a></li>
-                                        <li><a href="#">Computer</a></li>
-                                        <li><a href="#">Watch</a></li>
-                                        <li><a href="#">laptop</a></li>
-                                        <li><a href="#">Camera</a></li>
-                                        <li><a href="#">I pad</a></li>
-                                        <li><a class="view-more btn- btn-sm" href="#">View more</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 col-lg-3">
-                                    <h4 class="row mega-title">Description</h4>
-                                    <ul class="description">
-                                        <li><a href="#">Women</a>
-                                            <span>Description of Women</span>
-                                        </li>
-                                        <li><a href="#">Men</a>
-                                                <span>Description of men Cloths</span>
-                                        </li>
-                                        <li><a href="#">Kids</a>
-                                                <span>Description of Kids Cloths</span>
-                                        </li>
-                                        <li><a href="#">Others</a>
-                                                <span>Description of Others Cloths</span>
-                                        </li>
-                                        <li>
-                                        <a class="view-more btn btn-sm " href="#">View more</a>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3 product-col">
+                     <div class="product-category">
+                        <h5>Electronics</h5>
+                        <a href="#" class="dropdown-item">Audio</a>
+                        <a href="#" class="dropdown-item">Telescope</a>
+                        <a href="#" class="dropdown-item">Computers</a>
+                        <a href="#" class="dropdown-item">Computers Accessories</a>
+                        <a href="#" class="dropdown-item">Camera </a>
+                        <a href="#" class="dropdown-item">Camera Accessories</a>
+                        <a href="#" class="dropdown-item">View more... </a>
 
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3 col-lg-3">
-                                <h4 class="row mega-title">Icon + Description</h4>
-                                    <ul class="icon-des">
-                                        <li><a href="#"><i class="fa fa-globe"></i>Web</a></li>
-                                        <li><a href="#"><i class="fa fa-mobile"></i>Mobile</a></li>
-                                        <li><a href="#"><i class="fa fa-arrows-h"></i>Responsive</a></li>
-                                        <li><a href="#"><i class="fa fa-desktop"></i>Desktop</a></li>
-                                        <li><a href="#"><i class="fa fa-paint-brush"></i>UI/UX</a></li>
-                                    </ul>
+
+                     </div>
+                     <div class="product-category">
+                        <h5>Home Appliances</h5>
+                        <a href="#" class="dropdown-item">Housekeeping Laundry</a>
+                        <a href="#" class="dropdown-item">Home Furnishing</a>
+                        <a href="#" class="dropdown-item">Home Services</a>
+                        <a href="#" class="dropdown-item">Home Decor Festive Needs</a>
+                        <a href="#" class="dropdown-item">Furniture</a>
+                        <a href="#" class="dropdown-item">View more...</a>
+
+                     </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 product-col">
+                        <div class="product-category">
+                            <h5>Women</h5>
+                            <a href="#" class="dropdown-item">Beauty And Personal Care</a>
+                            <a href="#" class="dropdown-item">Belts</a>
+                            <a href="#" class="dropdown-item">Clothing</a>
+                            <a href="#" class="dropdown-item">Footwear</a>
+                            <a href="#" class="dropdown-item">Handbags&amp;Wallets</a>
+                            <a href="#" class="dropdown-item">Jewellery</a>
+                            <a href="#" class="dropdown-item">View more...</a>
+                         </div>
+                         <div class="product-category">
+                            <h5>Baby &amp; Kids</h5>
+                            <a href="#" class="dropdown-item">Baby Care</a>
+                            <a href="#" class="dropdown-item">Bicycles &amp; Tricycles</a>
+                            <a href="#" class="dropdown-item">Kids &amp; Baby Clothing</a>
+                            <a href="#" class="dropdown-item">Kids Watches</a>
+                            <a href="#" class="dropdown-item">Toys</a>
+                            <a href="#" class="dropdown-item">View more</a>
+
+                         </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 product-col">
+                        <div class="product-category">
+                            <h5>Men</h5>
+                            <a href="#" class="dropdown-item">Beauty And Personal Care</a>
+                            <a href="#" class="dropdown-item">Belts</a>
+                            <a href="#" class="dropdown-item">Clothing</a>
+                            <a href="#" class="dropdown-item">Footwear</a>
+                            <a href="#" class="dropdown-item">Wallets</a>
+                            <a href="#" class="dropdown-item">Men Jewellery</a>
+                            <a href="#" class="dropdown-item">View more...</a>
+                         </div>
+                         <div class="product-category">
+                            <h5>Sports, Fitness &amp; Outdoors</h5>
+                            <a href="#" class="dropdown-item">Badminton&nbsp</a>
+                            <a href="#" class="dropdown-item">Baseball&nbsp</a>
+                            <a href="#" class="dropdown-item">Basketball</a>
+                            <a href="#" class="dropdown-item">Boxing</a>
+                            <a href="#" class="dropdown-item">Camping &amp; Hiking&nbsp;</a>
+                         </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 product-col">
+                      <div class="product-category">
+                        <h5>Trending Products</h5>
+                        <div class="product menu-top-trading-product">
+                            <a href="#" class="img-prod">
+                                    <img class="img-fluid menu-top-trading-product"  src="frontend/images/Spider-Nail-Gel.png" alt="Colorlib Template">
+                                    <span class="status">35%</span>
+                                <div class="overlay"></div>
+                            </a>
+                            <div class="text py-3 pb-4 px-3 text-center">
+                                <h3><a href="#">Spider-Nail-Gel</a></h3>
+                                <div class="d-flex">
+                                    <div class="pricing">
+                                        <p class="price"><span>$120.00</span></p>
+                                    </div>
                                 </div>
 
                             </div>
                         </div>
+                      </div>
+                        <div class="product-category">
+                            <div class="product menu-top-trading-product">
+                                <a href="#" class="img-prod"><img class="img-fluid  menu-top-trading-product" src="frontend/images/Face-Shield.png" alt="Colorlib Template">
+                                    <span class="status">55%</span>
+                                    <div class="overlay"></div>
+                                </a>
+                                <div class="text py-3 pb-4 px-3 text-center">
+                                    <h3><a href="#">Face-Shield</a></h3>
+                                    <div class="d-flex">
+                                        <div class="pricing">
+                                            <p class="price"><span>$120.00</span></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  --}}
+                </div>
+
+            </div>
+        </li>
+              <!-- end of product mega-menu -->
+
+              <!-- start of store mega menu -->
+
+              <li class="nav-item dropdown mr-1 menu-area">
+                <a class="nav-link dropdown-toggle mega-drop-down" href="#" id="mega-one" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">STORES</a>
+                <div class="dropdown-menu mega-area" aria-labelledby="mega-one" >
+
+                  <div class="row">
+                      <div class="col-sm-6 col-lg-6 product-col">
+                          <div class="row">
+                              <div class="col-lg-4 col-sm-6">
+                                <div class="megamenu-store-title">
+                                    <h4>Trending Store</h4>
+                                </div>
+                                <div class="megamenu-store">
+                                    <img src="{{asset('frontend/images/aliexpress.png')}}" class="img-fluid megamenu-store-img-css zoom">
+
+                                </div>
+                                <div class="megamenu-store">
+                                <img  src="{{asset('frontend/images/yayvo4.png')}}" class="img-fluid megamenu-store-img-css zoom">
+
+                                </div>
+                                <div class="megamenu-store">
+                                    <img src="{{asset('frontend/images/daraz.jpg')}}" class="img-fluid  megamenu-store-img-css zoom">
+
+                                </div>
+                                <div class="megamenu-store">
+                                    <img src="{{asset('frontend/images/elo.png')}}" class="img-fluid megamenu-store-img-css zoom">
+
+                                </div>
+                                <div class="megamenu-store">
+                                    <img src="{{asset('frontend/images/homeshoping.jpg')}}" class="img-fluid megamenu-store-img-css zoom">
+                                </div>
+                              </div>
+                              <div class="col-lg-4 col-sm-6">
+                                <div class="megamenu-store-title">
+                                    <h4>Top Store</h4>
+                                </div>
+                              </div>
+                              <div class="col-lg-4 col-sm-6">
+                                <div class="megamenu-store-title">
+                                    <h4>30% plus Cashback Stores</h4>
+                                </div>
+                              </div>
+                          </div>
+
+                      </div>
+
+
+                      <div class="col-sm-6 col-lg-6 product-col">
+                          <div class="row">
+                              <div class="col-lg-12 col-sm-6">
+
+                              </div>
+                          </div>
+
+                      </div>
+                  </div>
 
               </div>
+          </li>
 
 
-              <!-- end of mega-menu -->
-            </li>
-	          <li class="nav-item "><a href="#" class="nav-link">store</a></li>
-	          <li class="nav-item "><a href="#" class="nav-link">deal</a></li>
-	          <li class="nav-item "><a href="#" class="nav-link">offer</a></li>
-	          <!-- <li class="nav-item mr-1 cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li> -->
+              <!-- end of store mega menu -->
+
+              <li class="nav-item "><a href="#" class="nav-link">deal</a></li>
+              <li class="nav-item "><a href="#" class="nav-link">offer</a></li>
+              <!-- <li class="nav-item mr-1 cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li> -->
             <!-- <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -231,16 +321,17 @@
 
 
 
-
             </form>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <!-- END nav -->
 
+    <!-- END nav -->
 
     @yield('content')
+
 
 
     <!-- footer -->
@@ -326,6 +417,10 @@
         <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
+
+
+       <!-- scripts -->
+
         <script src="{{asset('js/jquery.min.js')}}"></script>
         <!-- slider -->
         <script src="{{asset('js/jquery-migrate-3.0.1.min.js')}}"></script>
@@ -343,7 +438,6 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
         <script src="{{asset('js/google-map.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
-        <script src="{{asset('js/megamenu.js')}}"></script>
 
         <!-- font-awesome -->
         <script src="https://use.fontawesome.com/ddf0dbc894.js"></script>

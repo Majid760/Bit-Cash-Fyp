@@ -1,0 +1,60 @@
+
+.banner-area{
+  height:auto;
+  width: 100%;
+  /* background-image: url(2.jpg); */
+  -webkit-background-size:cover;
+  background-size: cover;
+  background-position: center center
+}
+.menu-area{
+  position: static;
+
+}
+.mega-area{
+  position: absolute;
+  width:100%;
+  left: 0;
+  right: 0;
+  padding: 15px;
+}
+.container-fluid-zero {
+  padding-left:0 ;
+  padding-right: 0;
+
+}
+
+/* product megamenu css */
+
+.product-col {
+    padding: 10px;
+    border-left: 1px solid #E9EBEC;
+}
+.product-category{
+    padding:10px;
+    margin: 10px;
+}
+.product-category a:hover{
+    font-weight: 400;
+    background: #E9EBEC;
+}
+
+
+.menu-top-trading-product {
+    height:160px;
+    width:240px;
+}
+
+
+/* store megamenu css */
+
+.megamenu-store-img-css {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin:5px;
+    max-width: 100%;
+    height: 100px;
+    width: 110px;
+
+}

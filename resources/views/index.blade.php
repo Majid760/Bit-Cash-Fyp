@@ -1,9 +1,11 @@
 @extends('layouts.frontend')
 
+
 <!-- style Section -->
 @section('styles')
 
 @endsection
+
 
 @section('content')
 
@@ -491,7 +493,7 @@
 
         <!-- how to get cash-back section -->
         <section>
-            <div class="container">
+            <div class="container" id="how-to-work">
                 <hr>
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12 mt-3 pt-3">
