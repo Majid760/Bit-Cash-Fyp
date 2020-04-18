@@ -220,9 +220,9 @@
 
               <!-- start of store mega menu -->
 
-              <li class="nav-item dropdown mr-1 menu-area">
+              <li class="nav-item dropdown mr-1 menu-area-store">
                 <a class="nav-link dropdown-toggle mega-drop-down" href="#" id="mega-one" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">STORES</a>
-                <div class="dropdown-menu mega-area" aria-labelledby="mega-one" >
+                <div class="dropdown-menu mega-area-store" aria-labelledby="mega-one" >
 
                   <div class="row">
                       <div class="col-sm-6 col-lg-6 product-col">
@@ -255,20 +255,103 @@
                                 <div class="megamenu-store-title">
                                     <h4>Top Store</h4>
                                 </div>
+                                <div class="megamenu-store">
+                                    <img src="{{asset('frontend/images/aliexpress.png')}}" class="img-fluid megamenu-store-img-css zoom">
+
+                                </div>
+                                <div class="megamenu-store">
+                                <img  src="{{asset('frontend/images/elo.png')}}" class="img-fluid megamenu-store-img-css zoom">
+
+                                </div>
+                                <div class="megamenu-store">
+                                    <img src="{{asset('frontend/images/daraz.jpg')}}" class="img-fluid  megamenu-store-img-css zoom">
+
+                                </div>
+                                <div class="megamenu-store">
+                                    <img src="{{asset('frontend/images/telemart1.jpg')}}" class="img-fluid megamenu-store-img-css zoom">
+
+                                </div>
+                                <div class="megamenu-store">
+                                    <img src="{{asset('frontend/images/homeshoping.jpg')}}" class="img-fluid megamenu-store-img-css zoom">
+                                </div>
                               </div>
                               <div class="col-lg-4 col-sm-6">
                                 <div class="megamenu-store-title">
                                     <h4>30% plus Cashback Stores</h4>
+                                </div>
+                                <div class="megamenu-store">
+                                    <img src="{{asset('frontend/images/elo.png')}}" class="img-fluid megamenu-store-img-css zoom">
+
+                                </div>
+                                <div class="megamenu-store">
+                                <img  src="{{asset('frontend/images/goto.jpg')}}" class="img-fluid megamenu-store-img-css zoom">
+
+                                </div>
+                                <div class="megamenu-store">
+                                    <img src="{{asset('frontend/images/mega.png')}}" class="img-fluid  megamenu-store-img-css zoom">
+
+                                </div>
+                                <div class="megamenu-store">
+                                    <img src="{{asset('frontend/images/telemart1.jpg')}}" class="img-fluid megamenu-store-img-css zoom">
+
+                                </div>
+                                <div class="megamenu-store">
+                                    <img src="{{asset('frontend/images/homeshoping.jpg')}}" class="img-fluid megamenu-store-img-css zoom">
                                 </div>
                               </div>
                           </div>
 
                       </div>
 
-
+                     <!-- section of megamenu of store-link slider -->
                       <div class="col-sm-6 col-lg-6 product-col">
                           <div class="row">
                               <div class="col-lg-12 col-sm-6">
+                                <div class="megamenu-store-title">
+                                    <h4>Store of the Day</h4>
+                                </div>
+                                  <!-- Container for the image gallery -->
+                                  <div id="minimal-bootstrap-carousel" class="carousel slide carousel-fade slider-content-style slider-home-one">
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active slide-1" style="background-image: url(frontend/images/ramdanoffer.png');">
+                                            <div class="carousel-caption">
+                                                <div class="container">
+                                                    <div class="box valign-middle">
+                                                        <div class="content text-center">
+                                                            <h3 data-animation="animated fadeInUp">Ramdan Offers..</h3>
+                                                            <p data-animation="animated fadeInUp">Discount <span class="sep">.</span> Quality <span class="sep">.</span> Trust</p>
+                                                            <a data-animation="animated fadeInDown" href="#" class="thm-btn ">Free Delivery</a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item slide-2" style="background-image: url(frontend/images/storeoftheday.png) ;">
+                                            <div class="carousel-caption">
+                                                <div class="container">
+                                                    <div class="box valign-middle">
+                                                        <div class="content text-center">
+                                                            <h3 data-animation="animated fadeInUp">Ramdan Offers.</h3>
+                                                            <p data-animation="animated fadeInUp">Discount <span class="sep">.</span> Quality <span class="sep">.</span> Trust</p>
+                                                            <a data-animation="animated fadeInDown" href="#" class="thm-btn ">Free Delivery</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Controls -->
+                                    <a class="carousel-control-prev" href="#minimal-bootstrap-carousel" role="button" data-slide="prev">
+                                        <i class="fa fa-long-arrow-left"></i>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#minimal-bootstrap-carousel" role="button" data-slide="next">
+                                        <i class="fa fa-long-arrow-right"></i>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
 
                               </div>
                           </div>
