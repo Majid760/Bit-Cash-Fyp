@@ -58,6 +58,16 @@
     <link href="{{ asset('frontend/css/mega-menu.css') }}" rel="stylesheet" id="bootstrap-css">
 
 
+    <!-- store page layout -->
+
+    <link rel="stylesheet" href="{{asset('frontend/css/daterangepicker.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/lightbox.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/util.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/main.css')}}">
+
+
+
 
     @yield('styles')
   </head>
@@ -232,8 +242,9 @@
                                     <h4>Trending Store</h4>
                                 </div>
                                 <div class="megamenu-store">
+                                   <a href="{{ route('store') }}">
                                     <img src="{{asset('frontend/images/aliexpress.png')}}" class="img-fluid megamenu-store-img-css zoom">
-
+                                   </a>
                                 </div>
                                 <div class="megamenu-store">
                                 <img  src="{{asset('frontend/images/yayvo4.png')}}" class="img-fluid megamenu-store-img-css zoom">
@@ -518,13 +529,40 @@
         <script src="{{asset('js/jquery.animateNumber.min.js')}}"></script>
         <script src="{{asset('js/bootstrap-datepicker.js')}}"></script>
         <script src="{{asset('js/scrollax.min.js')}}"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+        {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> --}}
         <script src="{{asset('js/google-map.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
 
         <!-- font-awesome -->
         <script src="https://use.fontawesome.com/ddf0dbc894.js"></script>
         <script src="https://use.fontawesome.com/7b1b5f4647.js"></script>
+
+        <!-- store page scripts -->
+
+        <script type="text/javascript" src="{{ asset('frontend/js/animsition.min.js') }}"></script>
+    <!--===============================================================================================-->
+        <script type="text/javascript" src="{{ asset('frontend/js/popper.js')}}"></script>
+
+    <!--===============================================================================================-->
+        <script type="text/javascript" src="{{ asset('frontend/js/slick.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('frontend/js/slick-custom.js')}}"></script>
+    <!--===============================================================================================-->
+        <script type="text/javascript" src="{{ asset('frontend/js/countdowntime.js')}}"></script>
+    <!--===============================================================================================-->
+        <!-- <script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script> -->
+    <!--===============================================================================================-->
+        <script type="text/javascript" src="{{ asset('frontend/js/sweetalert.min.js')}}"></script>
+        <script type="text/javascript">
+            $('.block2-btn-addcart').each(function(){
+                var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+                $(this).on('click', function(){
+                    swal(nameProduct, "is added to cart !", "success");
+                });
+            });
+
+        </script>
+    <!--===============================================================================================-->
+    <script src="{{ asset('frontend/js/store-main.js')}}"></script>
 
       @yield('scripts')
   </body>

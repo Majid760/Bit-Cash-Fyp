@@ -1,8 +1,13 @@
 <?php
 
+// use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
+
+
 require_once 'bit-cash/frontend.php';
 require_once 'bit-cash/auth.php';
 require_once 'bit-cash/user.php';
+require_once 'bit-cash/product.php';
 
 
 /*
@@ -15,6 +20,13 @@ require_once 'bit-cash/user.php';
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+
+    Route::get('store','StoreController@index')->name('store');
+
+
+
 
 
 
