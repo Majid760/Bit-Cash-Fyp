@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Admin\Auth;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
-class UserLoginController extends Controller
+class AdminLoginControllerr extends Controller
 {
+    //
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -29,7 +30,7 @@ class UserLoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo='admin/dashboard';
 
     /**
      * Create a new controller instance.
@@ -38,17 +39,17 @@ class UserLoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest:web')->except('logout');
+        $this->middleware('guest:admin')->except('logout');
     }
 
-     /**
+    /**
      * Show the application's login form.
      *
      * @return \Illuminate\Http\Response
      */
     public function showLoginForm()
     {
-        return view('auth.userlogin');
+        return view('auth.admin.admin-login');
     }
 
     /**
@@ -63,7 +64,6 @@ class UserLoginController extends Controller
     {
 
         $this->validateLogin($request);
-        // dd('kdkkd');
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
         // the login attempts for this application. We'll key this by the username and
@@ -98,7 +98,7 @@ class UserLoginController extends Controller
     protected function validateLogin(Request $request)
     {
         $request->validate([
-            $this->username() => 'required|string',
+            $this->username() => 'required|email',
             'password' => 'required|string',
         ]);
     }
@@ -111,7 +111,7 @@ class UserLoginController extends Controller
      */
     protected function attemptLogin(Request $request)
     {
-        return $this->guard('web')->attempt(
+        return $this->guard('admin')->attempt(
             $this->credentials($request), $request->filled('remember')
         );
     }
@@ -127,7 +127,21 @@ class UserLoginController extends Controller
         return $request->only($this->username(), 'password');
     }
 
+    /**
+     * Send the response after the user was authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    protected function sendLoginResponse(Request $request)
+    {
+        $request->session()->regenerate();
 
+        $this->clearLoginAttempts($request);
+
+        return $this->authenticated($request, $this->guard('admin')->user())
+                ?: redirect()->intended($this->redirectPath());
+    }
 
     /**
      * The user has been authenticated.
@@ -139,10 +153,22 @@ class UserLoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         //
-        return request()->route('home');
     }
 
-
+    /**
+     * Get the failed login response instance.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        throw ValidationException::withMessages([
+            $this->username() => [trans('auth.failed')],
+        ]);
+    }
 
     /**
      * Get the login username to be used by the controller.
@@ -162,15 +188,13 @@ class UserLoginController extends Controller
      */
     public function logout(Request $request)
     {
-
         $this->guard()->logout();
-
 
         // $request->session()->invalidate();
 
         $request->session()->regenerateToken();
 
-        return $this->loggedOut($request) ?: redirect('home');
+        return $this->loggedOut($request) ?: redirect(route('admin.login'));
     }
 
     /**
@@ -182,7 +206,7 @@ class UserLoginController extends Controller
     protected function loggedOut(Request $request)
     {
         //
-        return redirect()->route('home');
+        return redirect()->route('admin.login');
     }
 
     /**
@@ -192,6 +216,15 @@ class UserLoginController extends Controller
      */
     protected function guard()
     {
-        return Auth::guard('web');
+        return Auth::guard('admin');
+    }
+
+    public function redirectPath()
+    {
+        if (method_exists($this, 'redirectTo')) {
+            return $this->redirectTo();
+        }
+
+        return property_exists($this, 'redirectTo') ? $this->redirectTo : '/home';
     }
 }

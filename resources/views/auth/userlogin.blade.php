@@ -6,7 +6,7 @@
 
 @section('content')/
 <div class="container">
-    <div class="row mt-3">
+    <div class="row ">
         <div class="main">
             <!-- Sing in  Form -->
                 <section class="sign-in">
@@ -16,6 +16,7 @@
                             <div class="alert alert-danger text-center mt-2">{{ $error }}</div>
                         @endforeach
                     @endif
+
                     <div class="signin-content">
                         <div class="signin-image">
                             <figure><img src="{{asset('frontend/images/signin-image.jpg')}}" alt="sing up image"></figure>

@@ -8,6 +8,8 @@ require_once 'bit-cash/frontend.php';
 require_once 'bit-cash/auth.php';
 require_once 'bit-cash/user.php';
 require_once 'bit-cash/product.php';
+require_once 'bit-cash/admin.php';
+
 
 
 /*

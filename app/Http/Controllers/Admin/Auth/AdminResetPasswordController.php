@@ -1,17 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Admin\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
-class UserResetPasswordController extends Controller
+class AdminResetPasswordController extends Controller
 {
-    /*
+    //
+      /*
     |--------------------------------------------------------------------------
     | Password Reset Controller
     |--------------------------------------------------------------------------
@@ -29,7 +32,22 @@ class UserResetPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/user/login';
+    protected $redirectTo = '/admin/login';
+
+
+    public function __construct() {
+        $this->middleware('guest:admin');
+    }
+
+    protected function broker()
+    {
+        return Password::broker('admins');
+    }
+
+    protected function guard(){
+
+        return Auth::guard('admin');
+    }
 
      /**
      * Display the password reset view for the given token.
@@ -42,7 +60,7 @@ class UserResetPasswordController extends Controller
      */
     public function showResetForm(Request $request, $token = null)
     {
-        return view('auth.passwords.user-reset')->with(
+        return view('auth.admin.passwords.admin-reset')->with(
             ['token' => $token, 'email' => $request->email]
         );
     }
@@ -74,15 +92,61 @@ class UserResetPasswordController extends Controller
                     : $this->sendResetFailedResponse($request, $response);
     }
 
+    /**
+     * Get the password reset validation rules.
+     *
+     * @return array
+     */
+    protected function rules()
+    {
+        return [
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|confirmed|min:8',
+        ];
+    }
+
+    /**
+     * Get the password reset validation error messages.
+     *
+     * @return array
+     */
+    protected function validationErrorMessages()
+    {
+        return [];
+    }
+
+    /**
+     * Get the password reset credentials from the request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    protected function credentials(Request $request)
+    {
+        return $request->only(
+            'email', 'password', 'password_confirmation', 'token'
+        );
+    }
+
+    /**
+     * Reset the given user's password.
+     *
+     * @param  \Illuminate\Contracts\Auth\CanResetPassword  $user
+     * @param  string  $password
+     * @return void
+     */
+
     public function redirectPath()
     {
-        Auth::guard('web')->logout();
+        Auth::guard('admin')->logout();
         if (method_exists($this, 'redirectTo')) {
             return $this->redirectTo();
         }
 
         return property_exists($this, 'redirectTo') ? $this->redirectTo : '/home';
     }
+
 
 
 

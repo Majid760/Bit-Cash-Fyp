@@ -1,20 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Admin\Auth;
 
 use App\User;
+use App\Admin;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
-class UserRegisterController extends Controller
+class AdminRegisterController extends Controller
 {
-    /*
+    //
+     /*
     |--------------------------------------------------------------------------
     | Register Controller
     |--------------------------------------------------------------------------
@@ -32,7 +34,7 @@ class UserRegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo;
 
     /**
      * Create a new controller instance.
@@ -41,16 +43,17 @@ class UserRegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest:web');
+        $this->middleware('guest:admin');
     }
-     /**
+
+    /**
      * Show the application registration form.
      *
      * @return \Illuminate\Http\Response
      */
     public function showRegistrationForm()
     {
-        return view('auth.user-register');
+        return view('auth.admin.admin-register');
     }
 
     /**
@@ -61,15 +64,11 @@ class UserRegisterController extends Controller
      */
     public function register(Request $request)
     {
-
+        // dd($request->all());
 
         $this->validator($request->all())->validate();
-        event(new Registered($user = $this->create($request->all())));
+        return $this->create($request->all());
 
-        $this->guard('web')->login($user);
-
-        return $this->registered($request, $user)
-                        ?: redirect($this->redirectPath());
     }
 
     /**
@@ -79,7 +78,7 @@ class UserRegisterController extends Controller
      */
     protected function guard()
     {
-        return Auth::guard();
+        Auth::guard('admin');
     }
 
     /**
@@ -92,7 +91,8 @@ class UserRegisterController extends Controller
     protected function registered(Request $request, $user)
     {
         //
-        return request()->route('/');
+        return redirect()->route('admin.login')
+            ->with('redirectAfterRegister', 'Your account has been successfully created, Please login to verify your account');
 
     }
 
@@ -104,10 +104,10 @@ class UserRegisterController extends Controller
      */
     protected function validator(array $data)
     {
-
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'f_name' => ['required', 'string', 'max:255'],
+            'l_name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255','unique:admins'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
     }
@@ -120,10 +120,14 @@ class UserRegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        $admin=new Admin();
+        $admin->first_name=$data['f_name'];
+        $admin->last_name=$data['l_name'];
+        $admin->email=$data['email'];
+        $admin->password=Hash::make($data['password']);
+        $admin->save();
+        return redirect()->route('admin.login')
+            ->with('redirectAfterRegister', 'Your account has been successfully created, Please login to verify your account');
+
     }
 }
