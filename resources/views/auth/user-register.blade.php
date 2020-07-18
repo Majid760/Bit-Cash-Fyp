@@ -24,7 +24,7 @@
                                     <div class="form-group">
                                         @csrf
                                         <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                        <input type="text" name="name" id="name" placeholder="Your Name" class="@error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus/>
+                                        <input type="text" name="name" id="name" placeholder="user name e.g xyz786" class="@error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus/>
                                         @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

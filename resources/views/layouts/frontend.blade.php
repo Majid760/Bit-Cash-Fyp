@@ -230,7 +230,7 @@
 
               <!-- start of store mega menu -->
 
-              <li class="nav-item dropdown mr-1 menu-area-store">
+              <li class="nav-item  mr-1 menu-area-store">
                 <a class="nav-link dropdown-toggle mega-drop-down" href="#" id="mega-one" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">STORES</a>
                 <div class="dropdown-menu mega-area-store" aria-labelledby="mega-one" >
 
