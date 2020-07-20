@@ -4,6 +4,7 @@
  <link rel="stylesheet" href="{{ asset('frontend/css/user-dashboard.css') }}">
  <link rel="stylesheet" href="{{ asset('frontend/css/now-ui-dashboard.min.css') }}">
 
+
 @endsection
 @section('content')
     <div class="container">
@@ -44,10 +45,10 @@
                                 <span class="menu-collapsed">Password Reset</span>
                             </a>
                         </div>
-                        <a href="#" class="bg-dark list-group-item list-group-item-action">
+                        <a href="{{ route('user.account-activity') }}" class="bg-dark list-group-item list-group-item-action">
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span class="fa fa-tasks fa-fw mr-3"></span>
-                                <span class="menu-collapsed">Tasks</span>
+                                <span class="menu-collapsed">Account History</span>
                             </div>
                         </a>
                         <!-- Separator with title -->
@@ -80,7 +81,6 @@
                             <div class="d-flex w-100 justify-content-start align-items-center">
                                 <span id="collapse-icon" class="fa fa-2x mr-3"></span>
                                 <span id="collapse-text" class="menu-collapsed">
-                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
                                 Collapse</span>
                             </div>
                         </a>
@@ -109,44 +109,8 @@
     @endsection
 
     @section('scripts')
-
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-
+    {{-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
     @endsection
 
-
-
-    <script>
-                // Hide submenus
-            $('#body-row .collapse').collapse('hide');
-
-            // Collapse/Expand icon
-            $('#collapse-icon').addClass('fa-angle-double-left');
-
-            // Collapse click
-            $('[data-toggle=sidebar-colapse]').click(function() {
-                SidebarCollapse();
-            });
-
-            function SidebarCollapse () {
-                $('.menu-collapsed').toggleClass('d-none');
-                $('.sidebar-submenu').toggleClass('d-none');
-                $('.submenu-icon').toggleClass('d-none');
-                $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
-
-                // Treating d-flex/d-none on separators with title
-                var SeparatorTitle = $('.sidebar-separator-title');
-                if ( SeparatorTitle.hasClass('d-flex') ) {
-                    SeparatorTitle.removeClass('d-flex');
-                } else {
-                    SeparatorTitle.addClass('d-flex');
-                }
-
-                // Collapse/Expand icon
-                $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
-            }
-
-
-</script>
 
 

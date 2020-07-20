@@ -12,7 +12,7 @@
     @section('use-dashboard')
            <!-- Content Row -->
            <div class="jumbotron user-account-card">
-            <p class="text-primary mb-2 font-weight-bold">Hey {{ (auth()->user())->username }} You can find your PaisaWapas account details here!<p>
+            <p class="text-primary mb-2 font-weight-bold">Hey {{ (auth()->user())->username }} You can find your Bit-Cash account details here!<p>
             <div class="row w-100">
                     <div class="col-md-3">
                         <div class="card border-info mx-sm-1 p-2">
@@ -135,7 +135,7 @@
                             <p class="text-right text-primary font-weight-bold">Total Amount Earned:</p>
                         </div>
                         <div class="col-md-6 col-lg-6 ">
-                            <p class="text-left text-primary font-weight-bold">Rs.</p>
+                            <p class="text-center text-primary font-weight-bold">Rs.</p>
                         </div>
                     </div>
                 </div>

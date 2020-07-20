@@ -12,4 +12,17 @@ class UserAccountController extends Controller
     public function index() {
         return view('backend.user.userdash-home');
     }
+
+    public function accountHistory() {
+        // retrive the all data and send back to view
+
+        return view('backend.user.useraccount-activity');
+    }
+
+    public function transactionData(Request $request){
+
+        $transactionData=0;
+        return view('backend.user.useraccount-activity',compact('transactionData'));
+
+    }
 }

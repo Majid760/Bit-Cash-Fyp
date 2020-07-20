@@ -8924,7 +8924,7 @@ h1, h2, h3, h4, h5,
   overflow-x: scroll; }
 
 .table {
-  min-width: 1000px !important;
+  min-width: 100% !important;
   width: 100%;
   text-align: center; }
   .table th {
@@ -9719,7 +9719,7 @@ textarea.form-control {
       .block-17 form .search-submit {
         width: 80px; } }
     .block-17 form .search-submit:hover {
-      background: #82ae46 !important;
+      background: #df1d1d !important;
       color: #fff !important;
       border: 1px solid #82ae46 !important; }
 
@@ -10227,13 +10227,18 @@ textarea.form-control {
 
 .accoutn-btn {
     padding:12px 10px !important;
-    width:140px;
+    width:140px !important;
+    outline: none !important;
+    border:none !important;
     background-color:#EA3562 !important;
     color:#ffe100 !important;
     opacity: 0.8;
 
 }
+.account-btn button:hover {
+    background-color:none !important;
 
+}
 
 /* Dropdown Button */
 .dropbtn {
@@ -10320,3 +10325,11 @@ textarea.form-control {
         border-radius: 4px;
         cursor: zoom-in;
     }
+
+
+     /* search box */
+
+     #searh-box {
+         height: 40px !important;
+         width:300px !important;
+     }

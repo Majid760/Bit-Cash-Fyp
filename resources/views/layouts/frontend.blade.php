@@ -189,7 +189,7 @@
                         <h5>Trending Products</h5>
                         <div class="product menu-top-trading-product">
                             <a href="#" class="img-prod">
-                                    <img class="img-fluid menu-top-trading-product"  src="frontend/images/Spider-Nail-Gel.png" alt="Colorlib Template">
+                                    <img class="img-fluid menu-top-trading-product"  src="{{ asset('frontend/images/Spider-Nail-Gel.png') }}" alt="Colorlib Template">
                                     <span class="status">35%</span>
                                 <div class="overlay"></div>
                             </a>
@@ -206,7 +206,7 @@
                       </div>
                         <div class="product-category">
                             <div class="product menu-top-trading-product">
-                                <a href="#" class="img-prod"><img class="img-fluid  menu-top-trading-product" src="frontend/images/Face-Shield.png" alt="Colorlib Template">
+                                <a href="#" class="img-prod"><img class="img-fluid  menu-top-trading-product" src="{{ asset('frontend/images/Face-Shield.png') }}" alt="Colorlib Template">
                                     <span class="status">55%</span>
                                     <div class="overlay"></div>
                                 </a>
@@ -383,17 +383,23 @@
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form> -->
+            <form class="form-inline ml-auto">
+                <div class="md-form my-0">
+                  <input id="searh-box" class="form-control input-sm" type="text" placeholder="Search" aria-label="Search">
+                </div>
+                <button  class="btn btn-outline-white btn-primary accoutn-btn my-2  " type="submit">Search</button>
+              {{-- </form>
             <form class="form-inline my-2 my-lg-0">
                 <div class="input-group">
                     <input type="text" class="form-control  ml-2 search-input" placeholder="search...">
                     <div class="input-group-append">
                         <a class="btn btn-outline-warning text-center input-group-lg serach-btn"  >Search</a>
                     </div>
-                </div>
+                </div> --}}
                 @if (!((isset(Auth::user()->name)) || (isset(Auth::user()->email))))
                 <!--Check out button-->
                 <div class="dropdown">
-                    <button class="dropbtn btn  signs-btn ml-4" >Signs<i class="fa fa-map-signs ml-2"></i></button>
+                    <button class="btn btn-outline-white btn-primary  my-0 ml-sm-3" >Signs<i class="fa fa-map-signs ml-2"></i></button>
                     <div class="dropdown-content">
                         <a  href="{{ route('user.register') }}">Register</a>
                         <a  href="{{ route('user.login') }}">Login</a>
@@ -401,7 +407,7 @@
                   </div>
                 @else
                 <div class="dropdown">
-                    <button  class="dropbtn btn text-center accoutn-btn ml-2" >My Account <i class="fa fa-user pl-2"></i></button>
+                    <button  class="dropbtn btn text-center accoutn-btn  ml-2">My Account <i class="fa fa-user pl-2"></i></button>
                     <div class="dropdown-content">
                         <a  href="#" >AVAIL:Rs {{ __('0') }} </a>
                         <a  href="#" >PENDING:Rs {{ __('0') }} </a>
@@ -515,7 +521,9 @@
 
        <!-- scripts -->
 
-        <script src="{{asset('js/jquery.min.js')}}"></script>
+
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {{-- <script src="{{asset('js/jquery.min.js')}}"></script> --}}
         <!-- slider -->
         <script src="{{asset('js/jquery-migrate-3.0.1.min.js')}}"></script>
         <script src="{{asset('js/popper.min.js')}}"></script>
@@ -529,7 +537,7 @@
         <script src="{{asset('js/jquery.animateNumber.min.js')}}"></script>
         <script src="{{asset('js/bootstrap-datepicker.js')}}"></script>
         <script src="{{asset('js/scrollax.min.js')}}"></script>
-        {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> --}}
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
         <script src="{{asset('js/google-map.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
 
@@ -561,9 +569,53 @@
             });
 
         </script>
+
+
+         <!--=============== User Dashboard Javascript section =======================================-->
+
+        <script type="text/javascript">
+            // if(typeof jQuery!=='undefined'){
+            //     console.log('jQuery Loaded');
+            // }
+            // else{
+            //     console.log('not loaded yet');
+            // }
+                // Hide submenus
+            $(document).ready(function() {
+
+                $('#body-row .collapse').collapse('hide');
+
+                // Collapse/Expand icon
+                $('#collapse-icon').addClass('fa-angle-double-left');
+
+                // Collapse click
+                $('[data-toggle=sidebar-colapse]').click(function() {
+                    SidebarCollapse();
+                });
+
+                function SidebarCollapse () {
+                    $('.menu-collapsed').toggleClass('d-none');
+                    $('.sidebar-submenu').toggleClass('d-none');
+                    $('.submenu-icon').toggleClass('d-none');
+                    $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+
+                    // Treating d-flex/d-none on separators with title
+                    var SeparatorTitle = $('.sidebar-separator-title');
+                    if ( SeparatorTitle.hasClass('d-flex') ) {
+                        SeparatorTitle.removeClass('d-flex');
+                    } else {
+                        SeparatorTitle.addClass('d-flex');
+                    }
+
+                    // Collapse/Expand icon
+                    $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+                }
+
+        });
+</script>
     <!--===============================================================================================-->
     <script src="{{ asset('frontend/js/store-main.js')}}"></script>
 
-      @yield('scripts')
+    @yield('scripts')
   </body>
 </html>

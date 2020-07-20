@@ -16,6 +16,8 @@ Route::middleware('auth')->group(function(){
         // Account Routes
 
         Route::get('/account','Frontend\User\UserAccountController@index')->name('user.account');
+        Route::get('/account-history','Frontend\User\UserAccountController@accountHistory')->name('user.account-activity');
+        Route::post('/taransactiondata','Frontend\User\UserAccountController@transactionData')->name('user.taransactionData');
 
 
     });
