@@ -6,7 +6,6 @@
 @section('use-dashboard')
 
 <!-- ./Tabs -->
-        <!------ Include the above in your HEAD tag ---------->
 
         <section class=" ">
             <div class="container">

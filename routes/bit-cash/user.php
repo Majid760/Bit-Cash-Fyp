@@ -8,7 +8,6 @@ Route::middleware('auth')->group(function(){
         Route::get('/dashboard', 'UserDashboardController@index')->name('user.dashboard');
         Route::get('/profile', 'UserDashboardController@userProfileData')->name('user.profile');
         Route::post('/profile/update', 'UserDashboardController@update')->name('user.profile.update');
-        Route::get('/password-reset', 'UserDashboardController@passwordReset')->name('user.password-reset');
         Route::post('/password-update', 'UserDashboardController@passwordUpdate')->name('user.password-update');
 
 
@@ -20,5 +19,12 @@ Route::middleware('auth')->group(function(){
         Route::post('/taransactiondata','Frontend\User\UserAccountController@transactionData')->name('user.taransactionData');
 
 
+        // Payment Routes
+        Route::get('/payment', 'Frontend\User\UserPaymentSettingController@index')->name('user.payment');
+
+
+         // CustomerSupport Routes
+        Route::get('/support', 'Frontend\User\CustomerSupportController@index')->name('customer.support');
+        Route::post('/email', 'Frontend\User\CustomerSupportController@sendingEmail')->name('user.email');
     });
 });

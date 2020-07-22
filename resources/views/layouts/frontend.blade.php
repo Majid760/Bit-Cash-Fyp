@@ -387,7 +387,7 @@
                 <div class="md-form my-0">
                   <input id="searh-box" class="form-control input-sm" type="text" placeholder="Search" aria-label="Search">
                 </div>
-                <button  class="btn btn-outline-white btn-primary accoutn-btn my-2  " type="submit">Search</button>
+                <button id="searh-button" class="btn btn-outline-white btn-primary accoutn-btn my-2 text-center " type="submit">Search</button>
               {{-- </form>
             <form class="form-inline my-2 my-lg-0">
                 <div class="input-group">
@@ -399,7 +399,7 @@
                 @if (!((isset(Auth::user()->name)) || (isset(Auth::user()->email))))
                 <!--Check out button-->
                 <div class="dropdown">
-                    <button class="btn btn-outline-white btn-primary  my-0 ml-sm-3" >Signs<i class="fa fa-map-signs ml-2"></i></button>
+                    <button class="btn btn-outline-white btn-primary text-center" data-toggle=""  my-0 ml-sm-3" id="searh-button" >Signs<i class="fa fa-map-signs ml-2"></i></button>
                     <div class="dropdown-content">
                         <a  href="{{ route('user.register') }}">Register</a>
                         <a  href="{{ route('user.login') }}">Login</a>
@@ -407,7 +407,7 @@
                   </div>
                 @else
                 <div class="dropdown">
-                    <button  class="dropbtn btn text-center accoutn-btn  ml-2">My Account <i class="fa fa-user pl-2"></i></button>
+                    <button  id="searh-button" class="dropbtn btn text-center align-middle accoutn-btn ml-1">My Account <i class="fa fa-user pl-2"></i></button>
                     <div class="dropdown-content">
                         <a  href="#" >AVAIL:Rs {{ __('0') }} </a>
                         <a  href="#" >PENDING:Rs {{ __('0') }} </a>
@@ -540,6 +540,8 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
         <script src="{{asset('js/google-map.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
+
+
 
         <!-- font-awesome -->
         <script src="https://use.fontawesome.com/ddf0dbc894.js"></script>
