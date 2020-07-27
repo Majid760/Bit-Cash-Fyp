@@ -17,4 +17,18 @@ class UserPaymentSettingController extends Controller
         return view('backend/user/payment-setting');
 
     }
+
+    public function UseramountTransaction(Request $request){
+
+        $this->validate($request, [
+            "cc_name" => "required",
+            "cc_number" => "required|numeric",
+            "cc_exp_mo" => "required|numeric",
+            "cc_exp_yr" =>  "required|numeric",
+            "cvc" => "required|numeric",
+            "amount" => "required|numeric",
+
+        ]);
+
+    }
 }

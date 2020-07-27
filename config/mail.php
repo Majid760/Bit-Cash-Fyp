@@ -62,7 +62,7 @@ return [
 
     'from' => [
             'address' =>  'bit-cash@support.com',
-            'name' => 'Majid Ali Khan',
+            'name' => 'Bit-Cash.com',
         ],
 
     /*

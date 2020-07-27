@@ -8,9 +8,8 @@ Route::get('/about', function () {
     return view('frontend.about');
 })->name('about');
 
-Route::get('/contact', function () {
-    return view('frontend.contact');
-})->name('contact');
+Route::get('/contact','ContactUsController@index')->name('contact');
+Route::post('/contactus/emil','ContactUsController@sendingEmail')->name('contactus');
 
 Route::get('/blog', function () {
     return view('frontend.blog');

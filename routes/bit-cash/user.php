@@ -21,6 +21,8 @@ Route::middleware('auth')->group(function(){
 
         // Payment Routes
         Route::get('/payment', 'Frontend\User\UserPaymentSettingController@index')->name('user.payment');
+        Route::post('/transaction', 'Frontend\User\UserPaymentSettingController@UseramountTransaction')->name('user.amount-transaction');
+
 
 
          // CustomerSupport Routes

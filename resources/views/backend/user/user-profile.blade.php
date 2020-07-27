@@ -27,13 +27,23 @@
                                 <div class="row ">
                                 <div class="col-md-8">
                                     @if($errors->any())
-                                        @foreach ($errors->all() as $error)
-                                            <div class="alert alert-danger text-center">{{ $error }}</div>
-                                        @endforeach
+                                    <div class="alert alert-danger alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <ul>
+                                            @foreach($errors->all() as $error)
+                                                <li class="alert alert-danger text-center">{{ $error }}</li>
+                                            @endforeach
+                                            </ul>
+                                    </div>
                                     @endif
 
                                     @if(session('successMsg'))
-                                        <div class="alert alert-success text-center "> {{ session('successMsg') }}</div>
+                                    <div class="alert alert-success alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                         <ul>
+                                            <li>{{ session('successMsg') }}</li>
+                                         </ul>
+                                    </div>
                                     @endif
                                     <div class="card">
                                     <div class="card-header">
@@ -155,13 +165,23 @@
                     <div class="pt-3"></div>
 
                     <!-- form card change password -->
-            @if($errors->any())
-            @foreach($errors->all() as $error)
-                <div class="alert alert-danger text-center">{{ $error }}</div>
-            @endforeach
+        @if($errors->any())
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <ul>
+                @foreach($errors->all() as $error)
+                    <li class="alert alert-danger text-center">{{ $error }}</li>
+                @endforeach
+                </ul>
+        </div>
         @endif
         @if(session('message'))
-            <div class="alert alert-danger text-center">{{ session('message') }}</div>
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <ul>
+                    <li>{{ session('message') }}</li>
+                    </ul>
+            </div>
         @endif
         <div class="card card-outline-secondary">
             <div class="card-header">

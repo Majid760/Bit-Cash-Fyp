@@ -5,6 +5,16 @@
 
 @section('use-dashboard')
 
+        @if($errors->any())
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <ul>
+                    @foreach($errors->all() as $error)
+                        <li class="alert alert-danger text-center">{{ $error }}</li>
+                    @endforeach
+                    </ul>
+            </div>
+      @endif
       <!-- form card cc payment -->
       <div class="card card-outline-secondary">
         <div class="card-body">
@@ -13,61 +23,61 @@
           <div class="alert alert-info">
             <a class="close" data-dismiss="alert" href="#">×</a>CVC code is required.
           </div>
-          <form autocomplete="off" class="form" role="form">
+          <form autocomplete="off" class="form" role="form" method="POST" action="{{route('user.amount-transaction')}}">
             <div class="form-group">
                 @csrf
               <label for="cc_name">Card Holder's Name</label>
-              <input class="form-control" id="cc_name" pattern="\w+ \w+.*" required="required" title="First and last name" type="text">
+              <input class="form-control" name="cc_name" value="{{ old('cc_name') }} "id="name" pattern="\w+ \w+.*" required="required" title="First and last name" type="text">
             </div>
             <div class="form-group">
               <label>Card Number</label>
-              <input autocomplete="off" class="form-control" maxlength="20" pattern="\d{16}" required="" title="Credit card number" type="text">
+              <input autocomplete="off" name="cc_number" value="{{ old('cc_number') }}"  class="form-control" maxlength="20" pattern="\d{16}" required="" title="Enter your 16 digit Credit card number" type="text">
             </div>
             <div class="form-group row">
               <label class="col-md-12">Card Exp. Date</label>
               <div class="col-md-4">
                 <select class="form-control" name="cc_exp_mo" size="0">
-                  <option value="01">
+                  <option value="01" {{ old('cc_exp_mo')== '01' ? 'selected' : ''}}>
                     01
                   </option>
-                  <option value="02">
+                  <option value="02" {{ old('cc_exp_mo')== '02' ? 'selected' : ''}}>
                     02
                   </option>
-                  <option value="03">
+                  <option value="03" {{ old('cc_exp_mo')== '03' ? 'selected' : ''}}>
                     03
                   </option>
-                  <option value="04">
+                  <option value="04" {{ old('cc_exp_mo')== '04' ? 'selected' : ''}}>
                     04
                   </option>
-                  <option value="05">
+                  <option value="05" {{ old('cc_exp_mo')== '05' ? 'selected' : ''}}>
                     05
                   </option>
-                  <option value="06">
+                  <option value="06" {{ old('cc_exp_mo')== '06' ? 'selected' : ''}}>
                     06
                   </option>
-                  <option value="07">
+                  <option value="07" {{ old('cc_exp_mo')== '07' ? 'selected' : ''}}>
                     07
                   </option>
-                  <option value="08">
+                  <option value="08" {{ old('cc_exp_mo')== '08' ? 'selected' : ''}}>
                     08
                   </option>
-                  <option value="09">
+                  <option value="09" {{ old('cc_exp_mo')== '09' ? 'selected' : ''}}>
                     09
                   </option>
-                  <option value="10">
+                  <option value="10" {{ old('cc_exp_mo')== '10' ? 'selected' : ''}}>
                     10
                   </option>
-                  <option value="11">
+                  <option value="11" {{ old('cc_exp_mo')== '11' ? 'selected' : ''}}>
                     11
                   </option>
-                  <option value="12">
+                  <option value="12" {{ old('cc_exp_mo')== '12' ? 'selected' : ''}}>
                     12
                   </option>
                 </select>
               </div>
               <div class="col-md-4">
                 <select class="form-control" name="cc_exp_yr" size="0">
-                  <option>
+                  <option value>
                     2016
                   </option>
                   <option>
@@ -100,7 +110,7 @@
                 </select>
               </div>
               <div class="col-md-4">
-                <input autocomplete="off" class="form-control" maxlength="3" pattern="\d{3}" placeholder="CVC" required="" title="Three digits on the back of your card" type="text">
+                <input autocomplete="off" name="cvc" value="{{ old('cvc') }}" class="form-control" maxlength="3" pattern="\d{3}" placeholder="CVC" required="" title="Three digits on the back of your card" type="text">
               </div>
             </div>
             <div class="row">
@@ -111,7 +121,7 @@
                 <div class="input-group-addon mt-3">
                   Rs
                 </div>
-                <input class="form-control text-right" id="exampleInputAmount" placeholder="39" type="text">
+                <input class="form-control text-right" name="amount" id="exampleInputAmount"  type="text" value="{{ old('amount') }}">
                 <div class="input-group-addon mt-3">
                   .00
                 </div>

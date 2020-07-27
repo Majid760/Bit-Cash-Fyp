@@ -26,7 +26,7 @@
 
                             <div class="row">
                                 <div class="container">
-                                    <form action="{{route('user.taransactionData')}}" method="POST">
+                                    <form name="payment_form"  action="{{route('user.taransactionData')}}" method="POST">
                                         @csrf
                                         <div class="row mt-2">
                                           <div class="col">
