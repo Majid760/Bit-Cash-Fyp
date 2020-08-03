@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStoresTable extends Migration
+class CreateTransactionHistoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateStoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('stores', function (Blueprint $table) {
+        Schema::create('transaction_histories', function (Blueprint $table) {
             $table->bigIncrements('id')->primaryKey();
-            $table->string('name');
-            $table->string('store_link');
+            $table->bigInteger('credit_id')->foreign('credit_id')->references('id')->on('credits')->onDelete('cascade');
+            $table->float('amount_transer');
+            $table->string('amount_transfering_account');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateStoresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stores');
+        Schema::dropIfExists('transaction_histories');
     }
 }

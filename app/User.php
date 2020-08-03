@@ -8,9 +8,9 @@ use Illuminate\Notifications\Notifiable;
 use App\Notifications\UserResetPasswordNotification;
 use Laravel\Passport\HasApiTokens;
 
-class User extends Authenticatable implements JWTSubject
+class User extends Authenticatable
 {
-    use Notifiable, HasApiTokens;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -45,27 +45,21 @@ class User extends Authenticatable implements JWTSubject
     }
 
 
-    // Rest omitted for brevity
+    // Relations
 
-    /**
-     * Get the identifier that will be stored in the subject claim of the JWT.
-     *
-     * @return mixed
-     */
-    public function getJWTIdentifier()
-    {
-        return $this->getKey();
+    public function products() {
+        return $this->belongsToMany('App\User','id');
     }
 
-    /**
-     * Return a key value array, containing any custom claims to be added to the JWT.
-     *
-     * @return array
-     */
-    public function getJWTCustomClaims()
-    {
-        return [];
+    public function userComplaints() {
+        return $this->hasMany('App\UserComplaints','id');
     }
+
+    public function paymentAccount(){
+        return $this->hasOne('App\PaymentAccount','id');
+    }
+
+
 
 
 }

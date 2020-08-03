@@ -14,7 +14,16 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('serial');
+            $table->string('product_id')->primaryKey();
+            $table->string('category_id')->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->string('product_name');
+            $table->string('product_url');
+            $table->float('original_price');
+            $table->float('sale_price');
+            $table->string('commission');
+            $table->timestamp('out_of_stock_date');
+            $table->string('discount');
             $table->timestamps();
         });
     }
