@@ -11,6 +11,7 @@
 
   <title>Bit-Cash Admin  - Dashboard</title>
 
+
   <!-- Custom fonts for this template-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="{{ asset('backend/css/admin-all.min.css') }}" rel="stylesheet" type="text/css">
@@ -18,6 +19,9 @@
 
   <!-- Custom styles for this template-->
   <link href="{{ asset('backend/css/admin-css.min.css') }}" rel="stylesheet">
+
+  <!-- product listing css  -->
+  <link href="{{ asset('backend/css/admin-product-listing.css')}}" rel="stylesheet">
 
 </head>
 
@@ -79,8 +83,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="{{ route('admin.product-imports-view') }}">Import Products</a>
+            <a class="collapse-item" href="{{ route('admin.promoted-product-imports-view') }}">Import Promoted Products</a>
             <a class="collapse-item" href="utilities-animation.html">Animations</a>
             <a class="collapse-item" href="utilities-other.html">Other</a>
           </div>
@@ -403,13 +407,35 @@
   <script src="{{ asset('backend/js/admin-sb-admin-2.min.js') }}"></script>
 
   <!-- Page level plugins -->
-  <script src="{{ asset('backend/js/Chart.min.js') }}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-
+  {{-- <script src="{{ asset('backend/js/Chart.min.js') }}"></script> --}}
+  {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script> --}}
+  {{-- <script src="{{ asset('backend/js/Chart.min.js') }}"></script> --}}
   <!-- Page level custom scripts -->
-  <script src="{{ asset('backend/js/chart-area-demo.js') }}"></script>
-  <script src="{{ asset('backend/js/chart-pie-demo.js')  }}"></script>
+  {{-- <script src="{{ asset('backend/js/chart-area-demo.js') }}"></script> --}}
+  {{-- <script src="{{ asset('backend/js/chart-pie-demo.js')  }}"></script> --}}
 
+
+  <!-- DataTable scripts -->
+    {{-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> --}}
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example').DataTable( {
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            } );
+        } );
+    </script>
 </body>
 
 </html>

@@ -15,6 +15,8 @@ class CheckIfUserVerified
      */
     public function handle($request, Closure $next)
     {
+
+        dd('dkdkd');
         $guard = 'patient';
         if (auth()->guard('doctor')->check()) {
             $guard = 'doctor';

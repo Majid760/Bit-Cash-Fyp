@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Auth\AuthenticationException;
+use Illuminate\Http\Request;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
@@ -59,21 +60,21 @@ class Handler extends ExceptionHandler
 
     protected function unauthenticated($request, AuthenticationException $exception)
     {
-        if($request->exceptsJson()){
-            return response()->json(['error' => 'unauthendicated.'], 401);
-        }
-        if ($request->is('admin') || $request->is('admin/*')) {
-            return redirect()->guest('/admin/login');
-        }
+        // if($request->exceptsJson()){
+        //     return response()->json(['error' => 'unauthendicated.'], 401);
+        // }
+
+        // dd('ddd');
 
         $guard=Arr::get($exception->guards(),0);
+        // dd($guard);
         switch($guard)
         {
             case 'admin':
-                $login='admin.login';
+                $login='admin/login';
             break;
             default:
-                $login='user.login';
+                $login='user/login';
         }
 
         return redirect()->guest($login);

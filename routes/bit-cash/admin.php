@@ -28,6 +28,13 @@ Route::middleware(['auth:admin'])->prefix('admin')->group(function () {
 
     Route::get('/dashboard','Admin\AdminController@index')->name('admin.dashboard');
 
+    //product import and export routes
+    Route::get('/import-products/view','Admin\ExportImportController@index')->name('admin.product-imports-view');
+    Route::get('/export-products', 'Admin\ExportImportController@product_export')->name('admin.export-product');
+    Route::post('/import-products', 'Admin\ExportImportController@product_import')->name('admin.import-product');
+
+    Route::get('/import-promoted-products/view','Admin\ExportImportController@showPromotedView')->name('admin.promoted-product-imports-view');
+    Route::post('/import-promoted-products','Admin\ExportImportController@promoted_product_import')->name('admin.import-promoted-product');
 
 
 });

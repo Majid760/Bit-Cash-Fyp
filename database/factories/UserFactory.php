@@ -19,10 +19,11 @@ use Faker\Generator as Faker;
 
 $factory->define(App\User::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
+        'username' => $faker->name,
         'firstname' => $faker->name,
         'lastname' => $faker->name,
         'address' => $faker->address,
+        'about' => $faker->text,
         'city' => $faker->city,
         'country' => $faker->country,
         'email' => $faker->unique()->safeEmail,

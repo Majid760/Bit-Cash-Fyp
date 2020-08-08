@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Redirect;
 
-
+Route::Auth();
 Route::prefix('user')->group(function(){
 
     Route::get('/login', 'Auth\UserLoginController@showLoginForm')->name('user.login');

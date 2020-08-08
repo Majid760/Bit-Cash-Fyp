@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductImageUrlsTable extends Migration
+class CreateUserComplaintsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateProductImageUrlsTable extends Migration
      */
     public function up()
     {
-        Schema::create('product__image__urls', function (Blueprint $table) {
+        Schema::create('user_complaints', function (Blueprint $table) {
             $table->bigIncrements('id')->primaryKey();
-            $table->string('product_id')->foreign('product_id')->references('product_id')->on('products')->onDelete('cascade');
-            $table->string('product_img_url');
-            $table->string('prodcut_all_img_url');
+            $table->bigInteger('user_id')->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('email')->unique();
+            $table->string('message');
+            $table->string('issue_type');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateProductImageUrlsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product__image__urls');
+        Schema::dropIfExists('user__complaints');
     }
 }

@@ -23,7 +23,7 @@ require_once 'bit-cash/admin.php';
 |
 */
 
-
+   Route::Auth();
 
     Route::get('store','StoreController@index')->name('store');
 
@@ -39,3 +39,7 @@ require_once 'bit-cash/admin.php';
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

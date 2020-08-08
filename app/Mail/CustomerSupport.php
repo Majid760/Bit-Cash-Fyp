@@ -32,6 +32,6 @@ class CustomerSupport extends Mailable
     {
         return $this->from($this->data['email'])
         ->subject('New Customer Enquiry')
-        ->markdown('emails.customers.support',$this->data);
+        ->markdown('emails.customers.support', $this->data);
     }
 }
