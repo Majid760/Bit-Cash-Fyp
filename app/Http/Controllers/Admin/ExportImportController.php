@@ -16,23 +16,8 @@ class ExportImportController extends Controller
     //
     public function index() {
         $data=Product::with(['category'])->get();
-
-        foreach($data as $da) {
-            dump($da->category_id->category->category_name);
-            dump($da->product_id);
-
-            dump($da->product_name);
-            dump($da->product_url);
-            dump($da->sale_price);
-            dump($da->original_price);
-            dump($da->product_url);
-            dump($da->commission);
-            dump($da->discount);
-            dump($da->out_of_stock_date);
-            dd();
-        }
-        dd($data);
-        return view('backend.admin.import-product');
+        $catg=Category::with(['products'])->paginate();
+        return view('backend.admin.import-product',compact('data','catg'));
     }
 
     public function product_import(Request $request){

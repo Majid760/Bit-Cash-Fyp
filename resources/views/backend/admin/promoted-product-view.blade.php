@@ -1,9 +1,6 @@
 @extends('layouts.admin-dashb')
 
-@section('style')
-
-
-@endsection
+<link href="{{ asset('backend/css/custom-admin.css') }}" />
 
 @section('content')
 
