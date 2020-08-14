@@ -13,6 +13,10 @@ class Category extends Model
     ];
 
     public function products() {
-        return $this->hasMany('App\Product','category_id');
+        return $this->hasMany('App\Product');
+    }
+
+    public function genrel_category(){
+        return $this->belongsTo('App\GenrelCategory');
     }
 }

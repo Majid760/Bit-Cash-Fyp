@@ -12,7 +12,7 @@
   <title>Bit-Cash Admin  - Dashboard</title>
 
 
-
+  <link href="{{ asset('backend/css/admin-user-profile.css') }}" rel="stylesheet"/>
   <!-- Custom fonts for this template-->
   <link href="{{ asset('backend/css/custom-admin.css') }}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,6 +28,11 @@
 
   <!-- product listing css  -->
   <link href="{{ asset('backend/css/admin-product-listing.css')}}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- summernote -->
+<!-- include summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -73,8 +78,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
+            <h6 class="collapse-header">User Setting</h6>
+            <a class="collapse-item" href="{{ route('admin.all-user') }}">All User</a>
             <a class="collapse-item" href="cards.html">Cards</a>
           </div>
         </div>
@@ -435,19 +440,43 @@
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.colVis.min.js"></script>
-
-
+    <!-- Summernote -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script> --}}
     <script type="text/javascript">
        $(document).ready(function() {
+           //datatable script
     var table = $('#example').DataTable( {
         // dom: 'Bfrtip',
         lengthChange: false,
         buttons: [ 'copy', 'excel', 'pdf','print','csv' ],
         language: { search: '', searchPlaceholder: "Search..." },
     } );
-
     table.buttons().container()
         .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+
+        //end of datatable script
+
+        //user-profile editig at admin side script
+            $('ul.tabs li').click(function(){
+			var tab_id = $(this).attr('data-tab');
+			$('ul.tabs li').removeClass('current');
+			$('.tab-content').removeClass('current');
+
+			$(this).addClass('current');
+			$("#"+tab_id).addClass('current');
+        });
+            //end user-profile editig at admin side script
+
+            //summernote
+            $('#summernote').summernote({
+                    height: 120,                 // set editor height
+                    minHeight: null,             // set minimum height of editor
+                    maxHeight: null,             // set maximum height of editor
+                    focus: true                  // set focus to editable area after initializing summernote
+                });
+            //end of summarnote
+
 } );
 
     </script>

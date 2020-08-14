@@ -76,7 +76,9 @@
               <label class="mb-0" for="message2">Message</label>
               <div class="row mb-1">
                 <div class="col-lg-12">
-                  <textarea class="form-control" id="message2" name="message" required="" rows="6">{{ old('message') }}</textarea>
+                  {{-- <textarea class="form-control"  required="" ></textarea> --}}
+                  <textarea id="summernote" id="message2" name="message" rows="10">{{ old('message') }}</textarea>
+
                 </div>
               </div>
               <button class="btn btn-info btn-lg float-right" type="submit">Send Message</button>

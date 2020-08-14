@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Category;
+use App\Product;
 
 class FrontendController extends Controller
 {
@@ -11,10 +13,8 @@ class FrontendController extends Controller
 
 
     public function index(){
-        // Auth::logout();
-        // dd(isset(Auth::user()->name));
-        // dd(isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email );
-
+        // $products=Product::all();
+        // $catogory=Category::all();
         return view('index');
     }
 }

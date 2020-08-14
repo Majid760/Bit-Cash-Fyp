@@ -25,21 +25,7 @@ require_once 'bit-cash/admin.php';
 
    Route::Auth();
 
-    Route::get('store','StoreController@index')->name('store');
+Route::get('store','StoreController@index')->name('store');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

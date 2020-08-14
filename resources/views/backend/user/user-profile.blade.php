@@ -6,7 +6,6 @@
 @section('use-dashboard')
 <!-- ./Tabs -->
 <section class=" ">
-    <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-12 text-center ">
                 <nav class="nav-justified ">
@@ -108,7 +107,9 @@
                                             <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>About Me</label>
-                                                <textarea rows="4" cols="80" name="about" class="form-control" placeholder="Here can be your description" value="">{{ $userData['about'] }}</textarea>
+
+                                                <textarea id="summernote" name="about">{{ $userData['about'] }}</textarea>
+
                                             </div>
                                             </div>
                                         </div>
@@ -231,7 +232,7 @@ Simply place a div with the Bootstrap container class around the navbar. This wi
                 </div>
             </div>
         </div>
-    </div>
+
 </section>
 
 @endsection

@@ -15,12 +15,12 @@ class CreatePromotedProductsTable extends Migration
     {
         Schema::create('promoted_products', function (Blueprint $table) {
             $table->bigIncrements('id')->primaryKey();
-            $table->string('product_info')->unique();
-            $table->float('unit_price');
-            $table->string('image_link')->unique();
-            $table->string('product_link')->unique();
-            $table->string('store_info');
+            $table->string('store_id')->foreign('store_id')->references('id')->on('stores')->onDelete('cascade');
             $table->string('store_link');
+            $table->string('product_info');
+            $table->float('unit_price');
+            $table->string('image_link');
+            $table->string('product_link');
             $table->integer('sold_quantity');
             $table->integer('commission_rate');
             $table->float('commission');

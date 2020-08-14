@@ -152,7 +152,7 @@
                                     <td scope="row"><a href="{{preg_replace('/\s\s+/', ' ', $productDat->product_url)}}" target="_blank">{{ $productDat->product_url}}</a></td>
                                     <td scope="row">{{ $productDat->original_price.'$'}}</td>
                                     <td scope="row">{{ $productDat->sale_price.'$'}}</td>
-                                    <td scope="row">{{ $productDat->commission}}<span class="">%</span></td>
+                                    <td scope="row">{{ $productDat->commission.'%'}}</td>
                                     <td scope="row">{{ $productDat->discount.'%'}}</td>
                                     <td scope="row">{{ $productDat->out_of_stock_date}}</td>
                                 </tr>

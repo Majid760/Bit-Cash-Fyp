@@ -36,5 +36,10 @@ Route::middleware(['auth:admin'])->prefix('admin')->group(function () {
     Route::get('/import-promoted-products/view','Admin\ExportImportController@showPromotedView')->name('admin.promoted-product-imports-view');
     Route::post('/import-promoted-products','Admin\ExportImportController@promoted_product_import')->name('admin.import-promoted-product');
 
+    // user setting routes
+    Route::get('/user-list','Admin\AdminUserController@index')->name('admin.all-user');
+    Route::get('/user-edit/{id}','Admin\AdminUserController@edit')->name('admin.user-edit');
+    Route::post('/send-email','Admin\AdminUserController@sendEmailToUser')->name('admin.send-email-touser');
+    Route::get('/user-status/{id}','Admin\AdminUserController@changeUserStatus')->name('admin.user-status');
 
 });

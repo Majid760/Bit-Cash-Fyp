@@ -21,23 +21,23 @@
           <div class="carousel-item">
                 <img class="d-block w-100 img-fluid img-slider  " style="height:450px" src="{{asset('/frontend/images/category-4.png')}}" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Amazing Deals:</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint.</p>
+                    {{-- <h5>Amazing Deals:</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint.</p> --}}
                 </div>
           </div>
           <div class="carousel-item active">
             <img class="d-block w-100 img-fluid img-slider" style="object-fit:cover"src="{{asset('/frontend/images/category-2.jpg')}}" alt="First slide">
 
             <div class="carousel-caption d-none d-md-block">
-                <h5>Amazing Deals:</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint</p>
+                {{-- <h5>Amazing Deals:</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint</p> --}}
             </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100 img-fluid img-slider" src="{{asset('/frontend/images/sale60.png')}}" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Amazing Deals:</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint</p>
+                {{-- <h5>Amazing Deals:</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint, Lorem ipsum dolor sit amet consectetur adipisicing elit veritatis sint</p> --}}
             </div>
           </div>
 

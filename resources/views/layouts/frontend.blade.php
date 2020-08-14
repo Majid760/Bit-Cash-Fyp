@@ -9,6 +9,11 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+
+
+
     <!-- user dashboard css -->
     <link href="{{ asset('backend/css/user-dashboard-style.css')}}" rel="stylesheet" >
     {{-- <!-- sign in and up css -->
@@ -73,7 +78,7 @@
   </head>
   <body class="goto-here">
 		<div class="py-1 " style="background-color:#EA3562">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
                     <div class="col-lg-12 d-block">
                         <div class="row d-flex">
@@ -104,14 +109,14 @@
     <!-- Start nav -->
     <nav class="navbar navbar-expand-lg  ftco_navbar  ftco-navbar-light " id="ftco-navbar" style="margin-top:0 !important">
         <div class="container">
-            <a class="navbar-brand" href="{{route('home')}}"><span style="color:#EA3562">BIT</span><span style="color:#ffe100">-CASH<span></a>
+            <a class="navbar-brand" href="{{ URL::to('/') }}"><span style="color:#EA3562">BIT</span><span style="color:#ffe100">-CASH<span></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
           </button>
 
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav">
-              <li class="nav-item active  ml-3"><a href="{{route('home')}}" class="nav-link">HOME</a></li>
+              <li class="nav-item active  ml-3"><a href="{{URL::to('/')}}" class="nav-link">HOME</a></li>
               <!-- start of product mega menu -->
               <li class="nav-item dropdown mr-1 menu-area">
               <a class="nav-link dropdown-toggle mega-drop-down" href="#" id="mega-one" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">PRODUCT</a>
@@ -120,7 +125,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-lg-3 product-col">
                      <div class="product-category">
-                        <h5>Electronics</h5>
+                        {{-- <h5>Electronics</h5> --}}
                         <a href="#" class="dropdown-item">Audio</a>
                         <a href="#" class="dropdown-item">Telescope</a>
                         <a href="#" class="dropdown-item">Computers</a>
@@ -132,7 +137,7 @@
 
                      </div>
                      <div class="product-category">
-                        <h5>Home Appliances</h5>
+                        {{-- <h5>Home Appliances</h5> --}}
                         <a href="#" class="dropdown-item">Housekeeping Laundry</a>
                         <a href="#" class="dropdown-item">Home Furnishing</a>
                         <a href="#" class="dropdown-item">Home Services</a>
@@ -144,7 +149,7 @@
                     </div>
                     <div class="col-sm-6 col-lg-3 product-col">
                         <div class="product-category">
-                            <h5>Women</h5>
+                            {{-- <h5>Women</h5> --}}
                             <a href="#" class="dropdown-item">Beauty And Personal Care</a>
                             <a href="#" class="dropdown-item">Belts</a>
                             <a href="#" class="dropdown-item">Clothing</a>
@@ -154,7 +159,7 @@
                             <a href="#" class="dropdown-item">View more...</a>
                          </div>
                          <div class="product-category">
-                            <h5>Baby &amp; Kids</h5>
+                            {{-- <h5>Baby &amp; Kids</h5> --}}
                             <a href="#" class="dropdown-item">Baby Care</a>
                             <a href="#" class="dropdown-item">Bicycles &amp; Tricycles</a>
                             <a href="#" class="dropdown-item">Kids &amp; Baby Clothing</a>
@@ -176,7 +181,7 @@
                             <a href="#" class="dropdown-item">View more...</a>
                          </div>
                          <div class="product-category">
-                            <h5>Sports, Fitness &amp; Outdoors</h5>
+                            {{-- <h5>Sports, Fitness &amp; Outdoors</h5> --}}
                             <a href="#" class="dropdown-item">Badminton&nbsp</a>
                             <a href="#" class="dropdown-item">Baseball&nbsp</a>
                             <a href="#" class="dropdown-item">Basketball</a>
@@ -385,45 +390,34 @@
             </form> -->
             <form class="form-inline ml-auto">
                 <div class="md-form my-0">
-                  <input id="searh-box" class="form-control input-sm" type="text" placeholder="Search" aria-label="Search">
+                  <input id="searh-box" class="form-control input-sm border-0 rounded-0 border-bottom-2 border-bottom-warning" type="text" placeholder="Search" aria-label="Search">
                 </div>
-                <button id="searh-button" class="btn btn-outline-white btn-primary accoutn-btn my-2 text-center " type="submit">Search</button>
-              {{-- </form>
-            <form class="form-inline my-2 my-lg-0">
-                <div class="input-group">
-                    <input type="text" class="form-control  ml-2 search-input" placeholder="search...">
-                    <div class="input-group-append">
-                        <a class="btn btn-outline-warning text-center input-group-lg serach-btn"  >Search</a>
-                    </div>
-                </div> --}}
-                @if (!((isset(Auth::user()->name)) || (isset(Auth::user()->email))))
-                <!--Check out button-->
-                <div class="dropdown">
-                    <button class="btn btn-outline-white btn-primary text-center" data-toggle=""  my-0 ml-sm-3" id="searh-button" >Signs<i class="fa fa-map-signs ml-2"></i></button>
-                    <div class="dropdown-content">
-                        <a  href="{{ route('user.register') }}">Register</a>
-                        <a  href="{{ route('user.login') }}">Login</a>
-                    </div>
-                  </div>
-                @else
-                <div class="dropdown">
-                    <button  id="searh-button" class="dropbtn btn text-center align-middle accoutn-btn ml-1">My Account <i class="fa fa-user pl-2"></i></button>
-                    <div class="dropdown-content">
-                        <a  href="#" >AVAIL:Rs {{ __('0') }} </a>
-                        <a  href="#" >PENDING:Rs {{ __('0') }} </a>
-                        <a  href="{{route('user.dashboard')}}" >My Account <i class="fa fa-user pl-2"></i></a>
-                        <a  href="{{route('user.logout')}}">Logout<i class="fa fa-sign-out  pl-2"></i></a>
-                    </div>
-                </div>
-                <!-- Check in button -->
-                @endif
-
-
-
-
+                <button  class="btn border-left-0 btn-warning  px-2 my-2 text-left py-2 rounded-0" type="submit">Search<i class="fa ml-2 fa-search" aria-hidden="true"></i></button>
             </form>
+
             </ul>
           </div>
+          @if (!((isset(Auth::user()->name)) || (isset(Auth::user()->email))))
+            <!--Check out button-->
+            <div class="dropdown ml-sm-2 ml-lg-6 ml-md-3 float-right">
+                <button class=" btn  btn-warning btn-circle text-center rounded-0 py-2   my-3 " data-toggle="" >Signs<i class="fa fa-map-signs ml-2"></i></button>
+                <div class="dropdown-content">
+                    <a  href="{{ route('user.register') }}"><i class="fa fa-user-plus mr-2" aria-hidden="true"></i>Register</a>
+                    <a  href="{{ route('user.login') }}"><i class="fa fa-sign-in mr-3" aria-hidden="true"></i>Login</a>
+                </div>
+            </div>
+          @else
+          <span class="float-right ml-sm-2 ml-lg-5 ml-md-3 ">{{ Auth::user()->email }}</span>
+          <div class="dropdown ml-1">
+            <button  id="searh-button" class="  text-center py-2  my-3 btn btn-outline-success btn-lg rounded-circle"><i class="fa fa-10x fa-user  text-center"></i></button>
+            <div class="dropdown-content">
+                <a  href="#" >AVAIL:Rs {{ __('0') }} </a>
+                <a  href="#" >PENDING:Rs {{ __('0') }} </a>
+                <a  href="{{route('user.dashboard')}}" >My Account <i class="fa fa-user pl-2"></i></a>
+                <a  href="{{route('user.logout')}}">Logout<i class="fa fa-sign-out  pl-2"></i></a>
+            </div>
+            @endif
+        </div>
         </div>
       </nav>
     <!-- END nav -->
@@ -540,6 +534,8 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
         <script src="{{asset('js/google-map.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
+        <!-- Summernote -->
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
 
 
@@ -585,7 +581,17 @@
                 // Hide submenus
             $(document).ready(function() {
 
+                //summernote
+                $('#summernote').summernote({
+                    height: 200,                 // set editor height
+                    minHeight: null,             // set minimum height of editor
+                    maxHeight: null,             // set maximum height of editor
+                    focus: true                  // set focus to editable area after initializing summernote
+                });
+                //end of summarnote
+
                 $('#body-row .collapse').collapse('hide');
+
 
                 // Collapse/Expand icon
                 $('#collapse-icon').addClass('fa-angle-double-left');

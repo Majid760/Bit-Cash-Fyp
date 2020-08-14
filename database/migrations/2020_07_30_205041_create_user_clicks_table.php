@@ -16,7 +16,7 @@ class CreateUserClicksTable extends Migration
         Schema::create('user_clicks', function (Blueprint $table) {
             $table->bigIncrements('id')->primaryKey();
             $table->bigInteger('user_id')->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('product_id')->foreign('product_id')->references('product_id')->on('products')->onDelete('cascade');
+            $table->string('product_id')->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->timestamps();
         });
     }

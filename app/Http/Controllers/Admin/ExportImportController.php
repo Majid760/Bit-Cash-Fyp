@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Category;
 use App\Product;
+use App\Store;
+use App\PromotedProduct;
 
 class ExportImportController extends Controller
 {
@@ -17,16 +19,18 @@ class ExportImportController extends Controller
     public function index() {
         $data=Product::with(['category'])->get();
         $catg=Category::with(['products'])->paginate();
+
         return view('backend.admin.import-product',compact('data','catg'));
     }
 
+
+    // importing products to database
     public function product_import(Request $request){
         $this->validate($request,[
              'file' => 'required|mimes:xls,xlsx,csv,txt',
              ]);
 
         $file=$request->file('file');
-        // dd($file);
         Excel::import(new ProductImport, $file);
 
 
@@ -39,14 +43,20 @@ class ExportImportController extends Controller
 
 
 
-    // promoted product function
 
+    // promoted product function
     public function showPromotedView(){
-        return view('backend.admin.promoted-product-view');
+        $promoData = PromotedProduct::with(['store'])->get();
+        $store = Store::get();
+        return view('backend.admin.promoted-product-view',compact('promoData','store'));
     }
 
-    public function promoted_product_import(Request $request){
 
+    // Importing the promoted products
+    public function promoted_product_import(Request $request){
+        $this->validate($request,[
+            'promoted-file' => 'required|mimes:xls,xlsx,csv,txt',
+            ]);
         $file1=$request->file('promoted-file');
         Excel::import(new PromotedProductImport, $file1);
 

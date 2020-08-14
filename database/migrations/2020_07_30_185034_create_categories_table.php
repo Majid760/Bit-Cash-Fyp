@@ -14,8 +14,9 @@ class CreateCategoriesTable extends Migration
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->bigIncrements('serial');
             $table->bigInteger('id')->primaryKey();
+            $table->bigInteger('genrel_category_id')->foreign('genrel_category_id')->references('id')->on('genrel_categories')->onDelete('cascade');
+            $table->bigIncrements('serial');
             $table->string('category_name');
             $table->timestamps();
         });

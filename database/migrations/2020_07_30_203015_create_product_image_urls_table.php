@@ -15,7 +15,7 @@ class CreateProductImageUrlsTable extends Migration
     {
         Schema::create('product_image_urls', function (Blueprint $table) {
             $table->bigIncrements('id')->primaryKey();
-            $table->bigInteger('product_id')->foreign('product_id')->references('product_id')->on('products')->onDelete('cascade');
+            $table->bigInteger('product_id')->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->string('product_img_url');
             $table->timestamps();
         });
