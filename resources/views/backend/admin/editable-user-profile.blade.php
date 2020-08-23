@@ -123,7 +123,7 @@
 				<div id="Portfolio" class="tab-content">
 					<div class="portfolio-box">
 
-                            <textarea id="summernote" name="msgbody"></textarea>
+                            <textarea id="summernote" name="msgbody" class="form-control">{{{ old('msgbody') }}}</textarea>
                             <div class="float-right mb-5">
                                 <button type="submit" class="btn btn-primary mt-2">Send Message</button>
                             </div>

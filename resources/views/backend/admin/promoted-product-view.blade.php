@@ -190,7 +190,7 @@
                     </table>
                 </div>
                 <!-- End of Data table div-->
-                {{-- <div class="float-right">{{ $data->links('vendor.pagination.bootstrap-4') }}</div> --}}
+                <div class="float-right mt-4">{{ $promoData->links('vendor.pagination.bootstrap-4') }}</div>
             </div>
         </div>
 

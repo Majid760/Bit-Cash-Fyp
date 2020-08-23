@@ -10,8 +10,6 @@ Route::middleware('auth')->group(function(){
         Route::post('/profile/update', 'UserDashboardController@update')->name('user.profile.update');
         Route::post('/password-update', 'UserDashboardController@passwordUpdate')->name('user.password-update');
 
-
-
         // Account Routes
 
         Route::get('/account','Frontend\User\UserAccountController@index')->name('user.account');
@@ -28,5 +26,13 @@ Route::middleware('auth')->group(function(){
          // CustomerSupport Routes
         Route::get('/support', 'Frontend\User\CustomerSupportController@index')->name('customer.support');
         Route::post('/email', 'Frontend\User\CustomerSupportController@sendingEmail')->name('user.email');
+
+        // tracking the user and its click products
+        Route::get('/track-product'.'Frontend\User\UserTrackController@addProduct')->name('user.product-click');
+        // Route::get('/track-product'.function(){
+        //     return view('index');
+        // })->name('user.product-click');
+
+
     });
 });

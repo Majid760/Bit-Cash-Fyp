@@ -2069,13 +2069,13 @@ fieldset:disabled a.btn {
   pointer-events: none; }
 
 .btn-primary {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff; }
+  color: #fff !important;
+  background-color: #6f8296 !important;
+  border-color: #007bff !important; }
   .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc; }
+    background-color: #0069d9 !important;
+    border-color: #0062cc !important; }
   .btn-primary:focus, .btn-primary.focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
@@ -8245,17 +8245,9 @@ h1, h2, h3, h4, h5,
       font-family: "Poppins", Arial, sans-serif;
       letter-spacing: 3px;
       text-transform: uppercase; }
-    .hero-wrap .slider-text .btn-primary {
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      -webkit-border-radius: 30px;
-      -moz-border-radius: 30px;
-      -ms-border-radius: 30px;
-      border-radius: 30px; }
-      .hero-wrap .slider-text .btn-primary:hover, .hero-wrap .slider-text .btn-primary:focus {
-        background: #fff !important;
-        color: #000000; }
-  .hero-wrap.hero-bread {
-    padding: 10em 0; }
+
+
+
 
 .mouse {
   position: absolute;
@@ -8505,65 +8497,10 @@ h1, h2, h3, h4, h5,
 .bg-color-4 {
   background: #dcd691; }
 
-.btn {
-  cursor: pointer;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  border-radius: 30px;
-  -webkit-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
-  -moz-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
-  box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09); }
-  .btn:hover, .btn:active, .btn:focus {
-    outline: none; }
-  .btn.btn-primary {
-    background: #82ae46;
-    border: 1px solid #82ae46;
-    color: #fff; }
-    .btn.btn-primary:hover {
-      border: 1px solid #82ae46;
-      background: transparent;
-      color: #82ae46; }
-    .btn.btn-primary.btn-outline-primary {
-      border: 1px solid #82ae46;
-      background: transparent;
-      color: #82ae46; }
-      .btn.btn-primary.btn-outline-primary:hover {
-        border: 1px solid transparent;
-        background: #82ae46;
-        color: #fff; }
-  .btn.btn-white {
-    background: #fff;
-    border: 1px solid #fff;
-    color: #000000; }
-    .btn.btn-white:hover {
-      background: #82ae46;
-      border: 1px solid #82ae46;
-      color: #fff; }
-    .btn.btn-white.btn-outline-white {
-      border: 1px solid #fff;
-      background: transparent;
-      color: #fff; }
-      .btn.btn-white.btn-outline-white:hover {
-        border: 1px solid transparent;
-        background: #82ae46;
-        color: #fff; }
-  .btn.btn-black {
-    background: #000000;
-    border: 1px solid #000000;
-    color: #fff; }
-    .btn.btn-black:hover {
-      background: #82ae46;
-      border: 1px solid #82ae46;
-      color: #fff; }
-    .btn.btn-black.btn-outline-white {
-      border: 1px solid #000000;
-      background: transparent;
-      color: #000000; }
-      .btn.btn-black.btn-outline-white:hover {
-        border: 1px solid transparent;
-        background: #000000;
-        color: #fff; }
+
+
+
+
 
 .img-2 {
   position: relative; }
@@ -10170,7 +10107,7 @@ textarea.form-control {
     font-size: 24px;
     color: #FFBA39;
     text-indent: 2px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial,'Times New Roman', Times, serif, Helvetica, sans-serif, Geneva, Tahoma, sans-serif;
 
 
 }
@@ -10225,14 +10162,14 @@ textarea.form-control {
     color:#ffe100 !important;
 }
 
-.accoutn-btn {
+/* .accoutn-btn {
     padding:12px 10px !important;
     width:140px !important;
     outline: none !important;
     border:none !important;
     background-color:#EA3562 !important;
     color:#ffe100 !important;
-    opacity: 0.8;
+    opacity: 0.8; */
 
 }
 .account-btn button:hover {
@@ -10293,47 +10230,3 @@ textarea.form-control {
         background-color: #EA3562;
         text-decoration: none;
         }
-
-
-   /* product detail page */
-
-
-    .gallery-wrap .img-big-wrap img {
-        height: 450px;
-        width: auto;
-        display: inline-block;
-        cursor: zoom-in;
-    }
-
-
-    .gallery-wrap .img-small-wrap .item-gallery {
-        width: 60px;
-        height: 60px;
-        border: 1px solid #ddd;
-        margin: 7px 2px;
-        display: inline-block;
-        overflow: hidden;
-    }
-
-    .gallery-wrap .img-small-wrap {
-        text-align: center;
-    }
-    .gallery-wrap .img-small-wrap img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: cover;
-        border-radius: 4px;
-        cursor: zoom-in;
-    }
-
-
-     /* search box */
-
-     #searh-box {
-         height: 40px !important;
-         width:300px !important;
-     }
-     #searh-button {
-         height: 40px !important;
-
-     }

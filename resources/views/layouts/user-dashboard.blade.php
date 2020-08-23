@@ -4,7 +4,7 @@
  <link rel="stylesheet" href="{{ asset('frontend/css/user-dashboard.css') }}">
  <link rel="stylesheet" href="{{ asset('frontend/css/now-ui-dashboard.min.css') }}">
  <link rel="stylesheet" href="{{ asset('frontend/css/slim.min.css')}}">
-
+ 
 
 @endsection
 @section('content')

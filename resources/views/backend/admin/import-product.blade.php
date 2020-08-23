@@ -38,6 +38,17 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-12 col-md-12 justify-content-center ml-auto d-flex justify-content-center ">
+                                <a href="#" class="btn btn-info btn-icon-split btn-lg ">
+                                    <span class="icon text-white-50">
+                                        <i class="fa fa-upload" aria-hidden="true"></i>
+                                    </span>
+                                    <input type="file" name="file1" class="text text-white " value="Upload The File!">
+                                </a>
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col-lg-6 col-md-6  mt-4">
 
@@ -46,6 +57,7 @@
                             <div class="col-lg-6 col-md-6  mt-4">
                                 <button class="btn btn-success btn-md" href="{{ route('admin.export-product') }}">Export Products </button>
                             </div>
+
                         </div>
 
                         </form>
@@ -97,7 +109,7 @@
                                 <button class="btn btn-md btn-primary"><span class="badge badge-primary badge-pill">{{ count($data) }}</span></button>
                             </a>
                             <a href="#!" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">Categories
-                                <button class="btn btn-primary btn-md"><span class="badge badge-primary badge-pill">{{ $catg->total() }}</span></button>
+                                <button class="btn btn-primary btn-md"><span class="badge badge-primary badge-pill">{{count($catg) }}</span></button>
                             </a>
                             <a href="#!" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">Completed projects
                                 <button class="btn btn-md btn-primary"><span class="badge badge-primary badge-pill">10</span></button>
@@ -131,7 +143,7 @@
                         <thead class="rounded-top">
                             <tr class="bg-primary text-white rounded-top">
                                 <th scope="col">#</th>
-                                <th scope="col">Category</th>
+                                {{-- <th scope="col">Category</th> --}}
                                 <th scope="col">Product_Id</th>
                                 <th scope="col">Product_Name</th>
                                 <th scope="col">Product_Url</th>
@@ -145,8 +157,8 @@
                         <tbody class="table-hover">
                             @foreach($data as $productDat)
                                 <tr class="">
-                                    <td scope="row">{{ $productDat->serial }}</td>
-                                    <td scope="row">{{ $productDat->category->category_name }}</td>
+                                    <td scope="row">{{ $productDat->id }}</td>
+                                    {{-- <td scope="row">{{ $productDat->category->category_name }}</td> --}}
                                     <td scope="row">{{ $productDat->product_id}}</td>
                                     <td scope="row">{{$productDat->product_name}}</td>
                                     <td scope="row"><a href="{{preg_replace('/\s\s+/', ' ', $productDat->product_url)}}" target="_blank">{{ $productDat->product_url}}</a></td>
@@ -161,7 +173,7 @@
                         <tfoot>
                             <tr class="bg-info text-white rounded-top">
                                 <th scope="col">#</th>
-                                <th scope="col">Category</th>
+                                {{-- <th scope="col">Category</th> --}}
                                 <th scope="col">Product_Id</th>
                                 <th scope="col">Product_Name</th>
                                 <th scope="col">Product_Url</th>

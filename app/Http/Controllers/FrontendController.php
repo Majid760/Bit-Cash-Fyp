@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use App\Category;
 use App\Product;
+use App\Category;
+use App\PromotedProduct;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class FrontendController extends Controller
 {
     //
-
-
     public function index(){
-        // $products=Product::all();
-        // $catogory=Category::all();
-        return view('index');
+        // $catogory=Category::with('products')->get();
+        $products=Product::with('productImgsUrls')->orderBy(DB::raw('RAND(123)'))->paginate(90);
+        $promoData = PromotedProduct::all()->random(12);
+
+        return view('index',compact('products','promoData'));
     }
 }

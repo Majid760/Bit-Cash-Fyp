@@ -9,6 +9,7 @@ require_once 'bit-cash/auth.php';
 require_once 'bit-cash/user.php';
 require_once 'bit-cash/product.php';
 require_once 'bit-cash/admin.php';
+require_once 'bit-cash/ordertracking.php';
 
 
 
@@ -23,9 +24,12 @@ require_once 'bit-cash/admin.php';
 |
 */
 
-   Route::Auth();
+Route::Auth();
 
 Route::get('store','StoreController@index')->name('store');
 
 
 // Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/track-product/{id}'.'Frontend\User\UserTrackController@addProduct')->name('product.track-product');
+
+

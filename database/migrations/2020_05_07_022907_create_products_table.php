@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->bigInteger('product_id');
             $table->bigInteger('category_id')->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->string('product_name');
-            $table->string('product_url')->unique();
+            $table->string('product_url');
             $table->float('original_price');
             $table->float('sale_price')->nullable();
             $table->string('commission');

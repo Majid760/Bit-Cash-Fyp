@@ -15,7 +15,8 @@
   <link href="{{ asset('backend/css/admin-user-profile.css') }}" rel="stylesheet"/>
   <!-- Custom fonts for this template-->
   <link href="{{ asset('backend/css/custom-admin.css') }}" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
   <link href="{{ asset('backend/css/admin-all.min.css') }}" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -23,7 +24,6 @@
   <link href="{{ asset('backend/css/admin-css.min.css') }}" rel="stylesheet">
   <link href="{{  asset('backend/css/all.min.css') }}" rel="stylesheet">
   <link href="{{  asset('backend/css/sb-admin-2.min.css') }}" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
 
   <!-- product listing css  -->
@@ -74,13 +74,13 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
+          <span>Users</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">User Setting</h6>
             <a class="collapse-item" href="{{ route('admin.all-user') }}">All User</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
+            <a class="collapse-item" href="{{ route('admin.subscribed-user') }}">Subcribed User</a>
           </div>
         </div>
       </li>
@@ -114,12 +114,12 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
+          <span>Order Record</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
+            <a class="collapse-item" href="{{ route('admin.live-order-tracking') }}">Live Order Tracking</a>
             <a class="collapse-item" href="register.html">Register</a>
             <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
             <div class="collapse-divider"></div>
@@ -349,11 +349,11 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
+          {{-- <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-          </div>
+          </div> --}}
 
 
 
@@ -409,6 +409,8 @@
     </div>
   </div>
 
+
+
   <!-- Bootstrap core JavaScript-->
   <script src="{{ asset('backend/js/admin-jquery.min.js') }}" ></script>
   <script src="{{ asset('backend/js/admin-bootstrap.bundle.min.js') }}"></script>
@@ -421,14 +423,14 @@
   <!-- Page level plugins -->
   {{-- <script src="{{ asset('backend/js/Chart.min.js') }}"></script> --}}
   {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script> --}}
-  {{-- <script src="{{ asset('backend/js/Chart.min.js') }}"></script> --}}
+  <script src="{{ asset('backend/js/Chart.min.js') }}"></script>
   <!-- Page level custom scripts -->
-  {{-- <script src="{{ asset('backend/js/chart-area-demo.js') }}"></script> --}}
-  {{-- <script src="{{ asset('backend/js/chart-pie-demo.js')  }}"></script> --}}
+  <script src="{{ asset('backend/js/chart-area-demo.js') }}"></script>
+  <script src="{{ asset('backend/js/chart-pie-demo.js')  }}"></script>
 
 
   <!-- DataTable scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> --}}
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
@@ -441,8 +443,8 @@
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.colVis.min.js"></script>
     <!-- Summernote -->
+
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-    {{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script> --}}
     <script type="text/javascript">
        $(document).ready(function() {
            //datatable script
@@ -470,7 +472,8 @@
 
             //summernote
             $('#summernote').summernote({
-                    height: 120,                 // set editor height
+                    height: 150,
+                    width: 650 ,                   // set editor height
                     minHeight: null,             // set minimum height of editor
                     maxHeight: null,             // set maximum height of editor
                     focus: true                  // set focus to editable area after initializing summernote
@@ -478,6 +481,12 @@
             //end of summarnote
 
 } );
+
+     // Add the following code if you want the name of the file appear on select on order-tracking blade
+     $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
 
     </script>
 </body>

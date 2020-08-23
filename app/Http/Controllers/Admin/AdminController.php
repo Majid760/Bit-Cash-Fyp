@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Product;
+use App\PromotedProduct;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
@@ -18,7 +20,21 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        return view('backend.admin.admin-dashboard');
+        $estAmnt=0;
+        $products = Product::all();
+        foreach ($products as $product){
+            if($product->sale_price==null || $product->sale_price==0){
+                $estAmnt+=($product->original_price/100)*(str_replace('%','',$product->commission)+0);
+            } else {
+                $estAmnt+=($product->sale_price/100)*(str_replace('%','',$product->commission)+0);
+            }
+        }
+        $promoProd=PromotedProduct::all();
+        foreach($promoProd as $prod){
+            $estAmnt+=($prod->unit_price/100)*$prod->commission;
+        }
+
+        return view('backend.admin.admin-dashboard',compact('estAmnt'));
     }
 
     /**

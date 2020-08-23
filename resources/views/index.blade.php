@@ -56,21 +56,27 @@
 
       <!-- top different offers -->
       <div class="container">
-          <div class="row my-4">
-              <div class="col-md-6 col-lg-4 padding-0">
-                  <div class="top__offers d-flex align-items-end fadeInUp ftco-animate">
-                    <img class=" img-fluid top__offers" height="200px" src="{{asset('frontend/images/1-top-offer.png')}}">
-                  </div>
+          <div class="row my-4 px-5">
+              <div class="col-md-6 col-lg-4 ">
+                  <div class="top__offers d-flex align-items-center fadeInUp ftco-animate mt-5">
+                    <a href="https://s.click.aliexpress.com/e/_dUsjCJc?bz=300*250" target="_blank">
+                            <img width="400" height="250" src="https://ae01.alicdn.com/kf/HTB1uQflwASWBuNjSszd762eSpXam/EN_300_250.png"/>
+                    </a>
+                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 padding-0">
-                <div class="top__offers d-flex align-items-end fadeInUp ftco-animate">
-                    <img class=" img-fluid top__offers" height="200px" src="{{asset('frontend/images/sale-2.png')}}">
+              <div class="col-md-6 col-lg-4 ">
+                <div class="top__offers d-flex align-items-center fadeInUp ftco-animate mt-5">
+                    <a href="https://s.click.aliexpress.com/e/_dVEanBo?bz=300*250" target="_blank">
+                        <img width="400" height="250" src="//ae01.alicdn.com/kf/Had93e0a03ab54bca81b36c7da4a2bf44Y.gif"/>
+                    </a>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4 padding-0">
-                <div class="top__offers d-flex align-items-end fadeInUp ftco-animate">
-                    <img class=" img-fluid top__offers" height="200px" src="{{asset('frontend/images/sale-3.png')}}">
-                </div>
+              <div class="col-md-6 col-lg-4 ">
+                <div class="top__offers d-flex align-items-center fadeInUp ftco-animate mt-5">
+                    <a href="https://s.click.aliexpress.com/e/_d8rJNh4?bz=500*500" target="_blank">
+                        <img width="400" height="250" src="//ae01.alicdn.com/kf/H570a54cd21fa4c59ba7a0ec6d368dfe08.png"/>
+                    </a>
+                 </div>
             </div>
           </div>
       </div>
@@ -78,567 +84,651 @@
     <!-- top different offers -->
 
         <!-- services section -->
+        <div class="container my-5">
 
-		<section class="ftco-section ftco-category ftco-no-pt">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8">
-						<div class="row">
-							<div class="col-md-6 order-md-last align-items-stretch d-flex">
-								<div class="category-wrap-2 ftco-animate img align-self-stretch d-flex" style="background-image: url(frontend/images/product.jpg);">
-									<div class="text text-center">
-										<h2 class="text-color">Our Quality Products</h2>
-										<p>Save the money for your future!</p>
-										<p><a href="#" class="btn btn-primary" style="background:#EA3562; border-color:#EA3562;">Shop now</a></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(frontend/images/acc.jpg);">
-									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Accessories</a></h2>
-									</div>
-								</div>
-								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(frontend/images/clothes.jpg);">
-									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Clothes</a></h2>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+            <!-- Section -->
+            <section>
 
-					<div class="col-md-4">
-						<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(frontend/images/shoes.jpg);">
-							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="#">Shoes</a></h2>
-							</div>
-						</div>
-						<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(frontend/images/mobile-computer.jpg);">
-							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="#">Laptop & Smart Phones</a></h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-        </section>
+              <!-- Modal -->
+                  <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                              <div class="modal-body p-0">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+
+                                  <!-- Grid row -->
+                                  <div class="row">
+
+                                      <!-- Grid column -->
+                                      <div class="col-md-6 py-5 pl-5">
+
+                                          <h5 class="font-weight-normal mb-3">Paper cup mockup</h5>
+
+                                          <p class="text-muted">Key letters, explain which writing we he carpeting or fame, the itch expand medical amped through constructing time. And scarfs, gain, get showed accounts decades.</p>
+
+                                          <ul class="list-unstyled font-small mt-5">
+                                              <li>
+                                                  <p class="text-uppercase mb-2"><strong>Client</strong></p>
+                                                  <p class="text-muted mb-4">Envato Inc.</p>
+                                              </li>
+
+                                              <li>
+                                                  <p class="text-uppercase mb-2"><strong>Date</strong></p>
+                                                  <p class="text-muted mb-4">June 27, 2019</p>
+                                              </li>
+
+                                              <li>
+                                                  <p class="text-uppercase mb-2"><strong>Skills</strong></p>
+                                                  <p class="text-muted mb-4">Design, HTML, CSS, Javascript</p>
+                                              </li>
+
+                                              <li>
+                                                  <p class="text-uppercase mb-2"><strong>Address</strong></p>
+                                                  <a href="https://mdbootstrap.com/docs/jquery/design-blocks/">MDBootstrap</a>
+                                              </li>
+                                          </ul>
+
+                                      </div>
+                                      <!-- Grid column -->
+
+                                      <!-- Grid column -->
+                                      <div class="col-md-6">
+
+                                          <div class="view rounded-right">
+                                              <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/5.jpg" alt="Sample image">
+                                          </div>
+
+                                      </div>
+                                      <!-- Grid column -->
+
+                                  </div>
+                                  <!-- Grid row -->
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              <hr class="w-header my-4">
+
+              <!-- Grid row -->
+              <div class="row">
+
+
+
+              </div>
+              <!-- Grid row -->
+
+              <!-- Grid row -->
+              <div class="gallery mb-5" id="gallery">
+
+                <!-- Grid column -->
+                <div class="mb-3 pics all 2 animation">
+                  <a data-toggle="modal" data-target="#basicExampleModal">
+                    <img class="img-fluid z-depth-1 rounded" src="{{ asset('frontend/images/shoes1.jpg') }}" alt="Card image cap">
+                  </a>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="mb-3 pics animation all 1">
+                  <a data-toggle="modal" data-target="#basicExampleModal">
+                    <img class="img-fluid z-depth-1 rounded" src="{{ asset('frontend/images/apparel.jpg') }}" alt="Card image cap">
+                  </a>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="mb-3 pics animation all 1">
+                  <a data-toggle="modal" data-target="#basicExampleModal">
+                    <img class="img-fluid z-depth-1 rounded" src="{{ asset('frontend/images/mobile-computer.jpg') }}" alt="Card image cap">
+                  </a>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="mb-3 pics all 2 animation">
+                  <a data-toggle="modal" data-target="#basicExampleModal">
+                    <img class="img-fluid z-depth-1 rounded" src="{{ asset('frontend/images/beauty1.jpg')}}" alt="Card image cap">
+                  </a>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="mb-3 pics all 2 animation">
+                  <a data-toggle="modal" data-target="#basicExampleModal">
+                    <img class="img-fluid z-depth-1 rounded" src="{{ asset('frontend/images/jewelry.jpg')}}" alt="Card image cap">
+                  </a>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="mb-3 pics animation all 1">
+                  <a data-toggle="modal" data-target="#basicExampleModal">
+                    <img class="img-fluid z-depth-1 rounded" src="{{ asset('frontend/images/clothes1.jpg')}}" alt="Card image cap">
+                  </a>
+                </div>
+                <!-- Grid column -->
+
+              </div>
+              <!-- Grid row -->
+
+            </section>
+            <!-- Section -->
+
+          </div>
+
         <!-- end services section -->
 
 
         <!-- product listing services section -->
-    <section class="ftco-section">
+    <section class="ftco-section py-0">
     	<div class="container">
-				<div class="row justify-content-center mb-3 pb-3">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<span class="subheading">Featured Products</span>
-            <h2 class="mb-4">Our Products</h2>
-            {{-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> --}}
-          </div>
-        </div>
+			<div class="row justify-content-center mb-2 pb-3">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <span class="subheading">Store Products</span>
+                </div>
+            </div>
     	</div>
     	<div class="container">
-        <div class="row">
-        <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="product">
-                <a href="#" class="img-prod">
-                    <img class="img-fluid product-image" src="frontend/images/Manicure-Milling-Drill-Bit.jpg" alt="Colorlib Template">
-                    <span class="status">30%</span>
-                    <div class="overlay"></div>
-                </a>
-                <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Manicure-Milling-Drill-Bit</a></h3>
-                    <div class="d-flex">
-                        <div class="pricing">
-                            {{-- <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p> --}}
-                        </div>
-                    </div>
-                    <div class="bottom-area d-flex px-3">
-                        <div class="m-auto d-flex">
-                            <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                <span><i class="ion-ios-menu"></i></span>
-                            </a>
-                            <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                <span><i class="ion-ios-cart"></i></span>
-                            </a>
-                            <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                <span><i class="ion-ios-heart"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>                  <!-- 1 end of product listing section -->
-
-            <!-- 2 start product showing section -->
-        <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="product">
-                <a href="#" class="img-prod">
-                        <img class="img-fluid product-image" src="frontend/images/Spider-Nail-Gel.png" alt="Colorlib Template">
-                        <span class="status">35%</span>
-                    <div class="overlay"></div>
-                </a>
-                <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Spider-Nail-Gel</a></h3>
-                    <div class="d-flex">
-                        <div class="pricing">
-                            <p class="price"><span>$120.00</span></p>
-                        </div>
-                    </div>
-                    <div class="bottom-area d-flex px-3">
-                        <div class="m-auto d-flex">
-                            <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                <span><i class="ion-ios-menu"></i></span>
-                            </a>
-                            <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                <span><i class="ion-ios-cart"></i></span>
-                            </a>
-                            <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                <span><i class="ion-ios-heart"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>                                      <!-- 2 end product showing section -->
-        </div>
-        <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="product">
-                <a href="#" class="img-prod">
-                     <img class="img-fluid product-image" src="frontend/images/Wifi-Repeater.jpg" alt="Colorlib Template">
-                    <span class="status">20%</span>
-                    <div class="overlay"></div>
-                </a>
-                <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Wifi-Repeater</a></h3>
-                    <div class="d-flex">
-                        <div class="pricing">
-                            <p class="price"><span>$120.00</span></p>
-                        </div>
-                    </div>
-                    <div class="bottom-area d-flex px-3">
-                        <div class="m-auto d-flex">
-                            <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                <span><i class="ion-ios-menu"></i></span>
-                            </a>
-                            <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                <span><i class="ion-ios-cart"></i></span>
-                            </a>
-                            <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                <span><i class="ion-ios-heart"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Wireless-Phone-Chargers.jpg" alt="Colorlib Template">
-                    <div class="overlay"></div>
-                </a>
-                <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Wireless-Phone-Chargers</a></h3>
-                    <div class="d-flex">
-                        <div class="pricing">
-                            <p class="price"><span>$120.00</span></p>
-                        </div>
-                    </div>
-                    <div class="bottom-area d-flex px-3">
-                        <div class="m-auto d-flex">
-                            <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                <span><i class="ion-ios-menu"></i></span>
-                            </a>
-                            <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                <span><i class="ion-ios-cart"></i></span>
-                            </a>
-                            <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                <span><i class="ion-ios-heart"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 ftco-animate">
-        <div class="product">
-                <a href="{{ route('product.product-detail') }}" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Phone-Lenses.jpg" alt="Colorlib Template">
-                    <span class="status">30%</span>
-                    <div class="overlay"></div>
-                </a>
-                    <div class="text py-3 pb-4 px-3 text-center">
-                        <h3><a href="#">Phone-Lenses</a></h3>
-                        <div class="d-flex">
-                            <div class="pricing">
-                                <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
+            <div class="row">
+                @foreach($products as $product)
+                    @foreach ($product->productImgsUrls as $url)
+                        <div class="col-md-3 col-lg-2 col-sm-4 ftco-animate">
+                            <div class="product">
+                                <a href="{{ route('product.detail',['id' =>$product->id])}}"  class="img-prod">
+                                    {{-- "{{route('admin.user-status',['id'=>$user->id])}}" --}}
+                                    <img class="img-fluid product-image" src="{{ $url->product_img_url }}" alt="{{ $product->product_name }}" height="220" width="220">
+                                    @if($product->discount==null || $product->discount==0)
+                                    <span class="status float-right">0% off + {{ ((str_replace('%','',$product->commission)+0)/2).'% Cashback' }}</span>
+                                    @else
+                                    <span class="status float-right">{{ $product->discount.' '.'off + '.((str_replace('%','',$product->commission)+0)/2).'% Cashback' }}</span>
+                                    @endif
+                                    <div class="overlay"></div>
+                                </a>
+                                <div class="text py-3 pb-4 px-3 text-center">
+                                    <p><a href="{{ route('product.detail',['id' =>$product->id])}}" class="text-justify" style="font-size:12px">{{ implode(' ', array_slice(explode(' ', $product->product_name), 0, 6)) }}</a></p>
+                                    <div class="d-flex">
+                                        <div class="pricing">
+                                            <p class="price" >
+                                                @if($product->discount!=null && $product->discount!=0)
+                                                    @if ($product->original_price)
+                                                    <span class="mr-2 price-dc">{{ $product->original_price.''.'$'}}</span>
+                                                    @endif
+                                                    @if($product->sale_price)
+                                                    <span class="price-sale ml-1">{{ $product->sale_price.' '.'$'}}</span>
+                                                    @endif
+                                                @else
+                                                    @if($product->original_price)
+                                                    <span class="price-sale ml-1">{{ $product->original_price.' '.'$'}}</span>
+                                                    @endif
+                                                @endif
+                                            </p>
+                                        </div>
+                                    </div>
+                                    {{-- <div class="bottom-area d-flex px-3">
+                                        <div class="m-auto d-flex">
+                                            <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                                <span><i class="ion-ios-menu"></i></span>
+                                            </a>
+                                            <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                                <span><i class="ion-ios-cart"></i></span>
+                                            </a>
+                                            <a href="#" class="heart d-flex justify-content-center align-items-center ">
+                                                <span><i class="ion-ios-heart"></i></span>
+                                            </a>
+                                        </div>
+                                    </div> --}}
+                                </div>
                             </div>
                         </div>
-                        <div class="bottom-area d-flex px-3">
-                            <div class="m-auto d-flex">
-                                <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                    <span><i class="ion-ios-menu"></i></span>
-                                </a>
-                                <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                    <span><i class="ion-ios-cart"></i></span>
-                                </a>
-                                <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                    <span><i class="ion-ios-heart"></i></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        @break
+                    @endforeach
+                @endforeach
+                          <!-- 1 end of product listing section -->
             </div>
-        <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Home-Security-IP-Camera.jpg" alt="Colorlib Template">
-                    <div class="overlay"></div>
-                </a>
-                <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Home-Security-IP-Camera</a></h3>
-                    <div class="d-flex">
-                        <div class="pricing">
-                            <p class="price"><span>$120.00</span></p>
-                        </div>
-                    </div>
-                    <div class="bottom-area d-flex px-3">
-                        <div class="m-auto d-flex">
-                            <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                <span><i class="ion-ios-menu"></i></span>
-                            </a>
-                            <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                <span><i class="ion-ios-cart"></i></span>
-                            </a>
-                            <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                <span><i class="ion-ios-heart"></i></span>
-                            </a>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-lg12 col-md-12 col-sm-12">
+                    <div class="d-flex align-items-center justify-content-center">{{ $products->links() }}</div>
                 </div>
+
             </div>
         </div>
-        <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Face-Shield.png" alt="Colorlib Template">
-                    <div class="overlay"></div>
-                </a>
-                <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Face-Shield</a></h3>
-                    <div class="d-flex">
-                        <div class="pricing">
-                            <p class="price"><span>$120.00</span></p>
-                        </div>
-                    </div>
-                    <div class="bottom-area d-flex px-3">
-                        <div class="m-auto d-flex">
-                            <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                <span><i class="ion-ios-menu"></i></span>
-                            </a>
-                            <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                <span><i class="ion-ios-cart"></i></span>
-                            </a>
-                            <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                <span><i class="ion-ios-heart"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Car-Phone-Holder.jpg" alt="Colorlib Template">
-                    <div class="overlay"></div>
-                </a>
-                <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Car-Phone-Holder</a></h3>
-                    <div class="d-flex">
-                        <div class="pricing">
-                            <p class="price"><span>$120.00</span></p>
-                        </div>
-                    </div>
-                    <div class="bottom-area d-flex px-3">
-                        <div class="m-auto d-flex">
-                            <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                <span><i class="ion-ios-menu"></i></span>
-                            </a>
-                            <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                <span><i class="ion-ios-cart"></i></span>
-                            </a>
-                            <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                <span><i class="ion-ios-heart"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </section>
 
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Selfie-Drone-Quadcopter.jpg" alt="Colorlib Template">
-                    <div class="overlay"></div>
-                    </a>
-                    <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Selfie-Drone-Quadcopter</a></h3>
-                    <div class="d-flex">
-                        <div class="pricing">
-                        <p class="price"><span>$120.00</span></p>
-                        </div>
-                    </div>
-                    <div class="bottom-area d-flex px-3">
-                        <div class="m-auto d-flex">
-                        <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                            <span><i class="ion-ios-menu"></i></span>
-                        </a>
-                        <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                            <span><i class="ion-ios-cart"></i></span>
-                        </a>
-                        <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                            <span><i class="ion-ios-heart"></i></span>
-                        </a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="frontend/images/Fishing-Quick-Knot-Tool.jpg" alt="Colorlib Template">
-                    <div class="overlay"></div>
-                    </a>
-                    <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Fishing-Quick-Knot-Tool</a></h3>
-                    <div class="d-flex">
-                        <div class="pricing">
-                        <p class="price"><span>$120.00</span></p>
-                        </div>
-                    </div>
-                    <div class="bottom-area d-flex px-3">
-                        <div class="m-auto d-flex">
-                        <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                            <span><i class="ion-ios-menu"></i></span>
-                        </a>
-                        <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                            <span><i class="ion-ios-cart"></i></span>
-                        </a>
-                        <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                            <span><i class="ion-ios-heart"></i></span>
-                        </a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid product-image" src="frontend/images/Front-Facing-Baby-Carrier.jpg" alt="Colorlib Template">
-                    <div class="overlay"></div>
-                    </a>
-                    <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Front-Facing-Baby-Carrier</a></h3>
-                    <div class="d-flex">
-                        <div class="pricing">
-                        <p class="price"><span>$120.00</span></p>
-                        </div>
-                    </div>
-                    <div class="bottom-area d-flex px-3">
-                        <div class="m-auto d-flex">
-                        <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                            <span><i class="ion-ios-menu"></i></span>
-                        </a>
-                        <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                            <span><i class="ion-ios-cart"></i></span>
-                        </a>
-                        <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                            <span><i class="ion-ios-heart"></i></span>
-                        </a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="product">
-                    <a href="#" class="img-prod "><img class="img-fluid product-image" src="frontend/images/Portable-Blender-Electric-Blender.jpg" alt="Colorlib Template">
-                    <div class="overlay"></div>
-                    </a>
-                    <div class="text py-3 pb-4 px-3 text-center">
-                    <h3><a href="#">Portable-Blender-Electric-Blender</a></h3>
-                    <div class="d-flex">
-                        <div class="pricing">
-                        <p class="price"><span>$120.00</span></p>
-                        </div>
-                    </div>
-                    <div class="bottom-area d-flex px-3">
-                        <div class="m-auto d-flex">
-                        <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                            <span><i class="ion-ios-menu"></i></span>
-                        </a>
-                        <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                            <span><i class="ion-ios-cart"></i></span>
-                        </a>
-                        <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                            <span><i class="ion-ios-heart"></i></span>
-                        </a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- how to get cash-back section -->
-        <section>
-            <div class="container" id="how-to-work">
-                <hr>
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 pt-3">
-                        <h3 class="text-center text-color">How to Get Cashback via Bit-Cash?</h3>
-                    </div>
-                </div>
-                <div class="row py-2 my-2 text-center">
-                    <div class="col-sm-12 col-md-3 my-2 col-lg-3 service--section">
-                        <div class="service-icon">
-                            <i class="fa fa-search fa-4x mt-3 custom-font"></i>
-                        </div>
-                        <p class="service--sectio__title">One step registration</p>
-                        <p>Login & Browse Offers from 300+ Online Stores.</p>
-                    </div>
-                    <div class="col-sm-12 col-md-3 my-2 col-lg-3 service--section">
-                        <div class="service-icon">
-                            <i class="fa fa-shopping-cart fa-4x mt-3 custom-font"></i>
-                        </div>
-                        <p class="service--sectio__title">Search 20+ Stores</p>
-                        <p>Shop at any Store after Redirecting via Bit-Cash.</p>
-                    </div>
-                    <div class="col-sm-12 col-md-3 my-2 col-lg-3 service--section">
-                        <div class="service-icon">
-                            <i class="fa fa-google-wallet fa-4x mt-3 custom-font"></i>
-                        </div>
-
-                        <h2 class="service--sectio__title">Amount Verification</h2>
-                        <p>Cashback will be tracked into Bit-Cash account in 24-48 hours.</p>
-                    </div>
-                    <div class="col-sm-12 col-md-3 col-lg-3 my-2  service--section">
-                        <div  class="service-icon">
-                            <i class="fa fa-money fa-4x mt-3 custom-font"></i>
-                        </div>
-                        <h2 class="service--sectio__title">redeem</h2>
-                        <p>Redeem Earned Cashback to Bank Account</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <!-- end services section -->
     <!-- top store coupans and cashback offers -->
-    <section>
-        <div class="container">
-            <hr>
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <h3 class="text-color py-3 text-center">Top Stores Coupons & Cashback Offers</h3>
-                </div>
+    <div class="container my-5">
+
+
+        <!-- Section: Block Content -->
+        <section class="dark-grey-text text-center">
+
+          <h3 class="font-weight-bold mb-4 pb-2">Our Best Stores</h3>
+          <p class="text-muted w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</p>
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-12 mb-4">
+
+              <div class="view overlay rounded z-depth-1">
+                <img src="{{ asset('frontend/images/aliexpress1.gif') }}" class="img-fluid" alt="Sample project image" >
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <div class="px-3 pt-3 mx-1 mt-1 pb-0">
+                <h4 class="font-weight-bold mt-1 mb-3">AliExpress.com</h4>
+                <p class="text-muted">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
+                <a href="https://www.aliexpress.com" target="_blank" class="btn btn-warning mt-2  btn-rounded "> Visit Site</a>
+              </div>
+
             </div>
-            <div class="row">
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/daraz.jpg')}}" class="img-fluid  img-css zoom">
-                    <h2 class="cashback-offers">Up to 13% Cashback</h2>
-                    <p class="cashback-percent">50+ offers</p>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img  src="{{asset('frontend/images/yayvo4.png')}}" class="img-fluid img-css zoom">
-                    <h2 class="cashback-offers">Up to 9% Cashback</h2>
-                    <p class="cashback-percent">20+ offers</p>
+            <!-- Grid column -->
 
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/aliexpress.png')}}" class="img-fluid img-css zoom">
-                    <h2 class="cashback-offers">Up to 15% Cashback</h2>
-                    <p class="cashback-percent">10+ offers</p>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/ishoopingg.jpg')}}" class="img-fluid img-css zoom">
-                    <h2 class="cashback-offers">Up to 20% Cashback</h2>
-                    <p class="cashback-percent">50+ offers</p>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/mega.png')}}" class="img-fluid img-css zoom">
-                    <h2 class="cashback-offers">Up to 10% Cashback</h2>
-                    <p class="cashback-percent">30+ offers</p>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/goto.jpg')}}" class="img-fluid img-css zoom">
-                    <h2 class="cashback-offers">Up to 10% Cashback</h2>
-                    <p class="cashback-percent">26+ offers</p>
-                </div>
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-6 mb-4">
+
+              <div class="view overlay rounded z-depth-1">
+                <img src="{{ asset('frontend/images/ebay1.gif') }}" class="img-fluid" alt="Sample project image">
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <div class="px-3 pt-3 mx-1 mt-1 pb-0">
+                <h4 class="font-weight-bold mt-1 mb-3">ebay.com</h4>
+                <p class="text-muted">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
+                <a href="https://www.ebay.com" target="_blank" class="btn btn-warning  btn-rounded mt-2">Visit Site</a>
+              </div>
+
             </div>
-            <!-- 2nd row -->
+            <!-- Grid column -->
 
-            <div class="row mt-3">
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                 <img src="{{asset('frontend/images/telemart2.png')}}" class="img-fluid img-css zoom">
-                 <h2 class="cashback-offers">Up to 9% Cashback</h2>
-                    <p class="cashback-percent">20+ offers<p>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img  src="{{asset('frontend/images/shophive3.jpg')}}" class="img-fluid img-css zoom">
-                    <h2 class="cashback-offers">Up to 10% Cashback</h2>
-                    <p class="cashback-percent">40+ offers</p>
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-6 mb-4">
 
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/clickypk.jpg')}}" class="img-fluid img-css zoom">
-                    <h2 class="cashback-offers">Up to 10% Cashback</h2>
-                    <p class="cashback-percent">10+ offers</p>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/elo.png')}}" class="img-fluid img-css zoom">
-                    <h2 class="cashback-offers">Up to 12% Cashback</h2>
-                    <p class="cashback-percent">25+ offers</p>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/homeshoping.jpg')}}" class="img-fluid img-css zoom">
-                    <h2 class="cashback-offers">Up to 17% Cashback</h2>
-                    <p class="cashback-percent">20+ offers</p>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="{{asset('frontend/images/symbios.jpg')}}" class="img-fluid img-css zoom">
-                    <h2 class="cashback-offers">Up to 23% Cashback</h2>
-                    <p class="cashback-percent">50+ offers</p>
-                </div>
-            </div> <!--ending row -->
-        </div>
-    </section>
-        <!-- end of top store coupans and cashback offers -->
+              <div class="view overlay rounded z-depth-1">
+                <img src="{{ asset('frontend/images/amazon-discount1.gif') }}" class="img-fluid" alt="Sample project image" >
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <div class="px-3 pt-3 mx-1 mt-1 pb-0">
+                <h4 class="font-weight-bold mt-1 mb-3">Amazon.com</h4>
+                <p class="text-muted">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
+                <a class="btn btn-warning mt-2 btn-rounded">Visit Site</a>
+              </div>
+
+            </div>
+            <!-- Grid column -->
+
+          </div>
+          <!-- Grid row -->
+
+        </section>
+        <!-- Section: Block Content -->
 
 
-        <!-- Deal of the day section -->
+      </div>
+      <!-- our client -->
+      <div class="container z-depth-1 my-5">
 
-        <section class="ftco-section img" style="background-image: url(frontend/images/deal-of-the-day111.jpg);">
-            <div class="container">
-                    <div class="row justify-content-end ">
-                        <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate ml-4">
-                            <span class="subheading">Best Price For You</span>
-                            <h2 class="mb-4">Deal of the day</h2>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                            <h3><a href="#">Spinach</a></h3>
-                            <span class="price">$10 <a href="#">now $5 only</a></span>
-                            <div id="timer" class="d-flex mt-5">
-                                <div class="time" id="days"></div>
-                                <div class="time pl-3" id="hours"></div>
-                                <div class="time pl-3" id="minutes"></div>
-                                <div class="time pl-3" id="seconds"></div>
-                            </div>
+        <section class="text-center py-5">
+
+          <p class="mb-4 pb-2 lead font-weight-bold">Our Proud Partner</p>
+
+          <!-- Logo carousel -->
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="1800">
+            <div class="carousel-inner">
+              <!-- First slide -->
+              <div class="carousel-item active">
+                <!--Grid row-->
+                <div class="row">
+
+                  <!--First column-->
+                  <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="{{ asset('frontend/images/aliexpress-discount.jpg') }}" class="img-fluid px-4" alt="Logo">
+                  </div>
+                  <!--/First column-->
+
+                  <!--Second column-->
+                  <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="{{ asset('frontend/images/telemart.jpg') }}" class="img-fluid px-4" alt="Logo">
+                  </div>
+                  <!--/Second column-->
+
+                  <!--Third column-->
+                  <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://mdbootstrap.com/img/Photos/Template/6.png" class="img-fluid px-4" alt="Logo">
+                  </div>
+                  <!--/Third column-->
+
+                  <!--Fourth column-->
+                  <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://mdbootstrap.com/img/Photos/Template/9.png" class="img-fluid px-4" alt="Logo">
+                  </div>
+                  <!--/Fourth column-->
+
+                </div>
+                <!--/Grid row-->
+              </div>
+              <!-- First slide -->
+
+              <!-- Second slide -->
+              <div class="carousel-item">
+                <!--Grid row-->
+                <div class="row">
+
+                  <!--First column-->
+                  <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://mdbootstrap.com/img/Photos/Template/11.png" class="img-fluid px-4" alt="Logo">
+                  </div>
+                  <!--/First column-->
+
+                  <!--Second column-->
+                  <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://mdbootstrap.com/img/Photos/Template/10.png" class="img-fluid px-4" alt="Logo">
+                  </div>
+                  <!--/Second column-->
+
+                  <!--Third column-->
+                  <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://mdbootstrap.com/img/Photos/Template/12.png" class="img-fluid px-4" alt="Logo">
+                  </div>
+                  <!--/Third column-->
+
+                  <!--Fourth column-->
+                  <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://mdbootstrap.com/img/Photos/Template/13.png" class="img-fluid px-4" alt="Logo">
+                  </div>
+                  <!--/Fourth column-->
+
+                </div>
+                <!--/Grid row-->
+              </div>
+              <!-- Second slide -->
+
+              <!-- Third slide -->
+              <div class="carousel-item">
+                <!--Grid row-->
+                <div class="row">
+
+                  <!--First column-->
+                  <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://mdbootstrap.com/img/Photos/Template/1a.png" class="img-fluid px-4" alt="Logo">
+                  </div>
+                  <!--/First column-->
+
+                  <!--Second column-->
+                  <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://mdbootstrap.com/img/Photos/Template/2a.png" class="img-fluid px-4" alt="Logo">
+                  </div>
+                  <!--/Second column-->
+
+                  <!--Third column-->
+                  <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://mdbootstrap.com/img/Photos/Template/3a.png" class="img-fluid px-4" alt="Logo">
+                  </div>
+                  <!--/Third column-->
+
+                  <!--Fourth column-->
+                  <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://mdbootstrap.com/img/Photos/Template/4a.png" class="img-fluid px-4" alt="Logo">
+                  </div>
+                  <!--/Fourth column-->
+
+                </div>
+                <!--/Grid row-->
+              </div>
+              <!-- Third slide -->
+            </div>
+
+          </div>
+          <!-- Logo carousel -->
+
+        </section>
+
+      </div>
+
+
+      <!-- end of our client -->
+
+
+
+
+    <!-- Promoted Product of the day section -->
+    <div class="container my-5">
+
+        <!-- Section: Block Content -->
+        <section>
+
+          <h3 class="d-flex justify-content-center align-items-center text-center dark-grey-text mb-5 btn btn-info text-white">Promoted Products</h3>
+
+          <!-- Grid row -->
+          <div class="row">
+            <!-- Grid column -->
+            @if($promoData)
+            @php $i=0
+            @endphp
+            @foreach($promoData as $data)
+             @php if($i==4)break @endphp
+            <div class="col-lg-3 col-md-6 mb-4">
+              <!-- Card -->
+              <div class="card card-ecommerce">
+                <!-- Card image -->
+                <div class="view overlay">
+                  <img src="{{ $data->image_link }}" class="img-fluid"
+                    alt="{{ $data->product_info }}">
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                <!-- Card image -->
+                <!-- Card content -->
+                <div class="card-body">
+                  <!-- Category & Title -->
+                  <h5 class="card-title mb-1">
+                    <strong>
+                      <a href="" class="dark-grey-text text-sm">{{ implode(' ', array_slice(explode(' ', $data->product_info), 0, 7)).'...' }}</a>
+                    </strong>
+                  </h5>
+                  <span class="badge badge-danger mb-2 py-2 px-2">bestseller</span>
+                  <span class="badge badge-success mb-2 py-2 px-2 float-right">sold={{ $data->sold_quantity+3400 }}</span>
+
+
+                  <!-- Card footer -->
+                  <div class="card-footer py-0 px-0">
+                    <div class="row mb-0">
+                      <span class="btn btn-success text-center btn-block my-0 py-0">
+                        {{ $data->unit_price.'$' }}
+                      </span>
+                      <span class="float-right">
+                        <a class="" href="{{ $product->product_link }}" target="_blank" data-toggle="tooltip" data-placement="top" >
+                        </a>
+                      </span>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- Card content -->
+              </div>
+              <!-- Card -->
+              @php $i++ @endphp
+            </div>
+            @endforeach
+            @endif
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+
+          <!-- Grid row -->
+          <div class="row d-flex justify-content-center">
+            <p>
+              <a class="btn btn-info  btn-rounded mb-5 text-white" data-toggle="collapse" href="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                More Promoted Products
+                <i class="fa fa-level-down px-1" aria-hidden="true"></i>
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <!-- Grid row -->
+              <div class="row">
+                  @if($promoData)
+                  @php $i=0
+                  @endphp
+                  @php $x=0
+                  @endphp
+                  @foreach($promoData as $data)
+                  @php $x++
+                  @endphp
+                  @php if($x<5)continue @endphp
+                  @php if($i==4)break @endphp
+                <!-- Grid column -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <!-- Card -->
+                  <div class="card card-ecommerce">
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img src="{{ $data->image_link }}" class="img-fluid" alt="{{ $data->product_info }}">
+
+                    </div>
+                    <!-- Card image -->
+                    <!-- Card content -->
+                    <div class="card-body">
+                      <!-- Category & Title -->
+                      <h5 class="card-title mb-1">
+                        <strong>
+                          <a href="{{ $data->product_link }}" target="_blank" class="dark-grey-text">{{ implode(' ', array_slice(explode(' ', $data->product_info), 0, 7)).'...' }}</a>
+                        </strong>
+                      </h5>
+                      <span class="badge badge-danger mb-2 py-2 px-2">bestseller</span>
+                      <span class="badge badge-success mb-2 py-2 px-2 float-right">sold={{ $data->sold_quantity+3400 }}</span>
+
+
+                      <!-- Card footer -->
+                      <div class="card-footer py-0 px-0">
+                        <div class="row mb-0">
+                          <span class="btn btn-success text-center btn-block my-0 py-0">
+                            {{ $data->unit_price.'$' }}
+                        </span>
                         </div>
+                      </div>
+                    </div>
+                    <!-- Card content -->
+                  </div>
+                  <!-- Card -->
                 </div>
-            </div>
-    </section>
 
-    <!-- end of the Deal of the day section -->
+                <!-- Grid column -->
+                @php $i++ @endphp
+                @endforeach
+                @endif
+              </div>
+              <!-- Grid row -->
+            </div>
+          </div>
+          <!-- Grid row -->
+
+        </section>
+        <!-- Section: Block Content -->
+
+      </div>
+
+
+
+
+     <!-- end of the Promoted Product the day section -->
+
+    <section class="ftco-section">
+    <div class="container my-2  z-depth-1">
+
+
+        <!--Section: Content-->
+        <section class="px-md-5 mx-md-5 text-center dark-grey-text">
+
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+
+            <!--Grid column-->
+            <div class="col-xl-6 col-md-8">
+
+              <h3 class="font-weight-bold mt-3">How to get Cashback?</h3>
+
+              <p class="text-muted mt-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
+                molestiae
+                numquam quas, voluptates omnis nulla ea odio.</p>
+
+              <a class="btn btn-info btn-md ml-0 mt-3 mb-5" href="{{ route('user.login') }}" role="button">SignIn<i class="fa fa-magic ml-2"></i></a>
+
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+
+          <!--Grid row-->
+          <div class="row">
+
+            <!--First column-->
+            <div class="col-lg-3 col-md-6">
+              <i class="fa fa-sign-in fa-3x  text-primary" ></i>
+
+              <p class="font-weight-bold my-3">Step One</p>
+
+              <p class="text-muted">First signup/register your account with bitcash.com and get cashback  by per each product order place.</p>
+            </div>
+            <!--/First column-->
+
+            <!--Second column-->
+            <div class="col-lg-3 col-md-6">
+                <i class="fa fa-search fa-3x text-warning"></i>
+
+                <p class="font-weight-bold my-3">Step Two</p>
+
+
+                <p class="text-muted">Search more than 25000 products of all type category and enjoy the shooping.</p>
+            </div>
+            <!--/Second column-->
+
+            <!--Third column-->
+            <div class="col-lg-3 col-md-6">
+                <i class="fa fa-cart-plus fa-3x text-danger"></i>
+
+                <p class="font-weight-bold my-3">Step Three</p>
+
+
+                <p class="text-muted">Placing order is to make you able to get cashback.</p>
+            </div>
+            <!--/Third column-->
+
+            <!--Fourth column-->
+            <div class="col-lg-3 col-md-6">
+                <i class="fa fa-money fa-3x text-success"></i>
+
+                <p class="font-weight-bold my-3">Feature Four</p>
+
+                <p class="text-muted">After placing the order of product successfully, you will be able to draw your cash.</p>
+            </div>
+            <!--/Fourth column-->
+
+          </div>
+          <!--/Grid row-->
+
+
+        </section>
+        <!--Section: Content-->
+
+
+      </div>
+    </section>
 
     <!-- Satisfied customer section-->
 
@@ -647,7 +737,7 @@
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate text-center">
                 {{-- <span class="subheading">Testimony</span> --}}
-            <h2 class="mb-4">Our satisfied customer says</h2>
+            <h4 class="mb-4">Our satisfied customer says</h4>
             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
             </div>
         </div>
@@ -732,33 +822,6 @@
     </section>
 
 
-            <!-- proudy partner section -->
-            <hr>
-
-                <section class="ftco-section ftco-partner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm ftco-animate">
-                            <a href="#" class="partner"><img src="frontend/images/amazonn.png" class="img-fluid" alt="Colorlib Template"></a>
-                        </div>
-                        <div class="col-sm ftco-animate">
-                            <a href="#" class="partner"><img src="frontend/images/aliexpress-partner.png" class="img-fluid" alt="Colorlib Template"></a>
-                        </div>
-                        <div class="col-sm ftco-animate">
-                            <a href="#" class="partner"><img src="frontend/images/daraz-partner.png" class="img-fluid" alt="Colorlib Template"></a>
-                        </div>
-                        <div class="col-sm ftco-animate">
-                            <a href="#" class="partner"><img src="frontend/images/yayvo-partner.png" class="img-fluid" alt="Colorlib Template"></a>
-                        </div>
-                        <div class="col-sm ftco-animate">
-                            <a href="#" class="partner"><img src="frontend/images/elo-partner.png" class="img-fluid" alt="Colorlib Template"></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-                <!-- end of proudy partner section -->
-
             <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
             <div class="container py-4">
             <div class="row d-flex justify-content-center py-5">
@@ -777,7 +840,11 @@
             </div>
             </div>
         </section>
+
+
                 <!-- end of subscriber section -- >
+
+
 
 
 
@@ -786,5 +853,6 @@
 
 
 @section('scripts')
+
 
 @endsection

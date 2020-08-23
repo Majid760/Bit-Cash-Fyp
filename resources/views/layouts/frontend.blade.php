@@ -8,7 +8,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <!-- include masonary css -->
+    <link href="{{ asset('frontend/css/masonry/labs.css')}}" rel="stylesheet" >
+    <link href="{{ asset('frontend/css/masonry/masonry.css')}}" rel="stylesheet" >
     <!-- include summernote css/js -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 
@@ -28,13 +30,8 @@
 
 
     <link rel="stylesheet" href="{{asset('frontend/css/open-iconic-bootstrap.min.css')}}">
-
     <link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
-
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
-
-
-
 
 
     <link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.min.css')}}">
@@ -57,6 +54,7 @@
 
      <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('frontend/css/product-detail.css')}}" />
 
     <!-- mega  menu -->
 
@@ -66,14 +64,12 @@
     <!-- store page layout -->
 
     <link rel="stylesheet" href="{{asset('frontend/css/daterangepicker.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/slick.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('frontend/css/slick.css')}}"> --}}
     <link rel="stylesheet" href="{{asset('frontend/css/lightbox.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/util.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/main.css')}}">
 
-
-
-
+    <link rel="stylesheet" href="{{asset('frontend/css/product-detail.css')}}"/>
     @yield('styles')
   </head>
   <body class="goto-here">
@@ -123,110 +119,81 @@
               <div class="dropdown-menu mega-area" aria-labelledby="mega-one" >
 
                 <div class="row">
-                    <div class="col-sm-6 col-lg-3 product-col">
-                     <div class="product-category">
-                        {{-- <h5>Electronics</h5> --}}
-                        <a href="#" class="dropdown-item">Audio</a>
-                        <a href="#" class="dropdown-item">Telescope</a>
-                        <a href="#" class="dropdown-item">Computers</a>
-                        <a href="#" class="dropdown-item">Computers Accessories</a>
-                        <a href="#" class="dropdown-item">Camera </a>
-                        <a href="#" class="dropdown-item">Camera Accessories</a>
-                        <a href="#" class="dropdown-item">View more... </a>
 
 
-                     </div>
-                     <div class="product-category">
-                        {{-- <h5>Home Appliances</h5> --}}
-                        <a href="#" class="dropdown-item">Housekeeping Laundry</a>
-                        <a href="#" class="dropdown-item">Home Furnishing</a>
-                        <a href="#" class="dropdown-item">Home Services</a>
-                        <a href="#" class="dropdown-item">Home Decor Festive Needs</a>
-                        <a href="#" class="dropdown-item">Furniture</a>
-                        <a href="#" class="dropdown-item">View more...</a>
-
-                     </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 product-col">
-                        <div class="product-category">
-                            {{-- <h5>Women</h5> --}}
-                            <a href="#" class="dropdown-item">Beauty And Personal Care</a>
-                            <a href="#" class="dropdown-item">Belts</a>
-                            <a href="#" class="dropdown-item">Clothing</a>
-                            <a href="#" class="dropdown-item">Footwear</a>
-                            <a href="#" class="dropdown-item">Handbags&amp;Wallets</a>
-                            <a href="#" class="dropdown-item">Jewellery</a>
-                            <a href="#" class="dropdown-item">View more...</a>
-                         </div>
-                         <div class="product-category">
-                            {{-- <h5>Baby &amp; Kids</h5> --}}
-                            <a href="#" class="dropdown-item">Baby Care</a>
-                            <a href="#" class="dropdown-item">Bicycles &amp; Tricycles</a>
-                            <a href="#" class="dropdown-item">Kids &amp; Baby Clothing</a>
-                            <a href="#" class="dropdown-item">Kids Watches</a>
-                            <a href="#" class="dropdown-item">Toys</a>
-                            <a href="#" class="dropdown-item">View more</a>
-
-                         </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 product-col">
-                        <div class="product-category">
-                            <h5>Men</h5>
-                            <a href="#" class="dropdown-item">Beauty And Personal Care</a>
-                            <a href="#" class="dropdown-item">Belts</a>
-                            <a href="#" class="dropdown-item">Clothing</a>
-                            <a href="#" class="dropdown-item">Footwear</a>
-                            <a href="#" class="dropdown-item">Wallets</a>
-                            <a href="#" class="dropdown-item">Men Jewellery</a>
-                            <a href="#" class="dropdown-item">View more...</a>
-                         </div>
-                         <div class="product-category">
-                            {{-- <h5>Sports, Fitness &amp; Outdoors</h5> --}}
-                            <a href="#" class="dropdown-item">Badminton&nbsp</a>
-                            <a href="#" class="dropdown-item">Baseball&nbsp</a>
-                            <a href="#" class="dropdown-item">Basketball</a>
-                            <a href="#" class="dropdown-item">Boxing</a>
-                            <a href="#" class="dropdown-item">Camping &amp; Hiking&nbsp;</a>
-                         </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 product-col">
-                      <div class="product-category">
-                        <h5>Trending Products</h5>
-                        <div class="product menu-top-trading-product">
-                            <a href="#" class="img-prod">
-                                    <img class="img-fluid menu-top-trading-product"  src="{{ asset('frontend/images/Spider-Nail-Gel.png') }}" alt="Colorlib Template">
-                                    <span class="status">35%</span>
-                                <div class="overlay"></div>
-                            </a>
-                            <div class="text py-3 pb-4 px-3 text-center">
-                                <h3><a href="#">Spider-Nail-Gel</a></h3>
-                                <div class="d-flex">
-                                    <div class="pricing">
-                                        <p class="price"><span>$120.00</span></p>
-                                    </div>
+                        <div class="wrapper">
+                            <div class="masonry">
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>1]) }}" name="category" class="dropdown-item d-block text-left py-0 my-1 text-uppercase">women-clothing</a>
                                 </div>
-
-                            </div>
-                        </div>
-                      </div>
-                        <div class="product-category">
-                            <div class="product menu-top-trading-product">
-                                <a href="#" class="img-prod"><img class="img-fluid  menu-top-trading-product" src="{{ asset('frontend/images/Face-Shield.png') }}" alt="Colorlib Template">
-                                    <span class="status">55%</span>
-                                    <div class="overlay"></div>
-                                </a>
-                                <div class="text py-3 pb-4 px-3 text-center">
-                                    <h3><a href="#">Face-Shield</a></h3>
-                                    <div class="d-flex">
-                                        <div class="pricing">
-                                            <p class="price"><span>$120.00</span></p>
-                                        </div>
-                                    </div>
-
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>2]) }}" name="category" class="dropdown-item d-block text-left py-0 my-1 text-uppercase">Men-clothing</a>
                                 </div>
-                            </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>3]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Consumer-electronics</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>4]) }}"  name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Home & Garden</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>5]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Automobiles & Motorcycles</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>6]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Phones & Telecommunications</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>7]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Computer & Office</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>8]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Beauty & Health</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>9]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Jewelry & Accessories</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>10]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Toys & Hobbies</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>11]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Sports & Entertainment</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>12]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Mother & Kids</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>13]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Luggage & Bags</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>14]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Hair & Accessories</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>15]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Lights & Lighting</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>16]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Shoes</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>17]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Home Improvement</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>18]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Watches</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>19]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Electronic Components & Supplies</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>20]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Security & Protection</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>21]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Home Appliances</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>22]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Office & School Supplies</a>
+                                </div>
+                                <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
+                                    <a href="{{ route('category',['id'=>23]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Weddings & Events</a>
+                                </div>
+                            </div><!-- .masonry -->
                         </div>
-                    </div>
                 </div>
 
             </div>
@@ -390,9 +357,10 @@
             </form> -->
             <form class="form-inline ml-auto">
                 <div class="md-form my-0">
-                  <input id="searh-box" class="form-control input-sm border-0 rounded-0 border-bottom-2 border-bottom-warning" type="text" placeholder="Search" aria-label="Search">
+                  <input id="searh-box" class="form-control  border-0 rounded-0 border-bottom-2 border-bottom-warning" type="text" placeholder="Search" aria-label="Search" style="width:300px !important; height:40px !important;">
                 </div>
                 <button  class="btn border-left-0 btn-warning  px-2 my-2 text-left py-2 rounded-0" type="submit">Search<i class="fa ml-2 fa-search" aria-hidden="true"></i></button>
+
             </form>
 
             </ul>
@@ -400,21 +368,21 @@
           @if (!((isset(Auth::user()->name)) || (isset(Auth::user()->email))))
             <!--Check out button-->
             <div class="dropdown ml-sm-2 ml-lg-6 ml-md-3 float-right">
-                <button class=" btn  btn-warning btn-circle text-center rounded-0 py-2   my-3 " data-toggle="" >Signs<i class="fa fa-map-signs ml-2"></i></button>
+                <button class=" btn  btn-warning btn-circle text-center rounded-0 py-2   my-3 " data-toggle="" >Sign<i class="fa fa-map-signs ml-2"></i></button>
                 <div class="dropdown-content">
-                    <a  href="{{ route('user.register') }}"><i class="fa fa-user-plus mr-2" aria-hidden="true"></i>Register</a>
-                    <a  href="{{ route('user.login') }}"><i class="fa fa-sign-in mr-3" aria-hidden="true"></i>Login</a>
+                    <a  href="{{ route('user.register') }}"><i class="fa fa-user-plus mr-3" aria-hidden="true"></i>Sign Up</a>
+                    <a  href="{{ route('user.login') }}"><i class="fa fa-sign-in mr-3" aria-hidden="true"></i>SignIn</a>
                 </div>
             </div>
           @else
           <span class="float-right ml-sm-2 ml-lg-5 ml-md-3 ">{{ Auth::user()->email }}</span>
           <div class="dropdown ml-1">
-            <button  id="searh-button" class="  text-center py-2  my-3 btn btn-outline-success btn-lg rounded-circle"><i class="fa fa-10x fa-user  text-center"></i></button>
+            <button  id="searh-button" class="text-center py-2  my-3 btn btn-outline-success btn-lg rounded-circle"><i class="fa fa-10x fa-user  text-center"></i></button>
             <div class="dropdown-content">
                 <a  href="#" >AVAIL:Rs {{ __('0') }} </a>
                 <a  href="#" >PENDING:Rs {{ __('0') }} </a>
                 <a  href="{{route('user.dashboard')}}" >My Account <i class="fa fa-user pl-2"></i></a>
-                <a  href="{{route('user.logout')}}">Logout<i class="fa fa-sign-out  pl-2"></i></a>
+                <a  data-toggle="modal" data-target="#modalConfirmDelete">Logout<i class="fa fa-sign-out  pl-2"></i></a>
             </div>
             @endif
         </div>
@@ -508,8 +476,27 @@
 
 
             <!-- loader -->
-        <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+             <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+  <!--Modal: modalConfirmDelete-->
+    <!-- Logout Modal-->
+    <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+              <a class="btn btn-primary" href="{{ route('user.logout') }}">Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -537,6 +524,9 @@
         <!-- Summernote -->
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
+        <!-- product-details page js -->
+        <script src="{{ asset('frontend/js/product-detail.js') }}"></script>
+
 
 
         <!-- font-awesome -->
@@ -558,27 +548,30 @@
         <!-- <script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script> -->
     <!--===============================================================================================-->
         <script type="text/javascript" src="{{ asset('frontend/js/sweetalert.min.js')}}"></script>
-        <script type="text/javascript">
-            $('.block2-btn-addcart').each(function(){
-                var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-                $(this).on('click', function(){
-                    swal(nameProduct, "is added to cart !", "success");
-                });
-            });
-
-        </script>
-
 
          <!--=============== User Dashboard Javascript section =======================================-->
 
+
+         <script>
+                // front page product category images scripts
+                        $(function () {
+                            var selectedClass = "";
+                            $(".filter").click(function () {
+                                selectedClass = $(this).attr("data-rel");
+                                $("#gallery").fadeTo(100, 0.1);
+                                $("#gallery div").not("." + selectedClass).fadeOut().removeClass('animation');
+                                setTimeout(function () {
+                                $("." + selectedClass).fadeIn().addClass('animation');
+                                $("#gallery").fadeTo(300, 1);
+                                }, 300);
+                            });
+                            });                        // end front page product category images scripts
+
+
+        </script>
+
         <script type="text/javascript">
-            // if(typeof jQuery!=='undefined'){
-            //     console.log('jQuery Loaded');
-            // }
-            // else{
-            //     console.log('not loaded yet');
-            // }
-                // Hide submenus
+
             $(document).ready(function() {
 
                 //summernote
@@ -591,16 +584,12 @@
                 //end of summarnote
 
                 $('#body-row .collapse').collapse('hide');
-
-
                 // Collapse/Expand icon
                 $('#collapse-icon').addClass('fa-angle-double-left');
-
                 // Collapse click
                 $('[data-toggle=sidebar-colapse]').click(function() {
                     SidebarCollapse();
                 });
-
                 function SidebarCollapse () {
                     $('.menu-collapsed').toggleClass('d-none');
                     $('.sidebar-submenu').toggleClass('d-none');
@@ -614,7 +603,6 @@
                     } else {
                         SeparatorTitle.addClass('d-flex');
                     }
-
                     // Collapse/Expand icon
                     $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
                 }

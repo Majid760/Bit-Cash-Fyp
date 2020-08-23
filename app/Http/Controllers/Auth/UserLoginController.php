@@ -29,7 +29,7 @@ class UserLoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    // protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -48,6 +48,7 @@ class UserLoginController extends Controller
      */
     public function showLoginForm()
     {
+        session(['link' => url()->previous()]);
         return view('auth.userlogin');
     }
 
@@ -139,7 +140,7 @@ class UserLoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         //
-        return request()->route('home');
+        return redirect(session('link'));
     }
 
 

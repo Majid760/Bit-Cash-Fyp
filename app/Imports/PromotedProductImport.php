@@ -20,6 +20,7 @@ class PromotedProductImport implements ToCollection, WithHeadingRow, WithBatchIn
 
     public function collection(Collection $rows)
     {
+
         $i=0;
         foreach ($rows as $row) {
 
@@ -31,7 +32,7 @@ class PromotedProductImport implements ToCollection, WithHeadingRow, WithBatchIn
                 'product_info' => $row["products_info"],
                 'unit_price' => $row["unit_price"],
                 'image_link' => $row["image_link"],
-                'product_link' => $row["product_link"],
+                'product_link' => $row["product_link"].'?af=MAK7600ABD3299',
                 'sold_quantity' => $row["sold_quantity"],
                 'commission_rate' => $row["commission_rate"],
                 'commission' => $row["commission"],

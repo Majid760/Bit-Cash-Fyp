@@ -42,4 +42,7 @@ Route::middleware(['auth:admin'])->prefix('admin')->group(function () {
     Route::post('/send-email','Admin\AdminUserController@sendEmailToUser')->name('admin.send-email-touser');
     Route::get('/user-status/{id}','Admin\AdminUserController@changeUserStatus')->name('admin.user-status');
 
+    //subscribed user status
+    Route::get('/user/subscribed','Admin\AdminSubScribedUserController@index')->name('admin.subscribed-user');
+    Route::post('/email-to-subscribed-user','Admin\AdminSubScribedUserController@sendEmail')->name('admin.emailToSubscribedUser');
 });
