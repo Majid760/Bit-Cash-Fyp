@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\User;
 use App\Product;
+use App\SubscriberList;
 use App\PromotedProduct;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -34,7 +36,18 @@ class AdminController extends Controller
             $estAmnt+=($prod->unit_price/100)*$prod->commission;
         }
 
-        return view('backend.admin.admin-dashboard',compact('estAmnt'));
+        $totalUser=count(User::all());
+        $subUsers=count(SubscriberList::all());
+        $totalUser+=$subUsers;
+        $totalProduct=count(Product::all());
+        $totalPromo=counnt(PromotedProduct::all());
+        return view('backend.admin.admin-dashboard',compact([
+            'estAmnt'=>$estAmnt,
+            'totalUser'=>$totalUser,
+            'subUser'=>$subUser,
+            'totalProduct'=>$totalProduct,
+            'totalPromo' =>$totalPromo,
+        ]));
     }
 
     /**
