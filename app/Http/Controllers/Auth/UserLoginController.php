@@ -140,6 +140,7 @@ class UserLoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         //
+            // dd(session('link'));
         return redirect(session('link'));
     }
 

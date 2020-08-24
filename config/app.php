@@ -164,9 +164,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+
         // Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
-
-
+        Spatie\Analytics\AnalyticsServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -236,6 +236,8 @@ return [
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
         // 'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Analytics' => Spatie\Analytics\Facades\Analytics::class,
+        'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
 
 
     ],

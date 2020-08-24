@@ -67,10 +67,10 @@
                     @if($product->discount)
                     <h2 class="product-price display-4">{{ $product->sale_price }}</h2>
                     <h2 class="product-price display-5"><del>{{ $product->original_price .'$'}}</del></h2>
-                    <p class="text-success"><i class="fa fa-credit-card"></i>Discount:{{ $product->discount.''.'%' }}</p>
+                    <p class="text-success"><i class="fa fa-credit-card"></i>Discount:{{ $product->discount.''.'%' }}+ {{ ((str_replace('%','',$product->commission)+0)/2).'% Cashback' }}</p>
                     @else
                     <h2 class="product-price display-4">{{ $product->original_price.'$'}}</h2>
-                    <p class="text-success"><i class="fa mr-2 fa-credit-card"></i>Discount: 00 %</p>
+                    <p class="text-success"><i class="fa mr-2 fa-credit-card"></i>Discount: 00 % + {{ ((str_replace('%','',$product->commission)+0)/2).'% Cashback' }}</p>
                     @endif
                     <p class="mb-0"><i class="fa fa-truck"></i> Delivery in all territory</p>
                     <div class="text-muted mb-2"><small>know more about delivery time and shipping forms</small></div>

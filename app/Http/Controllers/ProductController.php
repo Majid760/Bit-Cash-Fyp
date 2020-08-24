@@ -17,6 +17,9 @@ class ProductController extends Controller
     }
 
     public function getDetail($id){
+        $url=Product::where('id',$id)->first();
+        return redirect()->away($url)->send();
+        dd($url->product_url);
         $product=Product::with('productImgsUrls')->where('id',$id)->first();
         $products=Product::where('category_id',$product->category_id)->paginate(48);
         return view('frontend.product-detail',compact('product','products'));

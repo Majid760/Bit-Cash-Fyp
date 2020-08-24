@@ -40,13 +40,13 @@ class AdminController extends Controller
         $subUsers=count(SubscriberList::all());
         $totalUser+=$subUsers;
         $totalProduct=count(Product::all());
-        $totalPromo=counnt(PromotedProduct::all());
+        $totalPromo=count(PromotedProduct::all());
         return view('backend.admin.admin-dashboard',compact([
-            'estAmnt'=>$estAmnt,
-            'totalUser'=>$totalUser,
-            'subUser'=>$subUser,
-            'totalProduct'=>$totalProduct,
-            'totalPromo' =>$totalPromo,
+            'estAmnt'=>'estAmnt',
+            'totalUser'=>'totalUser',
+            'subUser'=>'subUsers',
+            'totalProduct'=>'totalProduct',
+            'totalPromo' =>'totalPromo',
         ]));
     }
 

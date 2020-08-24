@@ -30,6 +30,9 @@ Route::get('store','StoreController@index')->name('store');
 
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/track-product/{id}'.'Frontend\User\UserTrackController@addProduct')->name('product.track-product');
+//  Route::get('/track-product/{id}'.function(){
+//      return redirect()->away('https://www.google.com/')->send();
+
+//  })->name('product.track-product');
 
 
