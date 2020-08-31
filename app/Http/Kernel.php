@@ -19,6 +19,8 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+
+
     ];
 
     /**
@@ -40,6 +42,17 @@ class Kernel extends HttpKernel
         'api' => [
             'throttle:60,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        ],
+        'pagespeed' => [
+             //page-speed package middleware
+                \RenatoMarinho\LaravelPageSpeed\Middleware\InlineCss::class,
+                \RenatoMarinho\LaravelPageSpeed\Middleware\ElideAttributes::class,
+                \RenatoMarinho\LaravelPageSpeed\Middleware\InsertDNSPrefetch::class,
+                \RenatoMarinho\LaravelPageSpeed\Middleware\RemoveComments::class,
+                \RenatoMarinho\LaravelPageSpeed\Middleware\TrimUrls::class,
+                \RenatoMarinho\LaravelPageSpeed\Middleware\RemoveQuotes::class,
+                \RenatoMarinho\LaravelPageSpeed\Middleware\CollapseWhitespace::class,
+
         ],
     ];
 

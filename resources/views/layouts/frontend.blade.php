@@ -355,9 +355,10 @@
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form> -->
-            <form class="form-inline ml-auto">
+            <form class="form-inline ml-auto" action="{{ route('search.product') }}">
+                @csrf
                 <div class="md-form my-0">
-                  <input id="searh-box" class="form-control  border-0 rounded-0 border-bottom-2 border-bottom-warning" type="text" placeholder="Search" aria-label="Search" style="width:300px !important; height:40px !important;">
+                  <input id="searh-box" name="searchProduct"  class="form-control  border-0 rounded-0 border-bottom-2 border-bottom-warning" type="text" placeholder="Search" aria-label="Search" style="width:300px !important; height:40px !important;">
                 </div>
                 <button  class="btn border-left-0 btn-warning  px-2 my-2 text-left py-2 rounded-0" type="submit">Search<i class="fa ml-2 fa-search" aria-hidden="true"></i></button>
 

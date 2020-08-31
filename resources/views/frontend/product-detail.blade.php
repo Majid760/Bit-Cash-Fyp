@@ -67,7 +67,7 @@
                     @if($product->discount)
                     <h2 class="product-price display-4">{{ $product->sale_price }}</h2>
                     <h2 class="product-price display-5"><del>{{ $product->original_price .'$'}}</del></h2>
-                    <p class="text-success"><i class="fa fa-credit-card"></i>Discount:{{ $product->discount.''.'%' }}+ {{ ((str_replace('%','',$product->commission)+0)/2).'% Cashback' }}</p>
+                    <p class="text-success"><i class="fa fa-credit-card"></i>Discount:{{ $product->discount}} &nbsp; &#43; &nbsp;{{ ((str_replace('%','',$product->commission)+0)/2).'% Cashback' }}</p>
                     @else
                     <h2 class="product-price display-4">{{ $product->original_price.'$'}}</h2>
                     <p class="text-success"><i class="fa mr-2 fa-credit-card"></i>Discount: 00 % + {{ ((str_replace('%','',$product->commission)+0)/2).'% Cashback' }}</p>
@@ -77,7 +77,7 @@
                     <label for="quant">Quantity</label>
                     <input type="number" name="quantity" min="1" id="quant" class="form-control mb-5 input-lg" placeholder="Choose the quantity">
                     @if ((isset(Auth::user()->email)))
-                    <a class="btn btn-primary btn-lg btn-block" id="clicked"  href="{{ route('product.track-product',['id'=>$product->id]) }}" target="_blank">Click to Buy</a>
+                    <a class="btn btn-primary btn-lg btn-block" id="clicked"  href="{{ $product->product_url.'&cv='.$product->id.'&dp='.Auth::user()->email}}" target="_blank">Click to Buy</a>
                     {{-- <input type="hidden" value="{{ Auth::user()->email}}" name="user-email" id="user-email" /> --}}
                     {{-- href="{{ $product->product_url.'&cv='.$product->id.'&dp='.Auth::user()->email}}" --}}
                     {{-- {{ return redirect()->route('user.product-click') }} --}}

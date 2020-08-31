@@ -19,4 +19,17 @@ class FrontendController extends Controller
 
         return view('index',compact('products','promoData'));
     }
+
+    // return about page
+    public function getAbout(){
+        return view('frontend.about');
+    }
+
+    //return contact pagespeed
+
+    public function getBlog(){
+        return view('frontend.blog');
+    }
+
+
 }

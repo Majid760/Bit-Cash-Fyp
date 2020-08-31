@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use App\Category;
 use App\GenrelCategory;
+use App\PromotedProduct;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -17,9 +18,6 @@ class ProductController extends Controller
     }
 
     public function getDetail($id){
-        $url=Product::where('id',$id)->first();
-        return redirect()->away($url)->send();
-        dd($url->product_url);
         $product=Product::with('productImgsUrls')->where('id',$id)->first();
         $products=Product::where('category_id',$product->category_id)->paginate(48);
         return view('frontend.product-detail',compact('product','products'));
@@ -31,7 +29,8 @@ class ProductController extends Controller
 
         if($id!=0){
             $products=GenrelCategory::find($id)->products()->paginate(72);
-            return view('index',compact('products'));
+            $promoData = PromotedProduct::all()->random(12);
+            return view('index',compact('products','promoData'));
 
         }else{
             return back();

@@ -9,17 +9,15 @@
 
 @section('content')
 
-@if($errors->any())
-<div class="alert alert-danger alert-dismissible mt-3" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <ul>
-        @foreach($errors->all() as $error)
-            <li class="alert alert-danger text-center">{{ $error }}</li>
-        @endforeach
-        </ul>
-</div>
-@endif
+    @if($products->total()==0)
+    <div class="alert alert-warning alert-dismissible mt-3" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2 class="alert alert-info text-center">No result found!</h2>
+    </div>
+    @endif
+
     <!-- slider -->
+
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -64,7 +62,6 @@
       <!-- end-slider -->
 
       <!-- top different offers -->
-
       <div class="container">
           <div class="row my-4 px-5">
               <div class="col-md-6 col-lg-4 ">
@@ -93,149 +90,11 @@
 
     <!-- top different offers -->
 
-        <!-- services section -->
-        <div class="container my-5">
-
-            <!-- Section -->
-            <section>
-
-              <!-- Modal -->
-                  <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                              <div class="modal-body p-0">
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                  </button>
-
-                                  <!-- Grid row -->
-                                  <div class="row">
-
-                                      <!-- Grid column -->
-                                      <div class="col-md-6 py-5 pl-5">
-
-                                          <h5 class="font-weight-normal mb-3">Paper cup mockup</h5>
-
-                                          <p class="text-muted">Key letters, explain which writing we he carpeting or fame, the itch expand medical amped through constructing time. And scarfs, gain, get showed accounts decades.</p>
-
-                                          <ul class="list-unstyled font-small mt-5">
-                                              <li>
-                                                  <p class="text-uppercase mb-2"><strong>Client</strong></p>
-                                                  <p class="text-muted mb-4">Envato Inc.</p>
-                                              </li>
-
-                                              <li>
-                                                  <p class="text-uppercase mb-2"><strong>Date</strong></p>
-                                                  <p class="text-muted mb-4">June 27, 2019</p>
-                                              </li>
-
-                                              <li>
-                                                  <p class="text-uppercase mb-2"><strong>Skills</strong></p>
-                                                  <p class="text-muted mb-4">Design, HTML, CSS, Javascript</p>
-                                              </li>
-
-                                              <li>
-                                                  <p class="text-uppercase mb-2"><strong>Address</strong></p>
-                                                  <a href="https://mdbootstrap.com/docs/jquery/design-blocks/">MDBootstrap</a>
-                                              </li>
-                                          </ul>
-
-                                      </div>
-                                      <!-- Grid column -->
-
-                                      <!-- Grid column -->
-                                      <div class="col-md-6">
-
-                                          <div class="view rounded-right">
-                                              <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/5.jpg" alt="Sample image">
-                                          </div>
-
-                                      </div>
-                                      <!-- Grid column -->
-
-                                  </div>
-                                  <!-- Grid row -->
-
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-              <hr class="w-header my-4">
-
-              <!-- Grid row -->
-              <div class="row">
-
-
-
-              </div>
-              <!-- Grid row -->
-
-              <!-- Grid row -->
-              <div class="gallery mb-5" id="gallery">
-
-                <!-- Grid column -->
-                <div class="mb-3 pics all 2 animation">
-                  <a data-toggle="modal" data-target="#basicExampleModal">
-                    <img class="img-fluid z-depth-1 rounded" src="{{ asset('frontend/images/shoes1.jpg') }}" alt="Card image cap">
-                  </a>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="mb-3 pics animation all 1">
-                  <a data-toggle="modal" data-target="#basicExampleModal">
-                    <img class="img-fluid z-depth-1 rounded" src="{{ asset('frontend/images/apparel.jpg') }}" alt="Card image cap">
-                  </a>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="mb-3 pics animation all 1">
-                  <a data-toggle="modal" data-target="#basicExampleModal">
-                    <img class="img-fluid z-depth-1 rounded" src="{{ asset('frontend/images/mobile-computer.jpg') }}" alt="Card image cap">
-                  </a>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="mb-3 pics all 2 animation">
-                  <a data-toggle="modal" data-target="#basicExampleModal">
-                    <img class="img-fluid z-depth-1 rounded" src="{{ asset('frontend/images/beauty1.jpg')}}" alt="Card image cap">
-                  </a>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="mb-3 pics all 2 animation">
-                  <a data-toggle="modal" data-target="#basicExampleModal">
-                    <img class="img-fluid z-depth-1 rounded" src="{{ asset('frontend/images/jewelry.jpg')}}" alt="Card image cap">
-                  </a>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="mb-3 pics animation all 1">
-                  <a data-toggle="modal" data-target="#basicExampleModal">
-                    <img class="img-fluid z-depth-1 rounded" src="{{ asset('frontend/images/clothes1.jpg')}}" alt="Card image cap">
-                  </a>
-                </div>
-                <!-- Grid column -->
-
-              </div>
-              <!-- Grid row -->
-
-            </section>
-            <!-- Section -->
-
-          </div>
-
-        <!-- end services section -->
 
 
         <!-- product listing services section -->
     <section class="ftco-section py-0">
-    	<div class="container">
+    	<div class="container mt-3">
 			<div class="row justify-content-center mb-2 pb-3">
                 <div class="col-md-12 heading-section text-center ftco-animate">
                     <span class="subheading">Store Products</span>
@@ -244,66 +103,69 @@
     	</div>
     	<div class="container">
             <div class="row">
-                @foreach($products as $product)
-                    @foreach ($product->productImgsUrls as $url)
-                        <div class="col-md-3 col-lg-2 col-sm-4 ftco-animate">
-                            <div class="product">
-                                <a href="{{ route('product.detail',['id' =>$product->id])}}"  class="img-prod">
-                                    {{-- "{{route('admin.user-status',['id'=>$user->id])}}" --}}
-                                    <img class="img-fluid product-image" src="{{ $url->product_img_url }}" alt="{{ $product->product_name }}" height="220" width="220" >
-                                    @if($product->discount==null || $product->discount==0)
-                                    <span class="status float-right">0% off + {{ ((str_replace('%','',$product->commission)+0)/2).'% Cashback' }}</span>
-                                    @else
-                                    <span class="status float-right">{{ $product->discount.' '.'off + '.((str_replace('%','',$product->commission)+0)/2).'% Cashback' }}</span>
-                                    @endif
-                                    <div class="overlay"></div>
-                                </a>
-                                <div class="text py-3 pb-4 px-3 text-center">
-                                    <p><a href="{{ route('product.detail',['id' =>$product->id])}}" title="{{ $product->product_name }}" class="text-justify" style="font-size:12px">{{ implode(' ', array_slice(explode(' ', $product->product_name), 0, 6)) }}</a></p>
-                                    <div class="d-flex">
-                                        <div class="pricing">
-                                            <p class="price" >
-                                                @if($product->discount!=null && $product->discount!=0)
-                                                    @if ($product->original_price)
-                                                    <span class="mr-2 price-dc">{{ $product->original_price.''.'$'}}</span>
+                @if($products->total()!=0)
+                    @foreach($products as $product)
+                        @foreach ($product->productImgsUrls as $url)
+                            <div class="col-md-3 col-lg-2 col-sm-4 ftco-animate">
+                                <div class="product">
+                                    <a href="{{ route('product.detail',['id' =>$product->id])}}"  class="img-prod">
+                                        <img class="img-fluid product-image" src="{{ $url->product_img_url }}" alt="{{ $product->product_name }}" height="220" width="220" >
+                                        @if($product->discount==null || $product->discount==0)
+                                        <span class="status float-right">0% off + {{ ((str_replace('%','',$product->commission)+0)/2).'% Cashback' }}</span>
+                                        @else
+                                        <span class="status float-right">{{ $product->discount.' '.'off + '.((str_replace('%','',$product->commission)+0)/2).'% Cashback' }}</span>
+                                        @endif
+                                        <div class="overlay"></div>
+                                    </a>
+                                    <div class="text py-3 pb-4 px-3 text-center">
+                                        <p><a href="{{ route('product.detail',['id' =>$product->id])}}" title="{{ $product->product_name }}" class="text-justify" style="font-size:12px">{{ implode(' ', array_slice(explode(' ', $product->product_name), 0, 6)) }}</a></p>
+                                        <div class="d-flex">
+                                            <div class="pricing">
+                                                <p class="price" >
+                                                    @if($product->discount!=null && $product->discount!=0)
+                                                        @if ($product->original_price)
+                                                        <span class="mr-2 price-dc">{{ $product->original_price.''.'$'}}</span>
+                                                        @endif
+                                                        @if($product->sale_price)
+                                                        <span class="price-sale ml-1">{{ $product->sale_price.' '.'$'}}</span>
+                                                        @endif
+                                                    @else
+                                                        @if($product->original_price)
+                                                        <span class="price-sale ml-1">{{ $product->original_price.' '.'$'}}</span>
+                                                        @endif
                                                     @endif
-                                                    @if($product->sale_price)
-                                                    <span class="price-sale ml-1">{{ $product->sale_price.' '.'$'}}</span>
-                                                    @endif
-                                                @else
-                                                    @if($product->original_price)
-                                                    <span class="price-sale ml-1">{{ $product->original_price.' '.'$'}}</span>
-                                                    @endif
-                                                @endif
-                                            </p>
+                                                </p>
+                                            </div>
                                         </div>
+                                        {{-- <div class="bottom-area d-flex px-3">
+                                            <div class="m-auto d-flex">
+                                                <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                                    <span><i class="ion-ios-menu"></i></span>
+                                                </a>
+                                                <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                                    <span><i class="ion-ios-cart"></i></span>
+                                                </a>
+                                                <a href="#" class="heart d-flex justify-content-center align-items-center ">
+                                                    <span><i class="ion-ios-heart"></i></span>
+                                                </a>
+                                            </div>
+                                        </div> --}}
                                     </div>
-                                    {{-- <div class="bottom-area d-flex px-3">
-                                        <div class="m-auto d-flex">
-                                            <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                                <span><i class="ion-ios-menu"></i></span>
-                                            </a>
-                                            <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                                <span><i class="ion-ios-cart"></i></span>
-                                            </a>
-                                            <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                                <span><i class="ion-ios-heart"></i></span>
-                                            </a>
-                                        </div>
-                                    </div> --}}
                                 </div>
                             </div>
-                        </div>
-                        @break
+                            @break
+                        @endforeach
                     @endforeach
-                @endforeach
+
+            @endif
                           <!-- 1 end of product listing section -->
             </div>
             <div class="row">
+                @if(count($products)!=0 || count($products)!=null)
                 <div class="col-lg12 col-md-12 col-sm-12">
                     <div class="d-flex align-items-center justify-content-center">{{ $products->links() }}</div>
                 </div>
-
+                @endif
             </div>
         </div>
     </section>
@@ -534,10 +396,11 @@
               <div class="card card-ecommerce">
                 <!-- Card image -->
                 <div class="view overlay">
-                    <a href="{{$data->product_link  }}" target="_blank">
-                        <img src="{{ $data->image_link }}" class="img-fluid"
-                            alt="{{ $data->product_info }}">
-                    </a>
+                <a href="{{ $data->product_link  }}" target="_blank">
+                  <img src="{{ $data->image_link }}" class="img-fluid"
+                    alt="{{ $data->product_info }}">
+                </a>
+                  <a>
                     <div class="mask rgba-white-slight"></div>
                   </a>
                 </div>
@@ -547,7 +410,7 @@
                   <!-- Category & Title -->
                   <h5 class="card-title mb-1">
                     <strong>
-                      <a href="{{ $data->product_link }}" target="_blank" class="dark-grey-text text-sm">{{ implode(' ', array_slice(explode(' ', $data->product_info), 0, 7)).'...' }}</a>
+                      <a href="{{ $data->product_link  }}" target="_blank" class="dark-grey-text text-sm" title="{{ $data->product_info }}">{{ implode(' ', array_slice(explode(' ', $data->product_info), 0, 7)).'...' }}</a>
                     </strong>
                   </h5>
                   <span class="badge badge-danger mb-2 py-2 px-2">bestseller</span>
@@ -607,7 +470,7 @@
                   <div class="card card-ecommerce">
                     <!-- Card image -->
                     <div class="view overlay">
-                    <a href="{{ $data->product_link}}" target="_blank">
+                    <a href="{{ $data->product_link  }}" target="_blank">
                         <img src="{{ $data->image_link }}" class="img-fluid" alt="{{ $data->product_info }}">
                     </a>
                     </div>
@@ -725,9 +588,9 @@
             <div class="col-lg-3 col-md-6">
                 <i class="fa fa-money fa-3x text-success"></i>
 
-                <p class="font-weight-bold my-3">Feature Four</p>
+                <p class="font-weight-bold my-3">Step Four</p>
 
-                <p class="text-muted">After placing the order of product successfully, you will be able to draw your cash.</p>
+                <p class="text-muted">After placing the order of product successfully, you will be able to draw your cash after two week.</p>
             </div>
             <!--/Fourth column-->
 
@@ -742,97 +605,8 @@
       </div>
     </section>
 
-    <!-- Satisfied customer section-->
 
-    <section class="ftco-section testimony-section">
-        <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section ftco-animate text-center">
-                {{-- <span class="subheading">Testimony</span> --}}
-            <h4 class="mb-4">Our satisfied customer says</h4>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-            </div>
-        </div>
-    <div class="row ftco-animate">
-            <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel">
-                <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                    <div class="user-img mb-5" style="background-image: url(frontend/images/person_1.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                        <i class="icon-quote-left"></i>
-                    </span>
-                    </div>
-
-                    <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Marketing Manager</span>
-                    </div>
-                </div>
-                </div>
-                <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                    <div class="user-img mb-5" style="background-image: url(frontend/images/person_2.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                        <i class="icon-quote-left"></i>
-                    </span>
-                    </div>
-                    <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Interface Designer</span>
-                    </div>
-                </div>
-                </div>
-                <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                    <div class="user-img mb-5" style="background-image: url(frontend/images/person_3.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                        <i class="icon-quote-left"></i>
-                    </span>
-                    </div>
-                    <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">UI Designer</span>
-                    </div>
-                </div>
-                </div>
-                <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                    <div class="user-img mb-5" style="background-image: url(frontend/images/person_1.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                        <i class="icon-quote-left"></i>
-                    </span>
-                    </div>
-                    <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Web Developer</span>
-                    </div>
-                </div>
-                </div>
-                <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                    <div class="user-img mb-5" style="background-image: url(frontend/images/person_1.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                        <i class="icon-quote-left"></i>
-                    </span>
-                    </div>
-                    <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">System Analyst</span>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
+    <!-- newsletter -->
 
             <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
             <div class="container py-4">
