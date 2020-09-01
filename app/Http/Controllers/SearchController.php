@@ -15,9 +15,9 @@ class SearchController extends Controller
         $this->validate($request,[
             'searchProduct' => 'required|min:3',
         ]);
-        $products = Product::with('productImgsUrls')->where('product_name', 'like','%'.$request->input('searchProduct').'%')->paginate(36);
+         $products = Product::with('productImgsUrls')->where('product_name', 'like','%'.$request->input('searchProduct').'%')->paginate(36);
+
         $promoData = PromotedProduct::all()->random(12);
-        // dd(count($products));
         return view('search-product',compact('products','promoData'));
     }
 }

@@ -160,8 +160,8 @@
                                     <td scope="row">{{ $productDat->id }}</td>
                                     {{-- <td scope="row">{{ $productDat->category->category_name }}</td> --}}
                                     <td scope="row">{{ $productDat->product_id}}</td>
-                                    <td scope="row">{{$productDat->product_name}}</td>
-                                    <td scope="row"><a href="{{preg_replace('/\s\s+/', ' ', $productDat->product_url)}}" target="_blank">{{ $productDat->product_url}}</a></td>
+                                    <td scope="row"> {{ Str::limit($productDat->product_name, 25, ' (...)')}}</td>
+                                    <td scope="row"><a href="{{preg_replace('/\s\s+/', ' ', $productDat->product_url)}}" target="_blank" title="{{ $productDat->product_url}}">{{ Str::limit($productDat->product_url, 40, ' (...)') }}</a></td>
                                     <td scope="row">{{ $productDat->original_price.'$'}}</td>
                                     <td scope="row">{{ $productDat->sale_price.'$'}}</td>
                                     <td scope="row">{{ $productDat->commission.'%'}}</td>
