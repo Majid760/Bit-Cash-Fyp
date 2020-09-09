@@ -8098,14 +8098,23 @@ h1, h2, h3, h4, h5,
     -ms-border-radius: 0;
     border-radius: 0; }
     .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item {
-      font-size: 14px; }
+      font-size: 14px;
+      width: 100%;
+
+
+
+     }
       .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:hover, .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:focus {
-        background: var(--green);
-        color: #000000; }
+        background:#EA3562 ;
+        color: #FFE924;
+        width: 125%;
+     }
   .ftco-navbar-light .navbar-nav > .nav-item.ftco-seperator {
     position: relative;
     margin-left: 20px;
-    padding-left: 20px; }
+    padding-left: 20px;
+    width: 100%;
+ }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item.ftco-seperator {
         padding-left: 0;
@@ -10198,7 +10207,7 @@ textarea.form-control {
     position: absolute;
     background-color: #f1f1f1;
     text-decoration:none;
-    min-width: 160px;
+    min-width: 220px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -10216,6 +10225,8 @@ textarea.form-control {
   .dropdown-content a:hover {
     background-color: #EA3562;
     color: #FCBB3D;
+    width:150%;
+
 }
 
   /* Show the dropdown menu on hover */
@@ -10223,10 +10234,12 @@ textarea.form-control {
     text-align: center;
     text-decoration: none;
     color: #FCBB3D;
+
 }
 
   /* Change the background color of the dropdown button when the dropdown content is shown */
     .dropdown:hover .dropbtn {
         background-color: #EA3562;
         text-decoration: none;
+
         }

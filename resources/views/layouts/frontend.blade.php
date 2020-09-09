@@ -84,7 +84,7 @@
                             </div>
                             <div class="col-md-3 col-sm-2 col-lg-3 pr-4 d-flex topper align-items-center">
                                 <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-                                <span class="text">email@email.com</span>
+                                <span class="text">bitcash@support.com</span>
                             </div>
                             <div class="col-md-6 col-sm-8 col-lg-6 pr-1 d-flex topper  text-lg-right">
                                 <nav class="navbar  px-0 top-navbar">
@@ -118,79 +118,79 @@
               <a class="nav-link dropdown-toggle mega-drop-down" href="#" id="mega-one" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">PRODUCT</a>
               <div class="dropdown-menu mega-area" aria-labelledby="mega-one" >
 
-                <div class="row">
+                <div class="row bg-warning">
 
 
                         <div class="wrapper">
                             <div class="masonry">
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>1]) }}" name="category" class="dropdown-item d-block text-left py-0 my-1 text-uppercase">women-clothing</a>
+                                    <a href="{{ route('category',['id'=>1]) }}" name="category" class="dropdown-item d-block text-left py-0 my-1 text-uppercase"><i class="fa fa-female fa-lg mr-2" aria-hidden="true"></i>women-clothing</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>2]) }}" name="category" class="dropdown-item d-block text-left py-0 my-1 text-uppercase">Men-clothing</a>
+                                    <a href="{{ route('category',['id'=>2]) }}" name="category" class="dropdown-item d-block text-left py-0 my-1 text-uppercase"><i class="fa fa-male fa-lg mr-2" aria-hidden="true"></i>Men-clothing</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>3]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Consumer-electronics</a>
+                                    <a href="{{ route('category',['id'=>3]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-camera-retro fa-lg mr-2" aria-hidden="true"></i>Consumer-electronics</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>4]) }}"  name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Home & Garden</a>
+                                    <a href="{{ route('category',['id'=>4]) }}"  name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-home fa-lg mr-2" aria-hidden="true"></i>Home & Garden</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>5]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Automobiles & Motorcycles</a>
+                                    <a href="{{ route('category',['id'=>5]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-car fa-lg mr-2" aria-hidden="true"></i>Automobiles & Motorcycles</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>6]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Phones & Telecommunications</a>
+                                    <a href="{{ route('category',['id'=>6]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-mobile fa-lg mr-2" aria-hidden="true"></i>Phones & Telecommunications</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>7]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Computer & Office</a>
+                                    <a href="{{ route('category',['id'=>7]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-laptop fa-lg mr-2" aria-hidden="true"></i>Computer & Office</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>8]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Beauty & Health</a>
+                                    <a href="{{ route('category',['id'=>8]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-paw fa-lg mr-2" aria-hidden="true"></i>Beauty & Health</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>9]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Jewelry & Accessories</a>
+                                    <a href="{{ route('category',['id'=>9]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-diamond fa-lg mr-2" aria-hidden="true"></i>Jewelry & Accessories</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>10]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Toys & Hobbies</a>
+                                    <a href="{{ route('category',['id'=>10]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-grav fa-lg mr-2" aria-hidden="true"></i>Toys & Hobbies</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>11]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Sports & Entertainment</a>
+                                    <a href="{{ route('category',['id'=>11]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-futbol-o fa-lg mr-2" aria-hidden="true"></i>Sports & Entertainment</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>12]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Mother & Kids</a>
+                                    <a href="{{ route('category',['id'=>12]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-child fa-lg mr-2" aria-hidden="true"></i>Mother & Kids</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>13]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Luggage & Bags</a>
+                                    <a href="{{ route('category',['id'=>13]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-shopping-bag fa-lg mr-2" aria-hidden="true"></i>Luggage & Bags</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>14]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Hair & Accessories</a>
+                                    <a href="{{ route('category',['id'=>14]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa  fa-ravelry fa-lg mr-2" aria-hidden="true"></i>Hair & Accessories</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>15]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Lights & Lighting</a>
+                                    <a href="{{ route('category',['id'=>15]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-lightbulb-o fa-lg mr-2" aria-hidden="true"></i>Lights & Lighting</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>16]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Shoes</a>
+                                    <a href="{{ route('category',['id'=>16]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><img class="mr-2" src="{{ asset('frontend/images/shoe.png') }}" width="20px" height="20px"/>Shoes</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>17]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Home Improvement</a>
+                                    <a href="{{ route('category',['id'=>17]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-bath fa-lg mr-2" aria-hidden="true"></i>Home Improvement</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>18]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Watches</a>
+                                    <a href="{{ route('category',['id'=>18]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-clock-o fa-lg mr-2" aria-hidden="true"></i>Watches</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>19]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Electronic Components & Supplies</a>
+                                    <a href="{{ route('category',['id'=>19]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-microchip fa-lg mr-2" aria-hidden="true"></i>Electronic Components & Supplies</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>20]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Security & Protection</a>
+                                    <a href="{{ route('category',['id'=>20]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-shield fa-lg mr-2" aria-hidden="true"></i>Security & Protection</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>21]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Home Appliances</a>
+                                    <a href="{{ route('category',['id'=>21]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-shower fa-lg mr-2" aria-hidden="true"></i>Home Appliances</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>22]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Office & School Supplies</a>
+                                    <a href="{{ route('category',['id'=>22]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-calculator fa-lg mr-2" aria-hidden="true"></i>Office & School Supplies</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>23]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase">Weddings & Events</a>
+                                    <a href="{{ route('category',['id'=>23]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-calendar-o fa-lg mr-2" aria-hidden="true"></i>Weddings & Events</a>
                                 </div>
                             </div><!-- .masonry -->
                         </div>
@@ -609,6 +609,7 @@
                 }
 
         });
+
 </script>
     <!--===============================================================================================-->
     <script src="{{ asset('frontend/js/store-main.js')}}"></script>
