@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\User;
 use App\Product;
+use App\ContactMessag;
+use App\UserComplaint;
 use App\SubscriberList;
 use App\PromotedProduct;
 use Illuminate\Http\Request;
@@ -41,6 +43,13 @@ class AdminController extends Controller
         $totalUser+=$subUsers;
         $totalProduct=count(Product::all());
         $totalPromo=count(PromotedProduct::all());
+
+
+        // dd($userComp->user);
+        // foreach($userComp as $userCo){
+        //     dump($userCo->email);
+        //     dd();
+        // }
         return view('backend.admin.admin-dashboard',compact([
             'estAmnt'=>'estAmnt',
             'totalUser'=>'totalUser',

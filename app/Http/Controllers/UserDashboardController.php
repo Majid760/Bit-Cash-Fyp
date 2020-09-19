@@ -20,7 +20,15 @@ class UserDashboardController extends Controller
     public function index()
     {
         //
-        return view('backend.user.userdash-home');
+        // dd(auth()->user()->id);
+        $user= User::findOrFail(auth()->user()->id);
+        if($user->status==1){
+            return view('backend.user.userdash-home');
+
+        } else {
+             return('Your Account Has been suspended!');
+        }
+
     }
 
     /**

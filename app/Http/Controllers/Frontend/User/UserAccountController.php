@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Frontend\User;
 
-use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UserAccountController extends Controller
 {
@@ -15,8 +16,8 @@ class UserAccountController extends Controller
 
     public function accountHistory() {
         // retrive the all data and send back to view
-
-        return view('backend.user.useraccount-activity');
+        $users = User::with(['products'])->where('id',auth()->guard('web')->user()->id)->get();
+        return view('backend.user.useraccount-activity',compact('users'));
     }
 
     public function transactionData(Request $request){

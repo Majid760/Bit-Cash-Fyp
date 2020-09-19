@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\ContactMessag;
+use App\UserComplaint;
 use App\Mail\ContactUs;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class ContactUsController extends Controller
@@ -21,8 +23,9 @@ class ContactUsController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'subject' => 'required',
-            // 'message' => 'required'
+            'message' => 'required'
         ]);
+
 
         $data=array(
             'name' => $request->name,
@@ -31,7 +34,14 @@ class ContactUsController extends Controller
             'message' => $request->message
         );
 
-        Mail::to('themuhmand@gmail.com')->send(new ContactUs($data));
+        Mail::to('bitcash@support.com')->send(new ContactUs($data));
+        ContactMessag::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'subject' => $request['subject'],
+            'message' => $request['message'],
+            'is_checked' => 0,
+           ]);
         return back()->with('message','Thanks for contacting us!');
 
     }

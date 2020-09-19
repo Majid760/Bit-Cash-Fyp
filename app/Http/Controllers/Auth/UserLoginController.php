@@ -172,7 +172,7 @@ class UserLoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return $this->loggedOut($request) ?: redirect('home');
+        return $this->loggedOut($request) ?: redirect(session('link'));
     }
 
     /**
@@ -184,7 +184,7 @@ class UserLoginController extends Controller
     protected function loggedOut(Request $request)
     {
         //
-        return redirect()->route('home');
+        return redirect()->to(session('link'));
     }
 
     /**

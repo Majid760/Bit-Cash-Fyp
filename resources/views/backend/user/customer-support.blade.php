@@ -41,7 +41,7 @@
               <label class="mb-0" for="email2">Email</label>
               <div class="row mb-1">
                 <div class="col-lg-12">
-                  <input class="form-control" id="email2" name="email" required="" type="text" value={{ $userData->email }}>
+                  <input class="form-control" id="email2" name="email" required="" type="text" value={{ $userData->email }} >
                 </div>
               </div>
               <label class="mb-0" for="email2">Phone</label>

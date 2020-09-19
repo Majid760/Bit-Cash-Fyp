@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserComplaintsTable extends Migration
+class CreateContactMessagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateUserComplaintsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_complaints', function (Blueprint $table) {
-            $table->bigIncrements('id')->primaryKey();
-            $table->bigInteger('user_id')->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('email')->unique();
+        Schema::create('contact_messags', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('email');
+            $table->string('subject');
             $table->string('message');
-            $table->string('issue_type');
             $table->string('is_checked');
-            $table->string('is_solved');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ class CreateUserComplaintsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user__complaints');
+        Schema::dropIfExists('contact_messags');
     }
 }

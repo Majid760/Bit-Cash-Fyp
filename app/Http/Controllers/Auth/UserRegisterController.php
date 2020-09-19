@@ -122,9 +122,11 @@ class UserRegisterController extends Controller
     {
         // dd($data['name']);
         return User::create([
-            'name' => $data['name'],
+            'username' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'status' => 1,
+            'is_checked' => 0,
         ]);
     }
 }

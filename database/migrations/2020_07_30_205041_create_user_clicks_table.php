@@ -17,6 +17,11 @@ class CreateUserClicksTable extends Migration
             $table->bigIncrements('id')->primaryKey();
             $table->bigInteger('user_id')->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('product_id')->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->string('city');
+            $table->string('country');
+            $table->string('latitude');
+            $table->string('longitude');
+            $table->string('continentName');
             $table->timestamps();
         });
     }

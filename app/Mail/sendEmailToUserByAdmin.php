@@ -30,7 +30,7 @@ class sendEmailToUserByAdmin extends Mailable
      */
     public function build()
     {
-        return $this->from('bit-cash@support.com')
+        return $this->from('bitcash@support.com')
         ->subject('bit-cash Admin Notification')
         ->markdown('emails.sendEmailToUserByAdmin', $this->data);
 

@@ -11,6 +11,13 @@
     <!--  main content  -->
     @section('use-dashboard')
            <!-- Content Row -->
+           @if(session('error'))
+           <div class="alert alert-danger alert-dismissible" role="alert">
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                       <li class="alert alert-danger text-center">{{ session('error') }}</li>
+           </div>
+
+           @endif
            <div class="jumbotron user-account-card">
             <p class="text-primary mb-2 font-weight-bold">Hey {{ (auth()->user())->username }} You can find your Bit-Cash account details here!<p>
             <div class="row w-100">

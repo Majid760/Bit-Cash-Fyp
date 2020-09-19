@@ -48,8 +48,11 @@ class User extends Authenticatable
     // Relations
 
     public function products() {
-        return $this->belongsToMany('App\User','id');
+
+        return $this->belongsToMany('App\Product','user_clicks');
+
     }
+
 
     public function userComplaints() {
         return $this->hasMany('App\UserComplaints','id');

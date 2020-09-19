@@ -1,8 +1,9 @@
 @extends('layouts.admin-dashb')
+
 @section('style')
   <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/admin-user-profile.css') }}" />
-	<title>Professional profile</title>
-	{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
+
+
 @endsection
 
 
@@ -17,11 +18,11 @@
 					<img src="http://nicesnippets.com/demo/up-profile.jpg">
 				</div>
 				<div class="user-data">
-					<h2>{{ $user->username }}</h2>
+					<h2 class="text-white">{{ $user->username }}</h2>
 					{{-- <span class="post-label">Admin</span>
 					<span class="post-label">Speaker</span>
 					<span class="post-label">AMA</span> --}}
-					<p>Subscriber <strong>User</strong><br>
+					<p class="text-white">Subscriber <strong class="text-white">User</strong><br>
 					<i class="fa fa-map-marker" aria-hidden="true"></i>  {{ $user->city }}, {{ $user->country }}
                     </p>
                     <p><strong><input type="email" name="user_email" value="{{ $user->email }}"></strong></p>
@@ -107,17 +108,19 @@
 				</div>
 				<div id="Edu-detail" class="tab-content">
 					<div class="Edu-box-main">
-						 <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> Education</h2>
-						 <div class="Edu-box">
-						 	<h5><span>User Profession</span> <br>
-						 		2005 - 2007 | Infoway Corporation</h5>
-						 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						 </div>
-						 <div class="Edu-box">
-						 	<h5><span>Experience</span> <br>
-						 		2007 - 2009 | Light Corporation</h5>
-						 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						 </div>
+                        <!-- Accordion -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12">
+                                    <h2>User Emails</h2>
+                                        <button class="accordion" >Section 1</button>
+                                        <div class="panel">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
 					</div>
 				</div>
 				<div id="Portfolio" class="tab-content">
@@ -154,6 +157,11 @@
 </body>
 @endsection
 @section('script')
+
+
+=
+</script>
+
 
 @endsection
 

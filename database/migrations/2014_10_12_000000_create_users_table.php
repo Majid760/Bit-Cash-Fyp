@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('country');
             $table->string('about')->length(255);
             $table->boolean('status');
+            $table->boolean('is_checked');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

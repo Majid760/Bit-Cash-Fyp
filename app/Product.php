@@ -34,6 +34,6 @@ class Product extends Model
     }
 
     public function users() {
-        return $this->belongsToMany('App\User','product_id');
+        return $this->belongsToMany('App\User','user_clicks');
     }
 }

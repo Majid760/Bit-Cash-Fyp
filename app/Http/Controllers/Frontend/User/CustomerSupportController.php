@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Frontend\User;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Facades\Auth;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\CustomerSupport;
 use App\User;
+use App\UserComplaint;
+use Illuminate\Facades\Auth;
+use Illuminate\Http\Request;
+use App\Mail\CustomerSupport;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
+
 class CustomerSupportController extends Controller
 {
     //
@@ -36,8 +38,14 @@ class CustomerSupportController extends Controller
             'email' => $request['email'],
             'message' => $request['message'],
         );
-
-        Mail::to('themuhmand@gmail.com')->send(new CustomerSupport($data));
+        Mail::to('bitcash@support.com')->send(new CustomerSupport($data));
+        UserComplaint::create([
+             'user_id' => Auth()->user()->id,
+             'message' => $request['message'],
+             'issue_type' => $request['issue_type'],
+             'is_solved' => 0,
+             'is_checked' => 0,
+            ]);
             return back()->with('message','Thanks for contacting us!');
 
 

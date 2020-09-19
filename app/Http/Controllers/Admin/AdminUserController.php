@@ -30,6 +30,8 @@ class AdminUserController extends Controller
     }
     public function edit($id){
         $user=User::findOrFail($id);
+        $user->is_checked=1;
+        $user->save();
         return view('backend.admin.editable-user-profile',compact('user'));
     }
 
@@ -54,19 +56,26 @@ class AdminUserController extends Controller
     public function changeUserStatus($id) {
 
         $userStat=User::where('id',$id)->first();
-
-        if ($userStat->status==1) {
-            $userStat->status=0;
-        }
-        if($userStat->status==0){
-            $userStat->status=1;
-        }
+        $userStat->status=($userStat->status==1) ? 0 : 1;
         if($userStat->save()){
             return redirect()->back();
         }
         else {
             return redirect()->back()->with('error','Status not change!');
         }
+
+    }
+
+    // change the status of new user ( is_checked)
+    public function changeIs_checked(){
+
+        $users=User::where('is_checked',0)->get();
+        foreach($users as $user){
+            $user->is_checked=1;
+            $user->save();
+        }
+
+        return redirect()->action('Admin\AdminUserController@index');
 
     }
 }

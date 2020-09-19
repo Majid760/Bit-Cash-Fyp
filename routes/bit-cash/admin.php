@@ -41,8 +41,16 @@ Route::middleware(['auth:admin'])->prefix('admin')->group(function () {
     Route::get('/user-edit/{id}','Admin\AdminUserController@edit')->name('admin.user-edit');
     Route::post('/send-email','Admin\AdminUserController@sendEmailToUser')->name('admin.send-email-touser');
     Route::get('/user-status/{id}','Admin\AdminUserController@changeUserStatus')->name('admin.user-status');
+    Route::get('users/user-check', 'Admin\AdminUserController@changeIs_checked')->name('admin.user-check');
 
     //subscribed user status
     Route::get('/user/subscribed','Admin\AdminSubScribedUserController@index')->name('admin.subscribed-user');
     Route::post('/email-to-subscribed-user','Admin\AdminSubScribedUserController@sendEmail')->name('admin.emailToSubscribedUser');
+
+    // user contacts emails
+    Route::get('/user-emails', 'Admin\AdminUsersEmail@index')->name('admin.user-email');
+    Route::post('user-reply','Admin\AdminUsersEmail@sendemail' )->name('admin.replay-user');
+    Route::get('user-isChecked','Admin\AdminUsersEmail@changeIschecked')->name('admin.user-isChecked');
+
+
 });

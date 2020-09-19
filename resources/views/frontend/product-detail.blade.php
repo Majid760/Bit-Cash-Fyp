@@ -65,7 +65,7 @@
                     <h4 class="product-title mb-2">{{ $product->product_name }}</h4>
                     <input type="hidden" value="{{ $product->id }}" name="id" id="product-id" />
                     @if($product->discount)
-                    <h2 class="product-price display-4">{{ $product->sale_price }}</h2>
+                    <h2 class="product-price display-4">{{ $product->sale_price . '$'}}</h2>
                     <h2 class="product-price display-5"><del>{{ $product->original_price .'$'}}</del></h2>
                     <p class="text-success"><i class="fa fa-credit-card"></i>Discount:{{ $product->discount}} &nbsp; &#43; &nbsp;{{ ((str_replace('%','',$product->commission)+0)/2).'% Cashback' }}</p>
                     @else
@@ -77,14 +77,10 @@
                     <label for="quant">Quantity</label>
                     <input type="number" name="quantity" min="1" id="quant" class="form-control mb-5 input-lg" placeholder="Choose the quantity">
                     @if ((isset(Auth::user()->email)))
-                    <a class="btn btn-primary btn-lg btn-block" id="clicked"  href="{{ $product->product_url.'&cv='.$product->id.'&dp='.Auth::user()->email}}" target="_blank">Click to Buy</a>
-                    {{-- <input type="hidden" value="{{ Auth::user()->email}}" name="user-email" id="user-email" /> --}}
-                    {{-- href="{{ $product->product_url.'&cv='.$product->id.'&dp='.Auth::user()->email}}" --}}
-                    {{-- {{ return redirect()->route('user.product-click') }} --}}
+                    <a class="btn btn-primary btn-lg btn-block" id="clicked"  href="{{ route('product.track-product',['id'=>$product->id])}}" target="_blank">Click to Buy</a>
                     @else
-                    <a class="btn btn-primary btn-lg btn-block" href="{{ $product->product_url.'&cv='.$product->id}}" target="_blank">Click to Buy</a>
+                    <a class="btn btn-info btn-lg btn-block" href="{{ $product->product_url.'&cv='.$product->id}}" target="_blank">Click to Buy</a>
                     @endif
-
                     <div class="alert alert-info mt-5" role="alert">
                         <p class="text-center text-danger">To get the CASHBACK, please first Signin into your bitcash.com account.</p>
                     </div>

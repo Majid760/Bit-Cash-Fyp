@@ -1,7 +1,7 @@
 @component('mail::message')
-# HI {{ $data['firstname'].' '.$data['lastname'] }}
+# HI {{ $data['firstname'] }}
 @component('mail::panel')
-{{ $data['message'] }}
+{!! $data['message'] !!}
 @endcomponent
 @component('mail::button', ['url' => 'https://www.bit-cash.com'])
 Visit Bitcash.com

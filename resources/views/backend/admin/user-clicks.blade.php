@@ -2,23 +2,20 @@
 
 @section('style')
 
-
 @endsection
 
 
 @section('content')
-
     <!-- Content Row -->
     <div class="row">
-
         <!-- Earnings (Monthly) Card Example -->
         <div class="col-xl-3 col-md-6 mb-4">
           <div class="card border-left-primary shadow h-100 py-2">
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-sm font-weight-bold text-primary text-uppercase mb-1">Total Users</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ count($allUser) }}</div>
+                  <div class="text-sm font-weight-bold text-primary text-uppercase mb-1">User Clicks</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ count($users) }}</div>
                 </div>
                 <div class="col-auto">
                   <i class="fas fa-users fa-2x text-gray-300"></i>
@@ -34,8 +31,8 @@
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-sm font-weight-bold text-success text-uppercase mb-1">Users (Subscriber)</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ count($subUser) }}</div>
+                  <div class="text-sm font-weight-bold text-success text-uppercase mb-1">Conversion</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">858</div>
                 </div>
                 <div class="col-auto">
                   <i class="fas fa-envelope fa-2x text-gray-300"></i>
@@ -52,10 +49,10 @@
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-sm font-weight-bold text-info text-uppercase mb-1">Approved User</div>
+                  <div class="text-sm font-weight-bold text-info text-uppercase mb-1">Visited User</div>
                   <div class="row no-gutters align-items-center">
                     <div class="col-auto">
-                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $approvedUser }}</div>
+                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">848</div>
                     </div>
                     {{-- <div class="col">
                       <div class="progress progress-sm mr-2">
@@ -78,8 +75,8 @@
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-sm font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $pendingUser }}</div>
+                  <div class="text-sm font-weight-bold text-warning text-uppercase mb-1">Estimated Commission</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">323$</div>
                 </div>
                 <div class="col-auto">
                   <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -94,7 +91,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Total User</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Clicks History</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -102,49 +99,53 @@
                     <table id="example" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Id</th>
-                                <th>User_Name</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Email</th>
-                                <th>City</th>
-                                <th>Country</th>
-                                <th>Take Action</th>
-                                <th>Profile</th>
-                                {{-- <th>Approved</th> --}}
+                                <th>#</th>
+                                <th>User Email</th>
+                                <th>Product_Id</th>
+                                <th>Product_Name</th>
+                                <th>Sale_Price</th>
+                                <th>Original_Price</th>
+                                <th>Commission</th>
+                                <th>Product Url</th>
+                                <th>Date&Time</th>
+
+
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($allUser as $user)
-                            <tr>
-                                <td>{{$user->id}}</td>
-                                <td>{{$user->username}}</td>
-                                <td>{{$user->firstname}}</td>
-                                <td>{{$user->lastname}}</td>
-                                <td>{{$user->email}}</td>
-                                <td>{{$user->city}}</td>
-                                <td>{{$user->country}}</td>
-
-                                <td><a class="btn btn-warning" href="{{route('admin.user-status',['id'=>$user->id])}}">{{ ($user->status==0) ? 'Approved':'Pending' }}</a></td>
-                                <td>
-                                    <a class="btn btn-md btn-primary" href="{{ route('admin.user-edit',['id'=>$user->id]) }}">View</a>
-                                </td>
-                                {{-- <td>Pending<td> --}}
-                            </tr>
+                            @php $i=1
+                            @endphp
+                            @foreach($users as $user)
+                                @foreach($user->products as $product)
+                                    <tr>
+                                    <td>{{ $i }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $product->product_id }}</td>
+                                    <td>{{ Str::limit($product->product_name, 25, ' (...)')}}</td>
+                                    <th>{{ $product->sale_price.'$' }}</th>
+                                    <th>{{ $product->original_price.'$'}}</th>
+                                    <td>{{ $product->commission }}</td>
+                                    <td><a href="{{ $product->product_url }}" target="_blank">{{ Str::limit($product->product_url,25,'(...)') }}</a></td>
+                                    <td>{{ $product->pivot->created_at }}</td>
+                                    </tr>
+                                @php $i++
+                                @endphp
+                                @endforeach
                             @endforeach
+
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>Id</th>
-                                <th>User_Name</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Email</th>
-                                <th>City</th>
-                                <th>Country</th>
-                                <th>Take Action</th>
-                                <th>Profile</th>
-                                {{-- <th>Approved</th> --}}
+                                <th>#</th>
+                                <th>User Email</th>
+                                <th>P_Id</th>
+                                <th>P_Name</th>
+                                <th>Sale_Price</th>
+                                <th>Original_Price</th>
+                                <th>Commission</th>
+                                <th>Product Url</th>
+                                <th>Date&Time</th>
+
                             </tr>
                         </tfoot>
                     </table>
@@ -157,8 +158,10 @@
 @endsection
 
 
+
+
+
+
 @section('script')
-
-
 
 @endsection
