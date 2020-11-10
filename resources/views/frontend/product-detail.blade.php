@@ -74,12 +74,10 @@
                     @endif
                     <p class="mb-0"><i class="fa fa-truck"></i> Delivery in all territory</p>
                     <div class="text-muted mb-2"><small>know more about delivery time and shipping forms</small></div>
-                    <label for="quant">Quantity</label>
-                    <input type="number" name="quantity" min="1" id="quant" class="form-control mb-5 input-lg" placeholder="Choose the quantity">
                     @if ((isset(Auth::user()->email)))
-                    <a class="btn btn-primary btn-lg btn-block" id="clicked"  href="{{ route('product.track-product',['id'=>$product->id])}}" target="_blank">Click to Buy</a>
+                    <a class="btn btn-primary btn-lg btn-block mt-3" id="clicked"  href="{{ route('product.track-product',['id'=>$product->id])}}" target="_blank">Click to Buy</a>
                     @else
-                    <a class="btn btn-info btn-lg btn-block" href="{{ $product->product_url.'&cv='.$product->id}}" target="_blank">Click to Buy</a>
+                    <a class="btn btn-info btn-lg btn-block mt-3" href="{{ $product->product_url.'&cv='.$product->id}}" target="_blank">Click to Buy</a>
                     @endif
                     <div class="alert alert-info mt-5" role="alert">
                         <p class="text-center text-danger">To get the CASHBACK, please first Signin into your bitcash.com account.</p>

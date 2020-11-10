@@ -10,8 +10,15 @@ Route::prefix('user')->group(function(){
     Route::get('/register', 'Auth\UserRegisterController@showRegistrationForm')->name('user.register')->middleware('pagespeed');
     Route::post('/register', 'Auth\UserRegisterController@register')->name('user.register');
     Route::post('/login', 'Auth\UserLoginController@login')->name('user.login');
+    // Route::post('/login', function(){
+    //     return 'kdkkd';
+    // })->name('user.login');
+
     Route::get('/logout','Auth\UserLoginController@logout')->name('user.logout')->middleware('pagespeed');
 
+    //socilate routes
+    // Route::get('/login/facebook', 'Auth\UserLoginController@redirectToFacebook');
+    // Route::get('login/facebook/callback', 'Auth\UserLoginController@handleFacebookCallback');
     //user forgot password
 
     Route::get('/forgot', 'Auth\UserForgotPasswordController@showLinkRequestForm')->name('user.forgot')->middleware('pagespeed');

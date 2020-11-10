@@ -19,15 +19,8 @@ class UserDashboardController extends Controller
      */
     public function index()
     {
-        //
-        // dd(auth()->user()->id);
-        $user= User::findOrFail(auth()->user()->id);
-        if($user->status==1){
-            return view('backend.user.userdash-home');
 
-        } else {
-             return('Your Account Has been suspended!');
-        }
+        return view('backend.user.userdash-home');
 
     }
 
@@ -38,9 +31,7 @@ class UserDashboardController extends Controller
      */
     public function userProfileData()
     {
-
         $userData = User::findOrFail(auth()->user()->id);
-
         return view('backend.user.user-profile',compact('userData'));
     }
 

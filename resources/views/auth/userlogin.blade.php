@@ -26,8 +26,9 @@
                         <div class="signin-form">
                             <h2 class="form-title">Sign In</h2>
                             <form method="POST" class="register-form" autocomplete="off" id="login-form" action="{{ route('user.login')}}">
+                                @csrf
                                 <div class="form-group">
-                                    @csrf
+
                                     <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                     <input type="email" name="email" id="email" placeholder="Your Email" class=" @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="nope" autofocus/>
                                     @error('email')
@@ -46,26 +47,26 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <input type="checkbox" name="remember-me" id="remember" class="agree-term"  {{ old('remember') ? 'checked' : '' }}/>
+                                    {{-- <input type="checkbox" name="remember-me" id="remember" class="agree-term"  {{ old('remember') ? 'checked' : '' }}/>
                                     <label for="remember-me" class="label-agree-term"><span><span></span></span>
                                         Remember me
-                                    </label>
-                                    <label for="forgot-password ml-2" class="label-agree-term">
-                                        <a href="{{route('user.forgot')}}" class="ml-4"style="color:#EA3562;"> Forgot Password?</a>
+                                    </label> --}}
+                                    <label for="forgot-password ml-2" class="label-agree-term ml-5">
+                                        <a href="{{route('user.forgot')}}" class="ml-4 text-danger"style="color:#EA3562;"> Forgot Password ?</a>
                                     </label>
                                 </div>
                                 <div class="form-group form-button">
                                     <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
                                 </div>
                             </form>
-                            <div class="social-login">
+                            {{-- <div class="social-login">
                                 <span class="social-label">Or login with</span>
                                 <ul class="socials">
                                     <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
                                     <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
                                     <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
                                 </ul>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -74,5 +75,4 @@
     </div>
 </div>
 @endsection
-
 

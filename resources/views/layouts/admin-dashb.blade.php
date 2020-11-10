@@ -49,7 +49,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Bitcash</div>
       </a>
 
       <!-- Divider -->
@@ -98,7 +98,7 @@
             <h6 class="collapse-header">Custom Utilities:</h6>
             <a class="collapse-item" href="{{ route('admin.product-imports-view') }}">Products</a>
             <a class="collapse-item" href="{{ route('admin.promoted-product-imports-view') }}">Promoted Products</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
+            {{-- <a class="collapse-item" href="utilities-animation.html">Animations</a> --}}
             <a class="collapse-item" href="utilities-other.html">Other</a>
           </div>
         </div>
@@ -123,11 +123,11 @@
             <h6 class="collapse-header">Login Screens:</h6>
             <a class="collapse-item" href="{{ route('admin.live-order-tracking') }}">Live Order</a>
             <a class="collapse-item" href="{{route('admin.user-clicks')  }}">User Click</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+            {{-- <a class="collapse-item" href="forgot-password.html">Forgot Password</a> --}}
             <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
+            {{-- <h6 class="collapse-header">Other Pages:</h6>
             <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            <a class="collapse-item" href="blank.html">Blank Page</a> --}}
           </div>
         </div>
       </li>

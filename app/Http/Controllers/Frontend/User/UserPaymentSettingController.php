@@ -24,8 +24,7 @@ class UserPaymentSettingController extends Controller
             "cc_name" => "required",
             "cc_number" => "required|numeric",
             "cc_exp_mo" => "required|numeric",
-            "cc_exp_yr" =>  "required|numeric",
-            "cvc" => "required|numeric",
+            "expire_year" =>  "required|date|after:tomorrow",
             "amount" => "required|numeric",
 
         ]);

@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','username'
     ];
 
     /**
@@ -60,6 +60,18 @@ class User extends Authenticatable
 
     public function paymentAccount(){
         return $this->hasOne('App\PaymentAccount','id');
+    }
+
+
+    public function paymentAccounts(){
+        return $this->hasMany('App\PaymentAccount');
+    }
+
+
+    // Relations with transaction history
+
+    public function transactionHistories(){
+        return $this->hasMany('App\TransactionHistory');
     }
 
 

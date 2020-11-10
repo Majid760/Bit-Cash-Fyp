@@ -183,7 +183,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
-
+        // Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -240,7 +240,7 @@ return [
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Analytics' => Spatie\Analytics\Facades\Analytics::class,
         'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
-
+        // 'Socialite' => Laravel\Socialite\Facades\Socialite::class
 
     ],
 

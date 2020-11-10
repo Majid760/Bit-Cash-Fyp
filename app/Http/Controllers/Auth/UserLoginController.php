@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
+use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+// use Socialite;
 
 class UserLoginController extends Controller
 {
@@ -49,6 +51,7 @@ class UserLoginController extends Controller
     public function showLoginForm()
     {
         session(['link' => url()->previous()]);
+        // Session::flush();
         return view('auth.userlogin');
     }
 
@@ -142,6 +145,7 @@ class UserLoginController extends Controller
         //
             // dd(session('link'));
         return redirect(session('link'));
+
     }
 
 
@@ -196,4 +200,36 @@ class UserLoginController extends Controller
     {
         return Auth::guard('web');
     }
+
+
+
+    //socialite login login
+
+    /**
+     * Redirect the user to the GitHub authentication page.
+    //  */
+    // public function redirectToFacebook()
+    // {
+    //     dd('ok');
+    //     return Socialite::driver('facebook')->redirect();
+    // }
+
+    // /**
+    //  * Obtain the user information from GitHub.
+    //  *
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function handleFacebookCallback()
+    // {
+
+
+    //     $user = Socialite::driver('facebook')->user();
+    //     dd($user);
+    //     // $user->token;
+    // }
+
+
+    // public function scopes(){
+
+    // }
 }

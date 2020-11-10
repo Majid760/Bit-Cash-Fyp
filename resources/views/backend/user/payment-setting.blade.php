@@ -27,7 +27,7 @@
             <div class="form-group">
                 @csrf
               <label for="cc_name">Card Holder's Name</label>
-              <input class="form-control" name="cc_name" value="{{ old('cc_name') }} "id="name" pattern="\w+ \w+.*" required="required" title="First and last name" type="text">
+              <input class="form-control" name="cc_name" value="{{ old('cc_name') }} "id="name"  required="required" title="First and last name" type="text">
             </div>
             <div class="form-group">
               <label>Card Number</label>
@@ -76,41 +76,11 @@
                 </select>
               </div>
               <div class="col-md-4">
-                <select class="form-control" name="cc_exp_yr" size="0">
-                  <option value>
-                    2016
-                  </option>
-                  <option>
-                    2017
-                  </option>
-                  <option>
-                    2018
-                  </option>
-                  <option>
-                    2019
-                  </option>
-                  <option>
-                    2020
-                  </option>
-                  <option>
-                    2021
-                  </option>
-                  <option>
-                    2022
-                  </option>
-                  <option>
-                    2023
-                  </option>
-                  <option>
-                    2024
-                  </option>
-                  <option>
-                    2025
-                  </option>
-                </select>
-              </div>
+                    <input type="date" name="expire_year" min="{{ date('m-d-Y', time()) }}" class="form-control" value="{{date('m-d-Y', time())}}" required/>
+
+                </div>
               <div class="col-md-4">
-                <input autocomplete="off" name="cvc" value="{{ old('cvc') }}" class="form-control" maxlength="3" pattern="\d{3}" placeholder="CVC" required="" title="Three digits on the back of your card" type="text">
+                <input autocomplete="off" id="cvc"  name="cvc" value="{{ old('cvc') }}" class="form-control" maxlength="3" pattern="\d{3}" placeholder="CVC" required="" title="Three digits on the back of your card" type="text" required>
               </div>
             </div>
             <div class="row">
@@ -119,11 +89,11 @@
             <div class="form-inline">
               <div class="input-group">
                 <div class="input-group-addon mt-3">
-                  Rs
+                  $
                 </div>
-                <input class="form-control text-right" name="amount" id="exampleInputAmount"  type="text" value="{{ old('amount') }}">
+                <input type="number"  class="form-control text-right" min="50" name="amount" id="exampleInputAmount"  value="{{ old('amount') }}" required>
                 <div class="input-group-addon mt-3">
-                  .00
+                  .00  <span class="text-right text-warning ml-3">Minimum Amount that to be drawn 50$</span>
                 </div>
               </div>
             </div>
@@ -149,5 +119,6 @@
 
 
 @section('script')
+
 
 @endsection

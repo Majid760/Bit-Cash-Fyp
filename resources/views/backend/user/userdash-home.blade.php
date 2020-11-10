@@ -29,11 +29,11 @@
                             <div class="text-info text-center mt-2">
                                 <div class="row no-gutters mb-2">
                                     <div class="col-lg-6 col-md-6 col-sm-6"><h6>Pending:</h6></div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6"><h6>600</h6></div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6"><h6>00 $</h6></div>
                                 </div>
                                 <div class="row no-gutters mb-2">
                                     <div class="col-lg-6 col-md-6 col-sm-6"><h6>Approved:</h6></div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6"><h6>600</h6></div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6"><h6>56 $</h6></div>
                                 </div>
 
                             </div>
@@ -100,7 +100,7 @@
                             <h5 class="redeem">Redeemable Amount:</h6>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <h5 class="redeem text-success">Rs: 00</h5>
+                            <h5 class="redeem text-success"> 33 $</h5>
                         </div>
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-lg-12">
@@ -117,7 +117,7 @@
                             <button href="#" class="btn btn-warning btn-lg">
                                 <h6>Redeem</h6>
                             </button>
-                             <p>(Minimum redeemable amount is 299 Rs.)</p>
+                             <p class="text text-warning">Minimum Amount that to be drawn 50$</p>
                         </div>
 
                     </div>
@@ -131,7 +131,7 @@
                             <p class="text-md-left text-primary font-weight-bold">Total Amount Paid:</p>
                         </div>
                         <div class="col-md-6 col-lg-6">
-                            <p class="text-left text-primary font-weight-bold">Rs.</p>
+                            <p class="text-left text-primary font-weight-bold">{{ 0 }} $</p>
                         </div>
                     </div>
 
@@ -142,7 +142,7 @@
                             <p class="text-right text-primary font-weight-bold">Total Amount Earned:</p>
                         </div>
                         <div class="col-md-6 col-lg-6 ">
-                            <p class="text-center text-primary font-weight-bold">Rs.</p>
+                            <p class="text-center text-primary font-weight-bold">56 $</p>
                         </div>
                     </div>
                 </div>

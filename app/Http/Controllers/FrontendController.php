@@ -20,7 +20,7 @@ class FrontendController extends Controller
         return view('index',compact('products','promoData'));
     }
 
-    // return about page
+    // return about pages
     public function getAbout(){
         return view('frontend.about');
     }
@@ -29,6 +29,11 @@ class FrontendController extends Controller
 
     public function getBlog(){
         return view('frontend.blog');
+    }
+
+    public function getDealCoupons(){
+        // Deals::get('')
+        return view('frontend.deal');
     }
 
 

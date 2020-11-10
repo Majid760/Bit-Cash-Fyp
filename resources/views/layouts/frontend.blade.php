@@ -23,8 +23,8 @@
 
     <!-- css files -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet"> --}}
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -80,11 +80,12 @@
                         <div class="row d-flex">
                             <div class="col-md-3 col-sm-2 pr-4 col-lg-3 d-flex topper  align-items-center">
                                 <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-                                <span class="text">+92 35 2355 98</span>
+                                <span class="text">bitcash@support.com</span>
                             </div>
                             <div class="col-md-3 col-sm-2 col-lg-3 pr-4 d-flex topper align-items-center">
                                 <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-                                <span class="text">bitcash@support.com</span>
+                                {{-- <span class="text">+92 35 2355 98</span> --}}
+
                             </div>
                             <div class="col-md-6 col-sm-8 col-lg-6 pr-1 d-flex topper  text-lg-right">
                                 <nav class="navbar  px-0 top-navbar">
@@ -105,14 +106,14 @@
     <!-- Start nav -->
     <nav class="navbar navbar-expand-lg  ftco_navbar  ftco-navbar-light " id="ftco-navbar" style="margin-top:0 !important">
         <div class="container">
-            <a class="navbar-brand" href="{{ URL::to('/') }}"><span style="color:#EA3562">BIT</span><span style="color:#ffe100">-CASH<span></a>
+            <a class="navbar-brand" href="/"><span style="color:#EA3562">BIT</span><span style="color:#ffe100">-CASH<span></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
           </button>
 
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav">
-              <li class="nav-item active  ml-3"><a href="{{URL::to('/')}}" class="nav-link">HOME</a></li>
+              <li class="nav-item active  ml-3"><a href="/" class="nav-link">HOME</a></li>
               <!-- start of product mega menu -->
               <li class="nav-item dropdown mr-1 menu-area">
               <a class="nav-link dropdown-toggle mega-drop-down" href="#" id="mega-one" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">PRODUCT</a>
@@ -124,10 +125,10 @@
                         <div class="wrapper">
                             <div class="masonry">
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>1]) }}" name="category" class="dropdown-item d-block text-left py-0 my-1 text-uppercase"><i class="fa fa-female fa-lg mr-2" aria-hidden="true"></i>women-clothing</a>
+                                    <a href="{{ route('category',['id'=>1]) }}" name="category" class="dropdown-item d-block text-left py-0 my-1 text-uppercase"><i class="fa fa-female fa-lg mr-2" aria-hidden="true"></i>Men-clothing</a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
-                                    <a href="{{ route('category',['id'=>2]) }}" name="category" class="dropdown-item d-block text-left py-0 my-1 text-uppercase"><i class="fa fa-male fa-lg mr-2" aria-hidden="true"></i>Men-clothing</a>
+                                    <a href="{{ route('category',['id'=>2]) }}" name="category" class="dropdown-item d-block text-left py-0 my-1 text-uppercase"><i class="fa fa-male fa-lg mr-2" aria-hidden="true">women-clothing</i></a>
                                 </div>
                                 <div class="brick text-center px-5 py-0 pt-0 my-1 w-100">
                                     <a href="{{ route('category',['id'=>3]) }}" name="category" class="dropdown-item d-block text-left py-0 my-0 text-uppercase"><i class="fa fa-camera-retro fa-lg mr-2" aria-hidden="true"></i>Consumer-electronics</a>
@@ -348,12 +349,12 @@
 
               <!-- end of store mega menu -->
 
-              <li class="nav-item "><a href="#" class="nav-link">deal</a></li>
-              <li class="nav-item "><a href="#" class="nav-link">offer</a></li>
+              <li class="nav-item "><a href="{{ route('deals-coupons') }}" class="nav-link">deal & coupons</a></li>
+              {{-- <li class="nav-item "><a href="#" class="nav-link">offer</a></li> --}}
               <!-- <li class="nav-item mr-1 cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li> -->
             <!-- <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-sucecss my-2 my-sm-0" type="submit">Search</button>
             </form> -->
             <form class="form-inline ml-auto" action="{{ route('search.product') }}">
                 @csrf

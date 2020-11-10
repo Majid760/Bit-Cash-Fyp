@@ -53,37 +53,23 @@
                                              <table id="example" class="display table table-striped table-bordered" style="width:100%">
                                                 <thead>
                                                     <tr>
-                                                        <th>Name</th>
-                                                        <th>Position</th>
-                                                        <th>Office</th>
-                                                        <th>Age</th>
-                                                        <th>Start date</th>
-                                                        <th>Salary</th>
+                                                        <th>#</th>
+                                                        <th>User Id</th>
+                                                        <th>Amount Transfer</th>
+                                                        <th>Account Number</th>
+                                                        <th>Time&Date</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-
-
-
                                                     <tr>
-                                                        <td>Donna Snider</td>
-                                                        <td>Customer Support</td>
-                                                        <td>New York</td>
-                                                        <td>27</td>
-                                                        <td>2011/01/25</td>
-                                                        <td>$112,000</td>
+                                                        <td>1</td>
+                                                        <td>the@gmail.com</td>
+                                                        <td>34</td>
+                                                        <td>12 32323 2323232 232</td>
+                                                        <td>12:3:3</td>
                                                     </tr>
                                                 </tbody>
-                                                <tfoot>
-                                                    <tr>
-                                                        <th>Name</th>
-                                                        <th>Position</th>
-                                                        <th>Office</th>
-                                                        <th>Age</th>
-                                                        <th>Start date</th>
-                                                        <th>Salary</th>
-                                                    </tr>
-                                                </tfoot>
+
                                             </table>
 
                                         </div>
@@ -108,6 +94,7 @@
 
                                             <thead>
                                                 <tr>
+                                                    <th>#</th>
                                                     <th>Email</th>
                                                     <th>Product_Id</th>
                                                     <th>Name</th>
@@ -121,8 +108,11 @@
                                             <tbody>
 
                                                 @foreach($users as $user)
+                                                    @php $i=1
+                                                    @endphp
                                                     @foreach($user->products as $product)
                                                         <tr>
+                                                        <td>{{ $i }}</td>
                                                         <td>{{ $user->email }}</td>
                                                         <td>{{ $product->product_id }}</td>
                                                         <td>{{ Str::limit($product->product_name, 25, ' (...)')}}</td>
@@ -130,7 +120,8 @@
                                                         <th>{{ $product->original_price.'$'}}</th>
                                                         <td><a href="{{ $product->product_url }}" target="_blank">{{ Str::limit($product->product_url,25,'(...)') }}</a></td>
                                                         </tr>
-
+                                                        @php $i++
+                                                        @endphp
                                                     @endforeach
                                                 @endforeach
 

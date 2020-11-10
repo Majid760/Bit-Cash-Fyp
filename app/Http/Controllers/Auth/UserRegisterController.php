@@ -126,7 +126,7 @@ class UserRegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'status' => 1,
-            'is_checked' => 0,
+            'is_checked' => 1,
         ]);
     }
 }

@@ -45,27 +45,128 @@
     <!-- proudy partner section -->
     <hr>
 
-    <section class="ftco-section ftco-partner">
-    <div class="container mt-2">
-        <div class="row">
-            <div class="col-sm ftco-animate">
-                <a href="#" class="partner"><img src="frontend/images/partner-1.png" class="img-fluid" alt="Colorlib Template"></a>
+   <!-- our client -->
+   <div class="container z-depth-1 my-5">
+
+    <section class="text-center py-5">
+
+      <p class="mb-4 pb-2 lead font-weight-bold">Our Proud Partner</p>
+
+      <!-- Logo carousel -->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="1800">
+        <div class="carousel-inner">
+          <!-- First slide -->
+          <div class="carousel-item active">
+            <!--Grid row-->
+            <div class="row">
+
+              <!--First column-->
+              <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                <img src="{{ asset('frontend/images/aliexpress-discount.jpg') }}" class="img-fluid px-4" alt="Logo">
+              </div>
+              <!--/First column-->
+
+              <!--Second column-->
+              <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                <img src="{{ asset('frontend/images/telemart.jpg') }}" class="img-fluid px-4" alt="Logo">
+              </div>
+              <!--/Second column-->
+
+              <!--Third column-->
+              <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                <img src="https://mdbootstrap.com/img/Photos/Template/6.png" class="img-fluid px-4" alt="Logo">
+              </div>
+              <!--/Third column-->
+
+              <!--Fourth column-->
+              <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                <img src="https://mdbootstrap.com/img/Photos/Template/9.png" class="img-fluid px-4" alt="Logo">
+              </div>
+              <!--/Fourth column-->
+
             </div>
-            <div class="col-sm ftco-animate">
-                <a href="#" class="partner"><img src="frontend/images/partner-2.png" class="img-fluid" alt="Colorlib Template"></a>
+            <!--/Grid row-->
+          </div>
+          <!-- First slide -->
+
+          <!-- Second slide -->
+          <div class="carousel-item">
+            <!--Grid row-->
+            <div class="row">
+
+              <!--First column-->
+              <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                <img src="https://mdbootstrap.com/img/Photos/Template/11.png" class="img-fluid px-4" alt="Logo">
+              </div>
+              <!--/First column-->
+
+              <!--Second column-->
+              <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                <img src="https://mdbootstrap.com/img/Photos/Template/10.png" class="img-fluid px-4" alt="Logo">
+              </div>
+              <!--/Second column-->
+
+              <!--Third column-->
+              <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                <img src="https://mdbootstrap.com/img/Photos/Template/12.png" class="img-fluid px-4" alt="Logo">
+              </div>
+              <!--/Third column-->
+
+              <!--Fourth column-->
+              <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                <img src="https://mdbootstrap.com/img/Photos/Template/13.png" class="img-fluid px-4" alt="Logo">
+              </div>
+              <!--/Fourth column-->
+
             </div>
-            <div class="col-sm ftco-animate">
-                <a href="#" class="partner"><img src="frontend/images/partner-3.png" class="img-fluid" alt="Colorlib Template"></a>
+            <!--/Grid row-->
+          </div>
+          <!-- Second slide -->
+
+          <!-- Third slide -->
+          <div class="carousel-item">
+            <!--Grid row-->
+            <div class="row">
+
+              <!--First column-->
+              <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                <img src="https://mdbootstrap.com/img/Photos/Template/1a.png" class="img-fluid px-4" alt="Logo">
+              </div>
+              <!--/First column-->
+
+              <!--Second column-->
+              <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                <img src="https://mdbootstrap.com/img/Photos/Template/2a.png" class="img-fluid px-4" alt="Logo">
+              </div>
+              <!--/Second column-->
+
+              <!--Third column-->
+              <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                <img src="https://mdbootstrap.com/img/Photos/Template/3a.png" class="img-fluid px-4" alt="Logo">
+              </div>
+              <!--/Third column-->
+
+              <!--Fourth column-->
+              <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
+                <img src="https://mdbootstrap.com/img/Photos/Template/4a.png" class="img-fluid px-4" alt="Logo">
+              </div>
+              <!--/Fourth column-->
+
             </div>
-            <div class="col-sm ftco-animate">
-                <a href="#" class="partner"><img src="frontend/images/partner-4.png" class="img-fluid" alt="Colorlib Template"></a>
-            </div>
-            <div class="col-sm ftco-animate">
-                <a href="#" class="partner"><img src="frontend/images/partner-5.png" class="img-fluid" alt="Colorlib Template"></a>
-            </div>
+            <!--/Grid row-->
+          </div>
+          <!-- Third slide -->
         </div>
-    </div>
-</section>
+
+      </div>
+      <!-- Logo carousel -->
+
+    </section>
+
+  </div>
+
+
+  <!-- end of our client -->
 
     <!-- end of proudy partner section -->
 

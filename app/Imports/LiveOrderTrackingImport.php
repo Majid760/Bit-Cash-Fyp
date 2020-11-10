@@ -7,6 +7,7 @@ use Maatwebsite\Excel\Concerns\ToCollection;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\WithBatchInserts;
 use App\LiveOrderTracking;
+use App\PaymentAccount;
 
 class LiveOrderTrackingImport implements ToCollection, WithHeadingRow, WithBatchInserts
 {
@@ -52,6 +53,15 @@ class LiveOrderTrackingImport implements ToCollection, WithHeadingRow, WithBatch
                 'originalFinalPaymentAmount' => $row['originalpaymentamount'],
                 'exchange rate' => $row['exchange_rate'],
                 'Seller Type' => $row['seller_type'],
+            ]);
+
+            //PaymentAccount
+            PaymentAccount::create([
+                'email' => $row['dp'],
+                'payment_amount' => (floatval(ltrim($row['paymentamount'], '$'))),
+                'pending_amount' => 0,
+                'commission' => (floatval(ltrim($row['commission'], '%')))/2,
+                'approved_amount' =>  ((floatval(ltrim($row['paymentamount'], '$')))/100)*((floatval(ltrim($row['commission'], '%')))/2.0),
             ]);
 
         }

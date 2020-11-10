@@ -56,7 +56,7 @@
                                             <div class="form-group">
                                                 @csrf
                                                 <label>Username</label>
-                                                <input type="text" class="form-control" name="username" placeholder="Username" value="{{ $userData['name'] }}" disabled>
+                                                <input type="text" class="form-control" name="username" placeholder="Username" value="{{ $userData['username'] }}">
                                             </div>
                                             </div>
                                             <div class="col-md-6 pl-1">

@@ -53,7 +53,9 @@ class AdminRegisterController extends Controller
      */
     public function showRegistrationForm()
     {
-        return view('auth.admin.admin-register');
+
+        return view('frontend.404');
+        // return view('auth.admin.admin-register');
     }
 
     /**
