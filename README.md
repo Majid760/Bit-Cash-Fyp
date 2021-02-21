@@ -1,3 +1,22 @@
+## Screen shots
+![s1](https://user-images.githubusercontent.com/55375676/108641665-45e44f80-74c2-11eb-910b-4dbc7c4b7ee9.PNG)
+![s2](https://user-images.githubusercontent.com/55375676/108641666-47ae1300-74c2-11eb-8734-f5beadfb6ea1.PNG)
+![s3](https://user-images.githubusercontent.com/55375676/108641669-4977d680-74c2-11eb-8906-4e4befb61315.PNG)
+![s4](https://user-images.githubusercontent.com/55375676/108641652-3d8c1480-74c2-11eb-8af6-fa235ad252bc.PNG)
+![s5](https://user-images.githubusercontent.com/55375676/108641653-3f55d800-74c2-11eb-8a7a-49bc9a3b1807.PNG)
+![s6](https://user-images.githubusercontent.com/55375676/108641655-411f9b80-74c2-11eb-8f34-2f109100e457.PNG)
+![s7](https://user-images.githubusercontent.com/55375676/108641656-41b83200-74c2-11eb-807c-9242885ff9a3.PNG)
+![s8](https://user-images.githubusercontent.com/55375676/108641657-42e95f00-74c2-11eb-88b9-f4c1ca4e3822.PNG)
+![s9](https://user-images.githubusercontent.com/55375676/108641658-4381f580-74c2-11eb-9842-adf78b4b299b.PNG)
+![s10](https://user-images.githubusercontent.com/55375676/108641660-4381f580-74c2-11eb-962f-1d01a226ccb6.PNG)
+![s12](https://user-images.githubusercontent.com/55375676/108641662-441a8c00-74c2-11eb-8b5b-f8a5ea1f5541.PNG)
+![s13](https://user-images.githubusercontent.com/55375676/108641663-44b32280-74c2-11eb-81fc-82d5c6668d7a.PNG)
+![s14](https://user-images.githubusercontent.com/55375676/108641664-454bb900-74c2-11eb-9b84-8c8cfa1f5465.PNG)
+
+
+
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
